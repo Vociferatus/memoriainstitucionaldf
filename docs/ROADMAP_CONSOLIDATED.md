@@ -270,7 +270,7 @@ Objetivo: tornar a edição individualizada e navegável.
 - [x] Criar `PublishedItem` como unidade geral.
 - [x] Segmentar início e fim de cada matéria.
 - [x] Permitir matérias que atravessam páginas.
-- [ ] Classificar portaria, ordem de serviço, edital, aviso, extrato, ata,
+- [x] Classificar portaria, ordem de serviço, edital, aviso, extrato, ata,
   decisão, retificação e outros tipos.
 - [x] Preservar matéria não classificada sem descartá-la.
 - [ ] Extrair número, data, título, órgão, unidade e autoridade.

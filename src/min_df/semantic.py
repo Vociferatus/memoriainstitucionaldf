@@ -13,12 +13,15 @@ from typing import Any
 
 from min_df.contracts import validate_semantic, validate_structured
 
-SCRIPT_VERSION = "0.1.0"
+SCRIPT_VERSION = "0.2.0"
 SECTION_RE = re.compile(r"^SEÇÃO\s+(I|II|III)$", re.IGNORECASE)
 ITEM_TYPE_RE = re.compile(
-    r"^(?P<type>ATO DECLARATÓRIO|AVISO|ATA|COMUNICADO|CONVOCAÇÃO|DECISÃO|"
+    r"^(?P<type>ATO DECLARATÓRIO|ATOS DA DIRETORIA COLEGIADA|AVISO|ATA|CHAMAMENTO|"
+    r"COMUNICADO|CONVOCAÇÃO|DECISÃO|"
     r"DECLARAÇÃO|DECRETO|DESPACHO|EDITAL|EXTRATO|INSTRUÇÃO|LEI|"
-    r"ORDEM DE SERVIÇO|PORTARIA|RECURSO|RESOLUÇÃO|RETIFICAÇÃO|TERMO)\b",
+    r"JULGAMENTO|NOTIFICAÇÃO|ORDEM DE SERVIÇO|PORTARIA|RECONHECIMENTO DE DÍVIDA|"
+    r"RECURSO|RESOLUÇÃO|RESULTADO DE HABILITAÇÃO|RESULTADO DE LICITAÇÃO|"
+    r"RETIFICAÇÃO|TERMO)\b",
     re.IGNORECASE,
 )
 ITEM_NUMBER_RE = re.compile(r"\bN[º°o]?\s*(?P<number>[\w./-]+)", re.IGNORECASE)
@@ -42,9 +45,11 @@ MONTHS = {
 }
 ORG_HEADING_RE = re.compile(
     r"\b(ADMINISTRAÇÃO|AGÊNCIA|ARQUIVO|CASA CIVIL|COMPANHIA|CONSELHO|"
-    r"CONTROLADORIA|CORPO DE BOMBEIROS|DEFENSORIA|DEPARTAMENTO|EMPRESA|"
-    r"FUNDAÇÃO|FUNDO|GABINETE|INSTITUTO|POLÍCIA|PROCURADORIA|SECRETARIA|"
-    r"SUBSECRETARIA|TRIBUNAL)\b",
+    r"BANCO|CÂMARA|CONTROLADORIA|COORDENAÇÃO|CORPO DE BOMBEIROS|DEFENSORIA|"
+    r"DEPARTAMENTO|DIRETORIA|EMPRESA|FUNDAÇÃO|FUNDO|GABINETE|GERÊNCIA|HOSPITAL|"
+    r"INSTITUTO|POLÍCIA|"
+    r"PROCURADORIA|SECRETARIA|SUBCOMANDO|SUBSECRETARIA|SUPERINTENDÊNCIA|"
+    r"TRIBUNAL|UNIDADE)\b",
     re.IGNORECASE,
 )
 ACTION_RE = re.compile(
@@ -96,16 +101,19 @@ def flatten_blocks(structured: dict[str, Any]) -> list[BlockRef]:
     ]
 
 
-def is_context_heading(block: BlockRef) -> bool:
+def is_context_heading(block: BlockRef, *, continuation: bool = False) -> bool:
     if block.noise or not block.text or ITEM_TYPE_RE.match(block.text):
+        return False
+    if block.text.startswith(("CAPÍTULO ", "TÍTULO ")):
         return False
     if block.role in {"h1", "h2"}:
         return block.text == block.text.upper() and len(block.text) <= 180
     return (
-        block.role == "h3"
+        block.role in {"h3", "paragraph"}
         and block.text == block.text.upper()
         and len(block.text) <= 180
-        and ORG_HEADING_RE.search(block.text) is not None
+        and not any(char.isdigit() for char in block.text)
+        and (continuation or ORG_HEADING_RE.search(block.text) is not None)
     )
 
 
@@ -319,7 +327,20 @@ def build_semantic_payload(structured: dict[str, Any], source_path: Path) -> dic
         items.append(current_item)
         current_item = None
 
-    for block in blocks:
+    def context_sequence_precedes_item(index: int) -> bool:
+        for candidate in blocks[index + 1 :]:
+            if candidate.noise or candidate.text == "DIÁRIO OFICIAL DO DISTRITO FEDERAL":
+                continue
+            if candidate.text.startswith("Redação, Administração e Editoração:"):
+                continue
+            if ITEM_TYPE_RE.match(candidate.text):
+                return True
+            if is_context_heading(candidate, continuation=True):
+                continue
+            return False
+        return False
+
+    for block_index_position, block in enumerate(blocks):
         if block.noise:
             assignments.append({"block_id": block.id, "category": "noise"})
             continue
@@ -356,7 +377,6 @@ def build_semantic_payload(structured: dict[str, Any], source_path: Path) -> dic
             continue
 
         if block.text == "DIÁRIO OFICIAL DO DISTRITO FEDERAL":
-            close_item()
             assignments.append(
                 {
                     "block_id": block.id,
@@ -367,7 +387,6 @@ def build_semantic_payload(structured: dict[str, Any], source_path: Path) -> dic
             continue
 
         if block.text.startswith("Redação, Administração e Editoração:"):
-            close_item()
             assignments.append(
                 {
                     "block_id": block.id,
@@ -377,11 +396,20 @@ def build_semantic_payload(structured: dict[str, Any], source_path: Path) -> dic
             )
             continue
 
-        if is_context_heading(block):
+        previous_assignment = assignments[-1] if assignments else None
+        previous_context = contexts[-1] if contexts else None
+        context_continuation = (
+            previous_assignment is not None
+            and previous_assignment["category"] == "editorial_context"
+            and previous_context is not None
+            and previous_context["page"] == block.page
+        )
+        context_candidate = is_context_heading(block, continuation=context_continuation)
+        if current_item is not None and context_candidate:
+            context_candidate = context_sequence_precedes_item(block_index_position)
+        if context_candidate:
             close_item()
             level = 1 if block.role == "h1" else 2 if block.role == "h2" else 3
-            previous_assignment = assignments[-1] if assignments else None
-            previous_context = contexts[-1] if contexts else None
             should_merge = (
                 previous_assignment is not None
                 and previous_assignment["category"] == "editorial_context"

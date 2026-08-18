@@ -14,7 +14,17 @@ if (-not (Test-Path -LiteralPath $python)) {
 }
 
 $semantic = ".artifacts\pilot-db\DODF 112 22-06-2026 INTEGRA.semantic.json"
-if (-not (Test-Path -LiteralPath $semantic)) {
+$semanticState = "missing"
+if (Test-Path -LiteralPath $semantic) {
+  $semanticState = & $python -c `
+    "import json,sys; from min_df.semantic import SCRIPT_VERSION; payload=json.load(open(sys.argv[1], encoding='utf-8')); print('current' if payload.get('tool', {}).get('version') == SCRIPT_VERSION else 'stale')" `
+    $semantic
+  if ($LASTEXITCODE -ne 0) {
+    throw "Falha ao verificar a versão da projeção semântica (código $LASTEXITCODE)."
+  }
+}
+
+if ($semanticState -ne "current") {
   & $python -m min_df.semantic `
     "data\structured\DODF 112 22-06-2026 INTEGRA.structured.json" `
     --output $semantic

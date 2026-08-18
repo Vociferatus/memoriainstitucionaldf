@@ -35,12 +35,12 @@ def test_semantic_pilot_landmarks(pilot_paths: dict[str, Path], project_root: Pa
     assert semantic["counts"] == {
         "blocks_total": 2553,
         "sections": 3,
-        "contexts": 133,
-        "published_items": 403,
-        "multi_page_items": 54,
-        "unclassified_items": 33,
+        "contexts": 202,
+        "published_items": 457,
+        "multi_page_items": 53,
+        "unclassified_items": 0,
         "actions": 114,
-        "entity_mentions": 218,
+        "entity_mentions": 302,
         "provisions": 834,
         "references": 1396,
     }
@@ -58,6 +58,25 @@ def test_semantic_pilot_landmarks(pilot_paths: dict[str, Path], project_root: Pa
         "SECRETARIA DE ESTADO DE GOVERNO",
         "SECRETARIA EXECUTIVA DAS CIDADES",
     ]
+
+    multipage_order = next(
+        item
+        for item in semantic["published_items"]
+        if item["title"] == "ORDEM DE SERVIÇO Nº 26, DE 17 DE JUNHO DE 2026"
+    )
+    assert (multipage_order["start_page"], multipage_order["end_page"]) == (1, 2)
+    assert "p0002-b0009" in multipage_order["block_ids"]
+
+    edital = next(
+        item
+        for item in semantic["published_items"]
+        if item["title"] == "EDITAL Nº 39/2026, DE 18 DE JUNHO DE 2026"
+    )
+    assert "p0064-b0016" in edital["block_ids"]
+    assert not any(
+        context["label"] in {"ELI RAMIRO PIMENTA", "M RIBEIRO HOLDING LTDA"}
+        for context in semantic["editorial_contexts"]
+    )
 
 
 def test_item_assignments_reference_existing_items(
