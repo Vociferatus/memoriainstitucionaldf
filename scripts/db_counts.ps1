@@ -13,3 +13,10 @@ docker compose exec -T postgres sh -c `
 if ($LASTEXITCODE -ne 0) {
   throw "Falha ao consultar contagens por tipo (código $LASTEXITCODE)."
 }
+
+docker compose exec -T postgres sh -c `
+  'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT ''blobs'' AS tabela, count(*) FROM blobs UNION ALL SELECT ''captures'', count(*) FROM captures UNION ALL SELECT ''artifacts'', count(*) FROM artifacts UNION ALL SELECT ''transformation_runs'', count(*) FROM transformation_runs UNION ALL SELECT ''transformation_io'', count(*) FROM transformation_io UNION ALL SELECT ''evidence_mentions'', count(*) FROM evidence_mentions;"'
+
+if ($LASTEXITCODE -ne 0) {
+  throw "Falha ao consultar o ledger v2 (código $LASTEXITCODE)."
+}

@@ -159,7 +159,7 @@ justificarem.
 
 ```text
 Fase 0 concluída
-Fase 1 concluída em 2026-08-18; Fase 2 é o próximo trabalho executável
+Fases 0, 1 e 2 concluídas em 2026-08-18; Fase 3 é o próximo trabalho executável
 ```
 
 ## 5. Fase 0 — Preservação e linha de base
@@ -232,21 +232,21 @@ Objetivo: criar a fundação correta antes de introduzir novas entidades.
 
 ### Modelo documental
 
-- [ ] Separar `blob`, `document`, `capture` e `artifact`.
-- [ ] Permitir múltiplas capturas apontando para os mesmos bytes.
-- [ ] Criar `transformation_runs` para todas as transformações.
-- [ ] Registrar hashes de entrada e saída, ferramenta, versão e parâmetros.
-- [ ] Substituir caminhos absolutos por URIs ou caminhos portáveis.
-- [ ] Corrigir referências redundantes de bloco em menções.
-- [ ] Garantir integridade entre menção, bloco, página e captura.
-- [ ] Registrar políticas e autoridade da fonte.
+- [x] Separar `blob`, `document`, `capture` e `artifact`.
+- [x] Permitir múltiplas capturas apontando para os mesmos bytes.
+- [x] Criar `transformation_runs` para todas as transformações.
+- [x] Registrar hashes de entrada e saída, ferramenta, versão e parâmetros.
+- [x] Substituir caminhos absolutos por URIs ou caminhos portáveis.
+- [x] Corrigir referências redundantes de bloco em menções.
+- [x] Garantir integridade entre menção, bloco, página e captura.
+- [x] Registrar políticas e autoridade da fonte.
 
 ### Migração
 
-- [ ] Criar migração v2 sem apagar o schema original.
-- [ ] Migrar a edição 112.
-- [ ] Comparar contagens e hashes antes/depois.
-- [ ] Documentar rollback.
+- [x] Criar migração v2 sem apagar o schema original.
+- [x] Migrar a edição 112.
+- [x] Comparar contagens e hashes antes/depois.
+- [x] Documentar rollback.
 
 ### Critério de saída
 

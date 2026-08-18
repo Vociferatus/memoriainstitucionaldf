@@ -25,6 +25,7 @@ import psycopg
 from psycopg.types.json import Jsonb
 
 from min_df.contracts import validate_manifest, validate_mentions, validate_structured
+from min_df.ledger import load_ledger_v2
 
 SCRIPT_VERSION = "0.1.0"
 DODF_FILENAME_RE = re.compile(
@@ -410,6 +411,19 @@ def load_all(
             block_db_ids,
             mentions_payload,
         )
+        ledger = load_ledger_v2(
+            conn,
+            source_id=source_id,
+            document_id=document_id,
+            legacy_capture_id=capture_id,
+            block_db_ids=block_db_ids,
+            manifest_path=manifest_path,
+            structured_path=structured_path,
+            mentions_path=mentions_path,
+            manifest=manifest,
+            structured=structured,
+            mentions_payload=mentions_payload,
+        )
 
     return {
         "source_id": source_id,
@@ -418,6 +432,7 @@ def load_all(
         "blocks": len(block_db_ids),
         "extraction_run_id": extraction_run_id,
         "mentions": mentions_inserted,
+        **ledger,
     }
 
 
