@@ -1,0 +1,11 @@
+# A linha de base recuperada deve entrar no Git sem conversão automática de
+# fim de linha. Normalizações futuras serão mudanças explícitas e auditáveis.
+* -text
+
+*.pdf binary
+*.zip binary
+
+# Artefatos JSON extensos são preservados integralmente, mas não geram diffs
+# textuais gigantes na interface padrão do Git.
+data/structured/*.json -diff
+data/extractions/*.json -diff

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-06-23T00:32:05+00:00",
+  "tool": {
+    "name": "dodf_to_markdown.py",
+    "version": "0.2.0"
+  },
+  "document": {
+    "path": "C:\\Users\\Paulo\\OneDrive\\Instituto Paulo Brazeiro\\Programação\\História Institucional do DF\\data\\raw\\DODF 112 22-06-2026 INTEGRA.pdf",
+    "filename": "DODF 112 22-06-2026 INTEGRA.pdf",
+    "size_bytes": 2041246,
+    "modified_at": "2026-06-23T00:12:30+00:00",
+    "sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+    "media_type": "application/pdf",
+    "page_count": 85
+  },
+  "derived_outputs": {
+    "structured_json": "data\\structured\\DODF 112 22-06-2026 INTEGRA.structured.json",
+    "markdown": "data\\markdown\\DODF 112 22-06-2026 INTEGRA.md"
+  }
+}

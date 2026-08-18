@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+
+# Dados locais do PostgreSQL quando usados fora de volume Docker.
+pgdata/
+postgres-data/
+opensearch-data/
+
+# Novos corpora e artefatos são preservados fora do Git e referenciados por
+# manifesto/hash. Os arquivos já rastreados no commit de recuperação continuam
+# versionados como exceção histórica deliberada.
+data/raw/*
+data/manifests/*
+data/structured/*
+data/markdown/*
+data/processed/*
+data/extractions/*
+data/quarantine/*
+data/logs/*
+
+# Novos pacotes recebidos exigem registro explícito de proveniência antes de
+# serem adicionados ao histórico. Os pacotes da linha de base são exceções.
+*.zip
