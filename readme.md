@@ -92,6 +92,10 @@ Isso permite conferir cada achado de volta no documento.
 
 ## Scripts Criados
 
+Para instalar o ambiente e executar toda a edição piloto com um único comando,
+consulte `docs/DEVELOPMENT.md`. A implementação vive no pacote `src/min_df`; os
+arquivos em `scripts/` preservam compatibilidade com os comandos históricos.
+
 ### `scripts/dodf_to_markdown.py`
 
 Le o PDF do DODF e gera:
@@ -126,8 +130,7 @@ Resultado validado na edicao atual:
 
 ### `scripts/load_to_postgres.py`
 
-Prepara a carga dos dados no PostgreSQL. Ele ainda depende de um banco
-PostgreSQL configurado.
+Prepara e executa a carga idempotente dos dados no PostgreSQL configurado.
 
 Sem banco, ja da para validar se os arquivos combinam entre si:
 

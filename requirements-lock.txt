@@ -1,0 +1,26 @@
+# Ambiente de referência da Fase 1: CPython 3.11 / Windows x86-64.
+# Instalação reproduzível:
+#   python -m pip install -r requirements-lock.txt
+#   python -m pip install --no-deps -e .
+attrs==26.1.0
+colorama==0.4.6
+iniconfig==2.3.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+librt==0.15.0
+mypy==1.20.2
+mypy_extensions==1.1.0
+packaging==26.3
+pathspec==1.1.1
+pluggy==1.6.0
+psycopg==3.3.4
+psycopg-binary==3.3.4
+Pygments==2.21.0
+PyMuPDF==1.27.2.3
+pytest==9.1.1
+referencing==0.37.0
+rpds-py==2026.6.3
+ruff==0.16.3
+typing_extensions==4.16.0
+tzdata==2026.3
+

@@ -158,8 +158,8 @@ justificarem.
 ### Etapa atual
 
 ```text
-Fase 0 concluída parcialmente
-Fase 1 é o próximo trabalho executável
+Fase 0 concluída
+Fase 1 concluída em 2026-08-18; Fase 2 é o próximo trabalho executável
 ```
 
 ## 5. Fase 0 — Preservação e linha de base
@@ -174,10 +174,10 @@ Objetivo: impedir perda ou reinterpretação silenciosa do piloto original.
 - [x] Reproduzir estrutura, Markdown e menções.
 - [x] Consultar o banco histórico.
 - [x] Registrar proveniência e auditoria técnica.
-- [ ] Revisar os arquivos que entrarão no primeiro commit.
-- [ ] Criar commit imutável da linha de base.
-- [ ] Criar tag de recuperação, por exemplo `recovered-pilot-v1`.
-- [ ] Definir política de versionamento de dados grandes e pacotes-fonte.
+- [x] Revisar os arquivos que entrarão no primeiro commit.
+- [x] Criar commit imutável da linha de base.
+- [x] Criar tag de recuperação `recovered-pilot-v1`.
+- [x] Definir política de versionamento de dados grandes e pacotes-fonte.
 
 ### Critério de saída
 
@@ -191,35 +191,35 @@ testes.
 
 ### Engenharia
 
-- [ ] Criar `pyproject.toml` e pacote em layout `src/`.
-- [ ] Manter CLIs compatíveis durante a migração.
-- [ ] Registrar ambiente de referência e lock de dependências.
-- [ ] Adicionar lint, formatação, checagem de tipos e testes em CI.
-- [ ] Criar comando único para processar e auditar a edição piloto.
-- [ ] Parametrizar PostgreSQL, porta e credenciais.
-- [ ] Remover `container_name` fixo do Compose.
-- [ ] Criar `.env.example` sem segredos reais.
+- [x] Criar `pyproject.toml` e pacote em layout `src/`.
+- [x] Manter CLIs compatíveis durante a migração.
+- [x] Registrar ambiente de referência e lock de dependências.
+- [x] Adicionar lint, formatação, checagem de tipos e testes em CI.
+- [x] Criar comando único para processar e auditar a edição piloto.
+- [x] Parametrizar PostgreSQL, porta e credenciais.
+- [x] Remover `container_name` fixo do Compose.
+- [x] Criar `.env.example` sem segredos reais.
 
 ### Testes de regressão
 
-- [ ] Congelar 85 páginas.
-- [ ] Congelar 2.553 blocos.
-- [ ] Congelar 179 blocos de ruído.
-- [ ] Congelar 1.140 menções SEI.
-- [ ] Congelar 1.096 valores únicos.
-- [ ] Garantir zero menções órfãs.
-- [ ] Conferir o hash do Markdown de referência.
-- [ ] Testar reprocessamento idempotente.
-- [ ] Testar banco criado do zero.
-- [ ] Testar backup e restauração.
+- [x] Congelar 85 páginas.
+- [x] Congelar 2.553 blocos.
+- [x] Congelar 179 blocos de ruído.
+- [x] Congelar 1.140 menções SEI.
+- [x] Congelar 1.096 valores únicos.
+- [x] Garantir zero menções órfãs.
+- [x] Conferir o hash do Markdown de referência.
+- [x] Testar reprocessamento idempotente.
+- [x] Testar banco criado do zero.
+- [x] Testar backup e restauração.
 
 ### Contratos
 
-- [ ] Criar JSON Schema para manifesto.
-- [ ] Criar JSON Schema para documento estrutural.
-- [ ] Criar JSON Schema para menções.
-- [ ] Validar inputs e outputs nos limites do pipeline.
-- [ ] Definir política de compatibilidade e migração de schema.
+- [x] Criar JSON Schema para manifesto.
+- [x] Criar JSON Schema para documento estrutural.
+- [x] Criar JSON Schema para menções.
+- [x] Validar inputs e outputs nos limites do pipeline.
+- [x] Definir política de compatibilidade e migração de schema.
 
 ### Critério de saída
 

@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memoria-institucional-navegavel"
+version = "0.1.0"
+description = "Pipeline auditável para consumo e navegação de Diários Oficiais."
+readme = "readme.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  # 1.28 alterou a segmentação do PDF piloto (2.553 -> 2.402 blocos).
+  # A versão de referência permanece fixa até nova validação e versionamento.
+  "PyMuPDF==1.27.2.3",
+  "jsonschema>=4,<5",
+  "psycopg[binary]>=3.2,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1,<2",
+  "pytest>=8,<10",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+min-df-audit = "min_df.audit_artifacts:main"
+min-df-convert = "min_df.dodf_to_markdown:main"
+min-df-extract = "min_df.extract_mentions:main"
+min-df-load = "min_df.load_to_postgres:main"
+min-df-pipeline = "min_df.pipeline:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+min_df = ["schemas/*.json"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src/min_df"]
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["fitz", "jsonschema"]
+ignore_missing_imports = true

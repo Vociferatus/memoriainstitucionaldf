@@ -1,18 +1,17 @@
 services:
   postgres:
-    image: postgres:16
-    container_name: memoria_institucional_postgres
+    image: ${POSTGRES_IMAGE:-postgres:16}
     environment:
-      POSTGRES_DB: memoria_institucional
-      POSTGRES_USER: memoria
-      POSTGRES_PASSWORD: memoria_local
+      POSTGRES_DB: ${POSTGRES_DB:-memoria_institucional}
+      POSTGRES_USER: ${POSTGRES_USER:-memoria}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-memoria_local}
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - .:/workspace:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U memoria -d memoria_institucional"]
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
       interval: 5s
       timeout: 5s
       retries: 10
