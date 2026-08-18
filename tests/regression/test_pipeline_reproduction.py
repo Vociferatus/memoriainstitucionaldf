@@ -22,6 +22,9 @@ def portable_structure(payload: dict) -> dict:
     result = without_created_at(payload)
     result["source"] = dict(result["source"])
     result["source"].pop("path", None)
+    # O checkout pode atribuir ao arquivo um mtime diferente em cada máquina.
+    # Integridade e identidade continuam cobertas por SHA-256, tamanho e conteúdo.
+    result["source"].pop("modified_at", None)
     return result
 
 
