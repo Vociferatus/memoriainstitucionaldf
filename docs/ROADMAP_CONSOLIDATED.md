@@ -158,8 +158,8 @@ justificarem.
 ### Etapa atual
 
 ```text
-Fase 0 concluída
-Fases 0, 1 e 2 concluídas em 2026-08-18; Fase 3 é o próximo trabalho executável
+Fases 0, 1 e 2 concluídas em 2026-08-18
+Fase 3 em execução: passe automático v1 concluído; cobertura integral e avaliação seguem pendentes
 ```
 
 ## 5. Fase 0 — Preservação e linha de base
@@ -259,60 +259,61 @@ Objetivo: tornar a edição individualizada e navegável.
 
 ### 8.1 Contexto editorial
 
-- [ ] Identificar Seções I, II e III.
-- [ ] Unir cabeçalhos quebrados em múltiplos blocos.
-- [ ] Construir breadcrumbs editoriais.
-- [ ] Separar contexto editorial de hierarquia institucional canônica.
-- [ ] Classificar sumário, expediente, cabeçalhos, rodapés e conteúdo útil.
+- [x] Identificar Seções I, II e III.
+- [x] Unir cabeçalhos quebrados em múltiplos blocos.
+- [x] Construir breadcrumbs editoriais.
+- [x] Separar contexto editorial de hierarquia institucional canônica.
+- [x] Classificar sumário, expediente, cabeçalhos, rodapés e conteúdo útil.
 
 ### 8.2 Matérias publicadas
 
-- [ ] Criar `PublishedItem` como unidade geral.
-- [ ] Segmentar início e fim de cada matéria.
-- [ ] Permitir matérias que atravessam páginas.
+- [x] Criar `PublishedItem` como unidade geral.
+- [x] Segmentar início e fim de cada matéria.
+- [x] Permitir matérias que atravessam páginas.
 - [ ] Classificar portaria, ordem de serviço, edital, aviso, extrato, ata,
   decisão, retificação e outros tipos.
-- [ ] Preservar matéria não classificada sem descartá-la.
+- [x] Preservar matéria não classificada sem descartá-la.
 - [ ] Extrair número, data, título, órgão, unidade e autoridade.
 - [ ] Relacionar retificação, republicação, revogação e referência entre
   matérias.
 
 ### 8.3 Dispositivos e ações
 
-- [ ] Segmentar artigos, incisos, itens e parágrafos quando presentes.
-- [ ] Localizar ações administrativas explícitas.
-- [ ] Começar por `NOMEAR`, `EXONERAR`, `DESIGNAR`, `DISPENSAR`,
+- [ ] Segmentar artigos, incisos, itens e parágrafos quando presentes. O passe v1
+  já segmenta artigos; os demais dispositivos seguem pendentes.
+- [x] Localizar ações administrativas explícitas.
+- [x] Começar por `NOMEAR`, `EXONERAR`, `DESIGNAR`, `DISPENSAR`,
   `CESSAR OS EFEITOS`, `TORNAR SEM EFEITO` e `RETIFICAR`.
 - [ ] Separar verbo, pessoa, cargo, órgão, data de efeito e processo.
-- [ ] Manter ação textual distinta de evento consolidado.
+- [x] Manter ação textual distinta de evento consolidado.
 
 ### 8.4 Entidades prioritárias
 
-- [ ] `PersonMention`.
-- [ ] `OrganizationMention`.
-- [ ] `PositionMention`.
+- [x] `PersonMention` inicial para participantes de ações prioritárias.
+- [x] `OrganizationMention` inicial para contexto editorial.
+- [x] `PositionMention` inicial associado a pessoas.
 - [x] `ProcessMention` inicial para SEI.
-- [ ] Papéis de participação de pessoas e organizações.
+- [x] Papel de sujeito da ação para pessoas; demais papéis seguem pendentes.
 - [ ] Datas tipadas: publicação, assinatura, efeito e vigência.
 
 ### 8.5 Referências complementares
 
-- [ ] CNPJ com validação de dígitos.
+- [x] CNPJ com validação de dígitos.
 - [ ] Empresas sem consolidação prematura.
-- [ ] Normas e dispositivos citados.
+- [x] Normas e dispositivos citados em passe inicial.
 - [ ] Contratos e instrumentos.
-- [ ] Valores monetários e contexto.
+- [x] Valores monetários com matéria e evidência.
 - [ ] Matrículas e outros identificadores administrativos conforme política de
   privacidade.
 
 ### 8.6 Navegação da evidência
 
-- [ ] Navegar edição → seção → contexto → matéria.
-- [ ] Navegar matéria → ação → entidade.
-- [ ] Navegar entidade → ocorrências → matérias.
-- [ ] Navegar processo → matérias → entidades.
-- [ ] Abrir página e destacar bbox ou span de origem.
-- [ ] Mostrar texto literal, normalizado, regra e revisão.
+- [x] Navegar edição → seção → contexto → matéria.
+- [x] Navegar matéria → ação → entidade.
+- [x] Navegar entidade → ocorrências → matérias.
+- [x] Navegar processo → matérias; junção com entidades disponível por matéria.
+- [x] Abrir referência de página, bbox e span de origem.
+- [x] Mostrar texto literal, normalizado e método; revisão entra na Fase 4.
 
 ### Critério de saída
 

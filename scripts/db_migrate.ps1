@@ -2,7 +2,8 @@ $ErrorActionPreference = "Stop"
 
 foreach ($migration in @(
   "001_initial_schema.sql",
-  "002_evidence_ledger_v2.sql"
+  "002_evidence_ledger_v2.sql",
+  "003_semantic_navigation.sql"
 )) {
   $command = 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" ' +
     "-v ON_ERROR_STOP=1 -f /workspace/db/migrations/$migration"

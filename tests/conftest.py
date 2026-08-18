@@ -22,4 +22,3 @@ def pilot_paths() -> dict[str, Path]:
         "markdown": ROOT / "data" / "markdown" / f"{PILOT_STEM}.md",
         "mentions": ROOT / "data" / "extractions" / f"{PILOT_STEM}.mentions.json",
     }
-

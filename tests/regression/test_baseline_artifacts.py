@@ -51,4 +51,3 @@ def test_auditor_reports_no_orphans(pilot_paths: dict[str, Path]) -> None:
         pilot_paths["mentions"],
     )
     assert "Mencoes sem bloco correspondente: 0" in report
-

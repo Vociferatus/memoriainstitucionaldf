@@ -90,6 +90,20 @@ Cada mencao extraida guarda:
 
 Isso permite conferir cada achado de volta no documento.
 
+### 6. Projeção semântica navegável
+
+O passe automático preserva a ligação com a evidência e organiza a edição por:
+
+- seção e contexto editorial;
+- matéria publicada e dispositivos `Art.`;
+- ações administrativas prioritárias;
+- menções de pessoas, órgãos e cargos;
+- processos, CNPJs, valores monetários e referências normativas.
+
+Essas observações não são promovidas automaticamente a entidades canônicas ou
+eventos consolidados. A cobertura e os limites atuais estão documentados em
+`docs/PHASE_3_AUTOMATIC_PASS_V1.md`.
+
 ## Scripts Criados
 
 Para instalar o ambiente e executar toda a edição piloto com um único comando,
@@ -222,8 +236,8 @@ O projeto ja tem um piloto de uma edicao do DODF:
 PDF -> manifesto -> JSON estrutural -> Markdown -> mencoes SEI -> PostgreSQL
 ```
 
-O proximo passo e ampliar os extratores deterministas, como CNPJ, valores,
-orgaos, normas e tipos de atos administrativos.
+O próximo passo é ampliar a cobertura semântica da Fase 3, construir o conjunto
+ouro e medir precisão e recall antes de consolidar inferências.
 
 ## Roadmap
 

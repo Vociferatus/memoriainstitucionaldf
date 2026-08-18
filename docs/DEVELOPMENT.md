@@ -20,9 +20,13 @@ python -m venv .venv
 .\scripts\run_pilot.ps1
 ```
 
-O comando recria os derivados em `.artifacts/pilot`, valida os três contratos,
-audita referências e confere o baseline do DODF 112. Para carregar também o
+O comando recria os derivados em `.artifacts/pilot`, valida os quatro contratos,
+audita referências, produz a projeção semântica e confere o baseline do DODF 112. Para carregar também o
 banco, use `min-df-pipeline ... --load-db` com `DATABASE_URL` configurada.
+
+O artefato `*.semantic.json` também pode ser gerado isoladamente com
+`min-df-semantic CAMINHO_DO_STRUCTURED_JSON`. Ele contém observações navegáveis,
+não entidades canônicas nem inferências consolidadas.
 
 ## Qualidade
 

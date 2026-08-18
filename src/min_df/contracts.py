@@ -44,3 +44,6 @@ def validate_structured(payload: dict[str, Any]) -> None:
 def validate_mentions(payload: dict[str, Any]) -> None:
     validate_payload(payload, "mentions")
 
+
+def validate_semantic(payload: dict[str, Any]) -> None:
+    validate_payload(payload, "semantic-document")

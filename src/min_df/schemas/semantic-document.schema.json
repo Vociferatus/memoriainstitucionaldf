@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria.df/contract/semantic-document/1.0",
+  "title": "Documento semântico auditável",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "created_at", "tool", "source", "sections", "editorial_contexts", "published_items", "provisions", "actions", "entity_mentions", "references", "block_assignments", "counts"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {"name": {"type": "string"}, "version": {"type": "string"}}
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["structured_uri", "document_sha256"],
+      "properties": {
+        "structured_uri": {"type": "string", "pattern": "^(repo|urn):"},
+        "document_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "start_block_id", "start_page"],
+        "properties": {
+          "id": {"type": "string"}, "label": {"type": "string"},
+          "start_block_id": {"type": "string"}, "start_page": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "editorial_contexts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "section_id", "level", "label", "block_ids", "page", "breadcrumb", "kind"],
+        "properties": {
+          "id": {"type": "string"}, "section_id": {"type": "string"},
+          "level": {"type": "integer", "minimum": 1, "maximum": 3},
+          "label": {"type": "string"}, "block_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "page": {"type": "integer", "minimum": 1},
+          "breadcrumb": {"type": "array", "items": {"type": "string"}},
+          "kind": {"const": "observed_editorial_heading"}
+        }
+      }
+    },
+    "published_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "section_id", "breadcrumb", "title", "item_type", "number", "date_literal", "act_date", "block_ids", "start_page", "end_page", "text"],
+        "properties": {
+          "id": {"type": "string"}, "section_id": {"type": "string"},
+          "breadcrumb": {"type": "array", "items": {"type": "string"}},
+          "title": {"type": "string"}, "item_type": {"type": "string"},
+          "number": {"type": ["string", "null"]}, "date_literal": {"type": ["string", "null"]},
+          "act_date": {"type": ["string", "null"], "format": "date"},
+          "block_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+          "start_page": {"type": "integer", "minimum": 1}, "end_page": {"type": "integer", "minimum": 1},
+          "text": {"type": "string"}
+        }
+      }
+    },
+    "provisions": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "kind", "label", "item_id", "block_id", "page", "start", "end"],
+        "properties": {
+          "id": {"type": "string"}, "kind": {"const": "article"}, "label": {"type": "string"},
+          "item_id": {"type": "string"}, "block_id": {"type": "string"},
+          "page": {"type": "integer", "minimum": 1}, "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 1}
+        }
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "verb", "value_original", "item_id", "block_id", "page", "start", "end", "status", "method"],
+        "properties": {
+          "id": {"type": "string"}, "verb": {"type": "string"}, "value_original": {"type": "string"},
+          "item_id": {"type": "string"}, "block_id": {"type": "string"},
+          "page": {"type": "integer", "minimum": 1}, "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 1}, "status": {"const": "observed_text"},
+          "method": {"type": "string"}
+        }
+      }
+    },
+    "entity_mentions": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "entity_type", "value_original", "value_normalized", "role", "item_id", "block_id", "page", "start", "end", "method"],
+        "properties": {
+          "id": {"type": "string"}, "entity_type": {"enum": ["person", "organization", "position"]},
+          "value_original": {"type": "string"}, "value_normalized": {"type": "string"},
+          "role": {"type": "string"}, "item_id": {"type": ["string", "null"]},
+          "block_id": {"type": "string"}, "page": {"type": "integer", "minimum": 1},
+          "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1},
+          "method": {"type": "string"}
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "reference_type", "value_original", "value_normalized", "valid", "item_id", "block_id", "page", "start", "end", "method"],
+        "properties": {
+          "id": {"type": "string"}, "reference_type": {"enum": ["cnpj", "monetary_value", "norm"]},
+          "value_original": {"type": "string"}, "value_normalized": {"type": "string"},
+          "valid": {"type": ["boolean", "null"]}, "item_id": {"type": "string"},
+          "block_id": {"type": "string"}, "page": {"type": "integer", "minimum": 1},
+          "start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 1},
+          "method": {"type": "string"}
+        }
+      }
+    },
+    "block_assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["block_id", "category"],
+        "properties": {
+          "block_id": {"type": "string"},
+          "category": {"enum": ["noise", "summary", "front_matter", "publication_header", "publication_metadata", "section_heading", "editorial_context", "published_item"]},
+          "section_id": {"type": "string"}, "context_id": {"type": "string"}, "item_id": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["blocks_total", "sections", "contexts", "published_items", "multi_page_items", "unclassified_items", "actions", "entity_mentions", "provisions", "references"],
+      "properties": {
+        "blocks_total": {"type": "integer", "minimum": 1}, "sections": {"type": "integer", "minimum": 1},
+        "contexts": {"type": "integer", "minimum": 0}, "published_items": {"type": "integer", "minimum": 0},
+        "multi_page_items": {"type": "integer", "minimum": 0}, "unclassified_items": {"type": "integer", "minimum": 0},
+        "actions": {"type": "integer", "minimum": 0}, "entity_mentions": {"type": "integer", "minimum": 0},
+        "provisions": {"type": "integer", "minimum": 0}, "references": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

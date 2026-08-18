@@ -23,4 +23,3 @@ def test_parse_dodf_filename_builds_stable_key() -> None:
     assert parsed["document_key"] == "dodf:2026-06-22:edicao-112:integra"
     assert parsed["edition_number"] == "112"
     assert parsed["publication_date"].isoformat() == "2026-06-22"
-

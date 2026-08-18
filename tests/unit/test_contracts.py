@@ -38,4 +38,3 @@ def test_mentions_reject_unknown_root_field(pilot_paths: dict[str, Path]) -> Non
 
     with pytest.raises(ContractValidationError, match="Additional properties"):
         validate_mentions(mentions)
-

@@ -13,10 +13,22 @@ if (-not (Test-Path -LiteralPath $python)) {
   $python = "python"
 }
 
+$semantic = ".artifacts\pilot-db\DODF 112 22-06-2026 INTEGRA.semantic.json"
+if (-not (Test-Path -LiteralPath $semantic)) {
+  & $python -m min_df.semantic `
+    "data\structured\DODF 112 22-06-2026 INTEGRA.structured.json" `
+    --output $semantic
+
+  if ($LASTEXITCODE -ne 0) {
+    throw "Falha ao gerar a projeção semântica (código $LASTEXITCODE)."
+  }
+}
+
 & $python scripts\load_to_postgres.py `
   --manifest "data\manifests\DODF 112 22-06-2026 INTEGRA.manifest.json" `
   --structured "data\structured\DODF 112 22-06-2026 INTEGRA.structured.json" `
-  --mentions "data\extractions\DODF 112 22-06-2026 INTEGRA.mentions.json"
+  --mentions "data\extractions\DODF 112 22-06-2026 INTEGRA.mentions.json" `
+  --semantic $semantic
 
 if ($LASTEXITCODE -ne 0) {
   throw "Falha ao carregar o piloto (código $LASTEXITCODE)."

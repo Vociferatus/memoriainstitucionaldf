@@ -24,8 +24,14 @@ from typing import Any
 import psycopg
 from psycopg.types.json import Jsonb
 
-from min_df.contracts import validate_manifest, validate_mentions, validate_structured
+from min_df.contracts import (
+    validate_manifest,
+    validate_mentions,
+    validate_semantic,
+    validate_structured,
+)
 from min_df.ledger import load_ledger_v2
+from min_df.semantic_store import load_semantic_projection
 
 SCRIPT_VERSION = "0.1.0"
 DODF_FILENAME_RE = re.compile(
@@ -376,15 +382,19 @@ def load_all(
     mentions_path: Path,
     source_name: str,
     source_kind: str,
+    semantic_path: Path | None = None,
 ) -> dict[str, int]:
     require_psycopg()
 
     manifest = read_json(manifest_path)
     structured = read_json(structured_path)
     mentions_payload = read_json(mentions_path)
+    semantic_payload = read_json(semantic_path) if semantic_path else None
     validate_manifest(manifest)
     validate_structured(structured)
     validate_mentions(mentions_payload)
+    if semantic_payload is not None:
+        validate_semantic(semantic_payload)
     doc_info = parse_dodf_filename(manifest["document"]["filename"])
     doc_info["metadata"] = {
         "manifest_schema_version": manifest.get("schema_version"),
@@ -424,6 +434,16 @@ def load_all(
             structured=structured,
             mentions_payload=mentions_payload,
         )
+        semantic_result: dict[str, int] = {}
+        if semantic_path is not None and semantic_payload is not None:
+            semantic_result = load_semantic_projection(
+                conn,
+                ledger_capture_id=ledger["ledger_capture_id"],
+                block_db_ids=block_db_ids,
+                structured_path=structured_path,
+                semantic_path=semantic_path,
+                semantic=semantic_payload,
+            )
 
     return {
         "source_id": source_id,
@@ -433,6 +453,7 @@ def load_all(
         "extraction_run_id": extraction_run_id,
         "mentions": mentions_inserted,
         **ledger,
+        **semantic_result,
     }
 
 
@@ -497,6 +518,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         type=Path,
         help="JSON de mencoes extraidas.",
     )
+    parser.add_argument(
+        "--semantic",
+        type=Path,
+        help="JSON semântico opcional para navegação por matérias e entidades.",
+    )
     parser.add_argument("--source-name", default="DODF")
     parser.add_argument("--source-kind", default="diario_oficial")
     parser.add_argument(
@@ -517,9 +543,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if not args.dsn:
-        raise SystemExit(
-            "Informe a conexao com --dsn ou pela variavel de ambiente DATABASE_URL."
-        )
+        raise SystemExit("Informe a conexao com --dsn ou pela variavel de ambiente DATABASE_URL.")
 
     result = load_all(
         dsn=args.dsn,
@@ -528,6 +552,7 @@ def main(argv: list[str] | None = None) -> int:
         mentions_path=args.mentions,
         source_name=args.source_name,
         source_kind=args.source_kind,
+        semantic_path=args.semantic,
     )
 
     print("Carga concluida")

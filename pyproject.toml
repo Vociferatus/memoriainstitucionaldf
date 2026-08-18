@@ -29,6 +29,7 @@ min-df-convert = "min_df.dodf_to_markdown:main"
 min-df-extract = "min_df.extract_mentions:main"
 min-df-load = "min_df.load_to_postgres:main"
 min-df-pipeline = "min_df.pipeline:main"
+min-df-semantic = "min_df.semantic:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
