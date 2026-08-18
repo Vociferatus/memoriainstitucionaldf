@@ -236,6 +236,15 @@ O projeto ja tem um piloto de uma edicao do DODF:
 PDF -> manifesto -> JSON estrutural -> Markdown -> mencoes SEI -> PostgreSQL
 ```
 
+Também existe um explorador web para analisar como esses dados foram formados:
+
+```powershell
+.\scripts\web_up.ps1
+```
+
+Ele oferece navegação por matérias, entidades, ações, processos e referências,
+sempre exibindo a evidência documental correspondente.
+
 O próximo passo é ampliar a cobertura semântica da Fase 3, construir o conjunto
 ouro e medir precisão e recall antes de consolidar inferências.
 

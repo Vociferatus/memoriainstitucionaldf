@@ -26,3 +26,24 @@ jobs:
         run: python -m mypy src
       - name: Tests
         run: python -m pytest -q
+
+  web:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Node 22
+        uses: actions/setup-node@1e60f620b9541dca1515402f7a8a6fba2f2e1d19 # v6.0.0
+        with:
+          node-version: "22.13.1"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Lint
+        run: npm run lint
+      - name: Tests
+        run: npm test

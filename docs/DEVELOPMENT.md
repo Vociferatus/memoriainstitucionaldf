@@ -51,6 +51,19 @@ Copie `.env.example` para `.env` apenas se precisar alterar os padrões. Depois:
 
 Migração e carga são idempotentes para o piloto.
 
+## Explorador web
+
+Para navegar a formação dos dados do DODF 112:
+
+```powershell
+.\scripts\web_up.ps1
+```
+
+O script atualiza o pacote de dados do painel e mostra o endereço local. A
+interface permite buscar e filtrar matérias, pessoas, órgãos, cargos, ações,
+processos e referências, além de abrir bloco, página, coordenadas, regra e texto
+usados como evidência.
+
 ## Política dos contratos
 
 Os contratos ficam em `src/min_df/schemas` e usam JSON Schema 2020-12.
