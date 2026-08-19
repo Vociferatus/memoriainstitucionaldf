@@ -150,7 +150,7 @@ justificarem.
 - explorador web de evidências;
 - identidade material v1 com 1.645 fragmentos, 1.276 entidades materiais,
   1.342 links, 45 grupos candidatos e 1 caso de resolução;
-- 26 testes, lint, tipos, pipeline web e pipeline Python aprovados.
+- 32 testes, lint, tipos, pipeline web e pipeline Python aprovados.
 
 ### Ausente ou insuficiente
 
@@ -352,6 +352,11 @@ Os limiares, portões e condições de parada estão em
 
 ### Anotação e revisão
 
+- [x] Criar contrato v1 e guia inicial de anotação humana.
+- [x] Separar primeira anotação, segunda revisão e adjudicação em lotes
+  imutáveis.
+- [x] Congelar páginas 37 e 51 para calibração do Portão 1.
+- [ ] Executar as duas aplicações independentes e adjudicar desacordos.
 - [ ] Revisar manualmente as 85 páginas.
 - [ ] Validar limites de todas as matérias.
 - [ ] Validar contextos editoriais.
