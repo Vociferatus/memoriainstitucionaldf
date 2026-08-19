@@ -288,12 +288,18 @@ CPF, matrícula, expansão para um mês e inferências permanecem bloqueados at�
 respectivos portões de qualidade e governança.
 
 O contrato `human-annotation/1.0`, os templates e o guia de calibração já estão
-disponíveis em `annotations/` e `docs/ANNOTATION_GUIDE_DODF.md`. Um lote pode ser
+disponíveis em `annotations/` e `docs/ANNOTATION_GUIDE_DODF.md`. A rota
+`/anotar` oferece a primeira aplicação cega das páginas 37 e 51, usando o PDF
+como fonte primária e sem expor rótulos automáticos. Um lote exportado pode ser
 validado com:
 
 ```powershell
 python -m min_df.annotation caminho\para\lote.json
 ```
+
+O fluxo operacional principal é a rota `/revisar`: uma fila automática baseada
+em risco, com casos críticos, amostra aleatória e busca de omissões. O revisor
+decide afirmações já acompanhadas de evidência, sem reconstruir o documento.
 
 ## Roadmap
 

@@ -2,7 +2,8 @@
 
 Versão: 1.0
 Data: 2026-08-18
-Estado: seleção congelada; anotações ainda não iniciadas.
+Estado: protocolo preservado como auditoria opcional; substituído operacionalmente
+pela revisão assistida baseada em risco.
 
 ## Objetivo
 
@@ -42,23 +43,42 @@ instrumento, temporalidade e vínculo de republicação.
 
 ## Protocolo de execução
 
-1. Copiar `annotations/templates/blind-primary.template.json`.
-2. Alterar o lote, o revisor, o instante e o escopo para `[37, 51]`.
-3. Manter `automatic_artifacts: []` e não abrir o explorador automático.
-4. Anotar as duas páginas usando apenas PDF, guia e referências de bloco para
-   localização.
-5. Fechar o lote e validar com:
+1. Abrir `/anotar` na interface web e informar um identificador de revisor. Como
+   alternativa sem interface, copiar
+   `annotations/templates/blind-primary.template.json`.
+2. Selecionar `blind_primary` na primeira aplicação. A interface fixa o escopo
+   em `[37, 51]`, o baseline e `automatic_artifacts: []`.
+3. Não abrir o explorador automático nem consultar lotes anteriores durante a
+   aplicação independente.
+4. Anotar as duas páginas usando a imagem integral como fonte primária e as
+   referências de bloco somente para localização.
+5. Exportar o lote JSON. O navegador preserva apenas um rascunho local; o arquivo
+   exportado é o artefato que deve ser fechado e versionado.
+6. Validar com:
 
    ```powershell
    min-df-validate-annotation caminho\para\lote.json
    ```
 
-6. Após intervalo ou por segundo revisor, repetir com modo
+7. Após intervalo ou por segundo revisor, repetir com modo
    `independent_second`, sem consultar o primeiro lote.
-7. Comparar os lotes somente quando ambos estiverem fechados.
-8. Classificar todos os desacordos.
-9. Criar novo lote de adjudicação; não editar os lotes originais.
-10. Atualizar o guia para versão 1.1 se houver mudança de regra.
+8. Comparar os lotes somente quando ambos estiverem fechados.
+9. Classificar todos os desacordos.
+10. Criar novo lote de adjudicação; não editar os lotes originais.
+11. Atualizar o guia para versão 1.1 se houver mudança de regra.
+
+## Interface de calibração
+
+A rota `/anotar` contém somente as imagens das páginas congeladas e um pacote
+estrutural mínimo com página, bloco, ordem, coordenadas e texto original. O
+pacote não contém matérias, entidades, ações, referências semânticas nem
+classificações de layout. A interface:
+
+- aceita apenas observações `PRESENT` ou `AMBIGUOUS` sem alvo automático;
+- exige ao menos uma evidência e justificativa para ambiguidade;
+- permite múltiplos blocos para limites de matéria;
+- salva rascunho somente no dispositivo do revisor;
+- exporta um lote compatível com `human-annotation/1.0`.
 
 ## Saída esperada
 

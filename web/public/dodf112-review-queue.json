@@ -1,0 +1,2701 @@
+{
+  "schema_version": "assisted-review-queue/1.0",
+  "generated_at": "2026-08-19T00:47:59+00:00",
+  "source": {
+    "title": "DODF 112",
+    "publication_date": "2026-06-22",
+    "pages": 85,
+    "sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+    "counts": {
+      "blocks_total": 2553,
+      "sections": 3,
+      "contexts": 202,
+      "published_items": 457,
+      "multi_page_items": 53,
+      "unclassified_items": 0,
+      "actions": 114,
+      "entity_mentions": 302,
+      "provisions": 834,
+      "references": 1396
+    }
+  },
+  "policy": {
+    "name": "risk_based_assisted_review",
+    "version": "1.0",
+    "human_role": "decision_not_transcription"
+  },
+  "counts": {
+    "total": 69,
+    "critical": 1,
+    "high": 36,
+    "medium": 32
+  },
+  "queue": [
+    {
+      "id": "review-case-000001",
+      "target": {
+        "layer": "identity",
+        "record_id": "case-000001"
+      },
+      "category": "identity_resolution",
+      "sample_kind": "critical",
+      "risk": "critical",
+      "priority": 100,
+      "question": "A decisão deve permanecer sem resolução?",
+      "proposal": "UNRESOLVED",
+      "label": "CNPJ observado não supera a validação dos dígitos verificadores.",
+      "reasons": [
+        "identificador material inválido",
+        "cnpj_checksum_invalid"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0012-b0018",
+          "page": 12,
+          "bbox": [
+            308.83,
+            591.1,
+            559.83,
+            629.13
+          ],
+          "start": 210,
+          "end": 228,
+          "text": "No Termo de Homologação referente ao Parecer nº 64/2024-CEDF e na Portaria nº 242, de 14 de março de 2024, publicados no DODF nº 52, de 15 de março de 2024, página 25, ONDE SE LÊ: \"…registrado no CNPJ sob o nº 01.701.830/0001-32...\", LEIA-SE: \"... registrado no CNPJ sob o nº 44.274.541/0001-83...\"."
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000001",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000001"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "A SAUDE DOS SERVIDORES",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0009-b0005",
+          "page": 9,
+          "bbox": [
+            42,
+            159.94,
+            226.96,
+            180.57
+          ],
+          "start": 0,
+          "end": 22,
+          "text": "A SAÚDE DOS SERVIDORES"
+        },
+        {
+          "block_id": "p0055-b0024",
+          "page": 55,
+          "bbox": [
+            308.83,
+            386.15,
+            493.8,
+            406.99
+          ],
+          "start": 0,
+          "end": 22,
+          "text": "A SAÚDE DOS SERVIDORES"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000002",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000002"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "CASA CIVIL",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0031-b0005",
+          "page": 31,
+          "bbox": [
+            139.56,
+            266.38,
+            201.1,
+            280.92
+          ],
+          "start": 0,
+          "end": 10,
+          "text": "CASA CIVIL"
+        },
+        {
+          "block_id": "p0050-b0008",
+          "page": 50,
+          "bbox": [
+            139.56,
+            329.01,
+            201.1,
+            343.56
+          ],
+          "start": 0,
+          "end": 10,
+          "text": "CASA CIVIL"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000003",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000003"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "COMPANHIA DE DESENVOLVIMENTO HABITACIONAL",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0025-b0013",
+          "page": 25,
+          "bbox": [
+            312.54,
+            425.3,
+            554.3,
+            437.77
+          ],
+          "start": 0,
+          "end": 41,
+          "text": "COMPANHIA DE DESENVOLVIMENTO HABITACIONAL"
+        },
+        {
+          "block_id": "p0078-b0024",
+          "page": 78,
+          "bbox": [
+            42,
+            468.82,
+            287.46,
+            489.36
+          ],
+          "start": 0,
+          "end": 41,
+          "text": "COMPANHIA DE DESENVOLVIMENTO HABITACIONAL"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000004",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000004"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "COMPANHIA IMOBILIARIA DE BRASILIA",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0030-b0008",
+          "page": 30,
+          "bbox": [
+            74.72,
+            366.17,
+            258.37,
+            378.63
+          ],
+          "start": 0,
+          "end": 33,
+          "text": "COMPANHIA IMOBILIÁRIA DE BRASÍLIA"
+        },
+        {
+          "block_id": "p0083-b0013",
+          "page": 83,
+          "bbox": [
+            342.79,
+            460.93,
+            524.04,
+            473.4
+          ],
+          "start": 0,
+          "end": 33,
+          "text": "COMPANHIA IMOBILIÁRIA DE BRASÍLIA"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000005",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000005"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "CONTROLADORIA SETORIAL DA SAUDE",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0009-b0010",
+          "page": 9,
+          "bbox": [
+            42,
+            283.78,
+            255.96,
+            304.41
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "CONTROLADORIA SETORIAL DA SAÚDE"
+        },
+        {
+          "block_id": "p0036-b0005",
+          "page": 36,
+          "bbox": [
+            42,
+            660.5,
+            255.96,
+            681.08
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "CONTROLADORIA SETORIAL DA SAÚDE"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000006",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000006"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "CORPO DE BOMBEIROS MILITAR",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0042-b0001",
+          "page": 42,
+          "bbox": [
+            42,
+            59.11,
+            240.46,
+            79.66
+          ],
+          "start": 0,
+          "end": 26,
+          "text": "CORPO DE BOMBEIROS MILITAR"
+        },
+        {
+          "block_id": "p0063-b0014",
+          "page": 63,
+          "bbox": [
+            359.54,
+            59.11,
+            507.3,
+            71.57
+          ],
+          "start": 0,
+          "end": 26,
+          "text": "CORPO DE BOMBEIROS MILITAR"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000007",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000007"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "DEPARTAMENTO DE ESTRADAS DE RODAGEM",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0024-b0008",
+          "page": 24,
+          "bbox": [
+            308.83,
+            103.88,
+            538.41,
+            124.42
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "DEPARTAMENTO DE ESTRADAS DE RODAGEM"
+        },
+        {
+          "block_id": "p0069-b0018",
+          "page": 69,
+          "bbox": [
+            308.83,
+            643.89,
+            537.17,
+            664.43
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "DEPARTAMENTO DE ESTRADAS DE RODAGEM"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000008",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000008"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "DEPARTAMENTO DE TRANSITO",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0019-b0041",
+          "page": 19,
+          "bbox": [
+            308.83,
+            131.59,
+            504.17,
+            152.88
+          ],
+          "start": 0,
+          "end": 24,
+          "text": "DEPARTAMENTO DE TRÂNSITO"
+        },
+        {
+          "block_id": "p0042-b0019",
+          "page": 42,
+          "bbox": [
+            308.83,
+            474.3,
+            504.17,
+            494.85
+          ],
+          "start": 0,
+          "end": 24,
+          "text": "DEPARTAMENTO DE TRÂNSITO"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000009",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000009"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "DIRETORIA DE ADMINISTRACAO E GESTAO",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0025-b0014",
+          "page": 25,
+          "bbox": [
+            308.83,
+            435.97,
+            517.62,
+            454.75
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "DIRETORIA DE ADMINISTRAÇÃO E GESTÃO"
+        },
+        {
+          "block_id": "p0078-b0026",
+          "page": 78,
+          "bbox": [
+            42,
+            619.89,
+            250.79,
+            638.67
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "DIRETORIA DE ADMINISTRAÇÃO E GESTÃO"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000010",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000010"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "ECONOMICO TRABALHO E RENDA",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0030-b0007",
+          "page": 30,
+          "bbox": [
+            86.85,
+            337.5,
+            254.42,
+            352.04
+          ],
+          "start": 0,
+          "end": 27,
+          "text": "ECONÔMICO, TRABALHO E RENDA"
+        },
+        {
+          "block_id": "p0048-b0009",
+          "page": 48,
+          "bbox": [
+            87.86,
+            555.7,
+            253.48,
+            570.24
+          ],
+          "start": 0,
+          "end": 27,
+          "text": "ECONÔMICO, TRABALHO E RENDA"
+        },
+        {
+          "block_id": "p0083-b0010",
+          "page": 83,
+          "bbox": [
+            353.68,
+            76.86,
+            521.25,
+            91.4
+          ],
+          "start": 0,
+          "end": 27,
+          "text": "ECONÔMICO, TRABALHO E RENDA"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000011",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000011"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "FUNDACAO HEMOCENTRO DE BRASILIA",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0036-b0016",
+          "page": 36,
+          "bbox": [
+            308.83,
+            538.61,
+            521.87,
+            559.19
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "FUNDAÇÃO HEMOCENTRO DE BRASÍLIA"
+        },
+        {
+          "block_id": "p0060-b0024",
+          "page": 60,
+          "bbox": [
+            308.83,
+            426.08,
+            524.04,
+            446.62
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "FUNDAÇÃO HEMOCENTRO DE BRASÍLIA"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000012",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000012"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "GABINETE",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0044-b0017",
+          "page": 44,
+          "bbox": [
+            308.83,
+            439.27,
+            457.17,
+            459.83
+          ],
+          "start": 0,
+          "end": 8,
+          "text": "GABINETE"
+        },
+        {
+          "block_id": "p0045-b0023",
+          "page": 45,
+          "bbox": [
+            308.83,
+            635.06,
+            457.17,
+            655.87
+          ],
+          "start": 0,
+          "end": 8,
+          "text": "GABINETE"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000013",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000013"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "HOSPITAL SAO VICENTE DE PAULO",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0036-b0011",
+          "page": 36,
+          "bbox": [
+            308.83,
+            370.83,
+            512.93,
+            391.41
+          ],
+          "start": 0,
+          "end": 29,
+          "text": "HOSPITAL SÃO VICENTE DE PAULO"
+        },
+        {
+          "block_id": "p0060-b0020",
+          "page": 60,
+          "bbox": [
+            353.91,
+            192.85,
+            512.93,
+            205.31
+          ],
+          "start": 0,
+          "end": 29,
+          "text": "HOSPITAL SÃO VICENTE DE PAULO"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000014",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000014"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "INSTITUTO DE ASSISTENCIA",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0009-b0004",
+          "page": 9,
+          "bbox": [
+            103.07,
+            148.8,
+            230.1,
+            161.27
+          ],
+          "start": 0,
+          "end": 24,
+          "text": "INSTITUTO DE ASSISTÊNCIA"
+        },
+        {
+          "block_id": "p0055-b0023",
+          "page": 55,
+          "bbox": [
+            369.9,
+            375.02,
+            496.93,
+            387.48
+          ],
+          "start": 0,
+          "end": 24,
+          "text": "INSTITUTO DE ASSISTÊNCIA"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000015",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000015"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "INSTITUTO DE DEFESA DO CONSUMIDOR",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0045-b0018",
+          "page": 45,
+          "bbox": [
+            308.83,
+            466.04,
+            525.42,
+            486.86
+          ],
+          "start": 0,
+          "end": 33,
+          "text": "INSTITUTO DE DEFESA DO CONSUMIDOR"
+        },
+        {
+          "block_id": "p0068-b0019",
+          "page": 68,
+          "bbox": [
+            42,
+            563.67,
+            258.59,
+            584.21
+          ],
+          "start": 0,
+          "end": 33,
+          "text": "INSTITUTO DE DEFESA DO CONSUMIDOR"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000016",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000016"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "INSTITUTO DE PREVIDENCIA DOS SERVIDORES",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0033-b0006",
+          "page": 33,
+          "bbox": [
+            60.57,
+            339.39,
+            272.59,
+            351.85
+          ],
+          "start": 0,
+          "end": 39,
+          "text": "INSTITUTO DE PREVIDÊNCIA DOS SERVIDORES"
+        },
+        {
+          "block_id": "p0055-b0004",
+          "page": 55,
+          "bbox": [
+            59.11,
+            156.4,
+            273.98,
+            168.87
+          ],
+          "start": 0,
+          "end": 39,
+          "text": "INSTITUTO DE PREVIDÊNCIA DOS SERVIDORES"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000017",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000017"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "OBRAS E INFRAESTRUTURA",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0024-b0007",
+          "page": 24,
+          "bbox": [
+            363.96,
+            76.86,
+            510.38,
+            91.4
+          ],
+          "start": 0,
+          "end": 22,
+          "text": "OBRAS E INFRAESTRUTURA"
+        },
+        {
+          "block_id": "p0045-b0022",
+          "page": 45,
+          "bbox": [
+            363.96,
+            608.03,
+            510.38,
+            622.57
+          ],
+          "start": 0,
+          "end": 22,
+          "text": "OBRAS E INFRAESTRUTURA"
+        },
+        {
+          "block_id": "p0068-b0025",
+          "page": 68,
+          "bbox": [
+            363.96,
+            559.59,
+            510.38,
+            574.13
+          ],
+          "start": 0,
+          "end": 22,
+          "text": "OBRAS E INFRAESTRUTURA"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000018",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000018"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "POLICIA MILITAR DO DISTRITO FEDERAL",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0040-b0009",
+          "page": 40,
+          "bbox": [
+            72.32,
+            663.21,
+            260.84,
+            675.67
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "POLÍCIA MILITAR DO DISTRITO FEDERAL"
+        },
+        {
+          "block_id": "p0063-b0004",
+          "page": 63,
+          "bbox": [
+            71.01,
+            159.1,
+            262.08,
+            171.57
+          ],
+          "start": 0,
+          "end": 35,
+          "text": "POLÍCIA MILITAR DO DISTRITO FEDERAL"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000019",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000019"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "PROCURADORIA GERAL",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0049-b0013",
+          "page": 49,
+          "bbox": [
+            373.01,
+            252.38,
+            501.33,
+            266.93
+          ],
+          "start": 0,
+          "end": 18,
+          "text": "PROCURADORIA-GERAL"
+        },
+        {
+          "block_id": "p0085-b0010",
+          "page": 85,
+          "bbox": [
+            106.17,
+            384.17,
+            234.49,
+            398.72
+          ],
+          "start": 0,
+          "end": 18,
+          "text": "PROCURADORIA-GERAL"
+        }
+      ]
+    },
+    {
+      "id": "review-candidate-000020",
+      "target": {
+        "layer": "identity",
+        "record_id": "candidate-000020"
+      },
+      "category": "identity_candidate",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 85,
+      "question": "Estes fragmentos devem permanecer separados?",
+      "proposal": "KEEP_SEPARATE",
+      "label": "SECRETARIA DE ESTADO DA AGRICULTURA ABASTECIMENTO E DESENVOLVIMENTO RURAL",
+      "reasons": [
+        "coincidência nominal sem identificador intransferível",
+        "nontransferable_identifier_or_complete_concordance"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0046-b0007",
+          "page": 46,
+          "bbox": [
+            55.5,
+            421.22,
+            285.84,
+            446.9
+          ],
+          "start": 0,
+          "end": 74,
+          "text": "SECRETARIA DE ESTADO DA AGRICULTURA, ABASTECIMENTO E DESENVOLVIMENTO RURAL"
+        },
+        {
+          "block_id": "p0070-b0037",
+          "page": 70,
+          "bbox": [
+            55.5,
+            670.56,
+            285.84,
+            696.24
+          ],
+          "start": 0,
+          "end": 74,
+          "text": "SECRETARIA DE ESTADO DA AGRICULTURA, ABASTECIMENTO E DESENVOLVIMENTO RURAL"
+        }
+      ]
+    },
+    {
+      "id": "review-item-00004",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00004"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "1–2",
+      "label": "ORDEM DE SERVIÇO Nº 26, DE 17 DE JUNHO DE 2026",
+      "reasons": [
+        "matéria multipágina",
+        "4 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0001-b0049",
+          "page": 1,
+          "bbox": [
+            308.83,
+            513.74,
+            559.84,
+            763.38
+          ],
+          "start": null,
+          "end": null,
+          "text": "ORDEM DE SERVIÇO Nº 26, DE 17 DE JUNHO DE 2026 O ADMINISTRADOR REGIONAL DO ITAPOÃ DO DISTRITO FEDERAL, no uso das atribuições conferidas pelo art. 42 do Regimento Interno aprovado pelo Decreto nº 38.094, de 28 de março de 2017, tendo em vista o Decreto nº 16.109, de 1º de dezembro de 1994, que disciplina a administração e o controle dos bens patrimoniais do Distrito Federal, e a Recomendação Conjunta nº 3/2026 – PROREGs/MPDFT, constante do Processo SEI nº 04018-00000977/2026-08, que trata da utilização e do empréstimo de bens públicos móveis no âmbito das Administrações Regionais, resolve: Art. 1º Os bens patrimoniais móveis sob a responsabilidade da Administração Regional do Itapoã destinam-se ao uso exclusivo em serviço, sendo vedada sua utilização para fins particulares. Art. 2º Os bens patrimoniais móveis não poderão ser retirados dos respectivos setores usuários, salvo quando necessários à realização de atividades externas ordinárias ou excepcionais, ao uso individual do servidor, ou por motivo de transferência, recolhimento ou reparo. Art. 3º Para os fins desta Ordem de Serviço, consideram-se: I – atividades externas ordinárias: tarefas, ações e rotinas realizadas habitualmente no exercício das competências institucionais da Administração Regional do Itapoã, incluindose atividades envolvendo órgãos e entidades da Administração Pública; II – atividades externas não ordinárias ou excepcionais: aquelas não realizadas habitualmente no exercício das competências institucionais da Administração Regional do Itapoã. Art. 4º A utilização de bens para atividades externas não ordinárias ou excepcionais somente será admitida quando vinculada a atividade oficial, programa, ação ou evento do qual a Administração Regional do Itapoã participe institucionalmente, seja como promotora, apoiadora ou coorganizadora, devendo ser formalizada em processo próprio, aberto no Sistema Eletrônico de Informações — SEI/GDF, pela unidade responsável pela atividade."
+        },
+        {
+          "block_id": "p0002-b0010",
+          "page": 2,
+          "bbox": [
+            375.95,
+            95.08,
+            491.73,
+            104.15
+          ],
+          "start": null,
+          "end": null,
+          "text": "DILSON BULHÕES DO NASCIMENTO"
+        }
+      ]
+    },
+    {
+      "id": "review-item-00038",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00038"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "8–9",
+      "label": "RECURSO EXTRAORDINÁRIO Nº 28/2026 Recorrente: DIAGNÓSTICOS DA AMÉRICA S.A",
+      "reasons": [
+        "matéria multipágina",
+        "4 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0008-b0026",
+          "page": 8,
+          "bbox": [
+            308.83,
+            683.66,
+            559.82,
+            763.41
+          ],
+          "start": null,
+          "end": null,
+          "text": "RECURSO EXTRAORDINÁRIO Nº 28/2026 Recorrente: DIAGNÓSTICOS DA AMÉRICA S.A. Advogado(a): ELAYNE LOPES LOURENÇO - OAB/DF Nº 28.478 Recorrida: FAZENDA PÚBLICA DO DISTRITO FEDERAL Origem da decisão: 1ª CÂMARA DO TRIBUNAL ADMINISTRATIVO DE RECURSOS FISCAIS Processo SEI: 04034-00014325/2023-38 DIAGNÓSTICOS DA AMÉRICA S.A., irresignado(a) com a decisão da 1ª Câmara deste egrégio Tribunal Administrativo de Recursos Fiscais, no julgamento do Recurso"
+        },
+        {
+          "block_id": "p0009-b0003",
+          "page": 9,
+          "bbox": [
+            152.52,
+            132.59,
+            180.85,
+            141.66
+          ],
+          "start": null,
+          "end": null,
+          "text": "Presidente"
+        }
+      ]
+    },
+    {
+      "id": "review-item-00093",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00093"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "22–23",
+      "label": "ATA - SEMOB/JARI SEGUNDA CÂMARA Aos dezessete dias do mês de junho do ano de dois mil e vinte e seis, às quinze horas, realizou-se, por videoconferência, sessão de julgamento da Junta Administrativa de Recursos de Infrações da Secretaria de Estado de Transporte e Mobilidade do Distrito Federal – JARI/SEMOB, no exercício das competências previstas no art. 37 da Lei nº 3.106, de 27 de dezembro de 2002",
+      "reasons": [
+        "matéria multipágina",
+        "6 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0022-b0018",
+          "page": 22,
+          "bbox": [
+            308.83,
+            539.92,
+            559.73,
+            762.83
+          ],
+          "start": null,
+          "end": null,
+          "text": "ATA - SEMOB/JARI SEGUNDA CÂMARA Aos dezessete dias do mês de junho do ano de dois mil e vinte e seis, às quinze horas, realizou-se, por videoconferência, sessão de julgamento da Junta Administrativa de Recursos de Infrações da Secretaria de Estado de Transporte e Mobilidade do Distrito Federal – JARI/SEMOB, no exercício das competências previstas no art. 37 da Lei nº 3.106, de 27 de dezembro de 2002, no art. 75, parágrafo único, da Lei nº 5.323, de 17 de março de 2014 e no Decreto Nº 46.721, de 03 de Janeiro de 2025. A reunião contou com a presença do Presidente em Substituição Roberto Neri Dias, juntamente com os membros: Aliete Maia Rezende, Polyana Costa Barboza Fazendeiro, José Luiz Barbosa Hermogenes e Suely Rodrigues Loureiro. Abertos os trabalhos, foram relatados, discutidos, analisados e postos em julgamento os processos discriminados por operador e por número, relacionados a seguir, aos quais, por maioria, foi negado provimento: EXPRESSO SÃO JOSÉ 00090-00006595/2023-86, EXPRESSO SÃO JOSÉ 00090-00001179/2023-91, EXPRESSO SÃO JOSÉ 00090-00001241/2023-45, EXPRESSO SÃO JOSÉ 00090- 00009327/2023-16, EXPRESSO SÃO JOSÉ 00090-00009001/2023-99, EXPRESSO SÃO JOSÉ 00090-00012639/2023-15, EXPRESSO SÃO JOSÉ 00090-00013781/2023- 71, EXPRESSO SÃO JOSÉ 00090-00014127/2023-85, EXPRESSO SÃO JOSÉ 00090- 00014610/2023-60, EXPRESSO SÃO JOSÉ 00090-00014999/2023-43, EXPRESSO SÃO JOSÉ 00090-00014952/2023-80, EXPRESSO SÃO JOSÉ 00090-00001238/2023- 21, EXPRESSO SÃO JOSÉ 00090-00024397/2023-02, EXPRESSO SÃO JOSÉ 00090- 00015490/2023-18, EXPRESSO SÃO JOSÉ 00090-00015308/2023-29, EXPRESSO SÃO JOSÉ 00090-00012952/2023-45, EXPRESSO SÃO JOSÉ 00090-00012712/2023- 41, EXPRESSO SÃO JOSÉ 00090-00017771/2023-13, EXPRESSO SÃO JOSÉ 00090- 00018197/2023-11, EXPRESSO SÃO JOSÉ 00090-00018959/2023-71, EXPRESSO"
+        },
+        {
+          "block_id": "p0023-b0005",
+          "page": 23,
+          "bbox": [
+            73.21,
+            594.04,
+            261.34,
+            603.11
+          ],
+          "start": null,
+          "end": null,
+          "text": "BARBOSA HERMOGENES E SUELY RODRIGUES LOUREIRO."
+        }
+      ]
+    },
+    {
+      "id": "review-item-00123",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00123"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "31–32",
+      "label": "PORTARIA Nº 430, DE 17 DE JUNHO DE 2026",
+      "reasons": [
+        "matéria multipágina",
+        "3 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0031-b0017",
+          "page": 31,
+          "bbox": [
+            308.83,
+            429.36,
+            559.84,
+            762.33
+          ],
+          "start": null,
+          "end": null,
+          "text": "PORTARIA Nº 430, DE 17 DE JUNHO DE 2026 (*) Altera a Portaria nº 994, de 20 de dezembro de 2024, que disciplina a formação de Grupo de Trabalho com vistas à elaboração de artefatos e acompanhamento do processo licitatório do novo Sistema Integrado de Gestão Governamental – Novo SIGGO para o Governo do Distrito Federal. O SECRETÁRIO DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o art. 105, parágrafo único, incisos I e III, da Lei Orgânica do Distrito Federal, resolve: Art. 1º A Portaria nº 994, de 20 de dezembro de 2024, passa a vigorar com as seguintes alterações: “Art. 3º [...] I – Pela Secretaria Executiva de Finanças, Orçamento e Planejamento – SEFIN: a) OTÁVIO VERÍSSIMO SOBRINHO, Auditor de Controle Interno, matrícula 0191939-3 (Titular); e b) LUCIANO LIMA GOULART, Auditor de Controle Interno, matrícula 0190026-9 (Suplente); II – Pela Contadoria Geral do Distrito Federal – ContDF/SEFIN: a) LEON DE OLIVEIRA MADEIRA, Auditor de Controle Interno, matrícula 285.789-8 (Titular); e b) JOÃO VITOR SANTANA VIEIRA, Auditor de Controle Interno, matrícula 0285.099-0 (Suplente); III – Pela Subsecretaria de Planejamento Governamental – SUPLAN/SEFIN: a) GABRIEL CARLOS RIBEIRO ANTUNES, Auditor de Controle Interno, matrícula 285.784-7 (Titular); e b) PEDRO AUGUSTO CESAR, Auditor de Controle Interno, matrícula 285.762-6 (Suplente); IV – Pela Subsecretaria de Orçamento Público – SUOP/SEFIN: a) RAFAEL DUARTE DE PAULA SILVA, Auditor de Controle Interno, matrícula 0272467-7 (Titular); e b) ALISSON LIRA DA ROCHA, Auditor de Controle Interno, matrícula 190.047-1 (Suplente); [...] X – Pela Subsecretaria de Tecnologia da Informação – SUTI/SERT: a) EWERTON LUIZ KNEBEL MASERA, Gestor de Políticas Públicas e Gestão Governamental, matrícula 126.832-5 (Titular); e b) KEILLY FRANCIELLY DE ALMEIDA ALVES, matrícula 286.854-7 (Suplente). [...] Art. 4º Designar LEON DE OLIVEIRA MADEIRA, Auditor de Controle Interno, matrícula 285.789-8 (Titular), da Contadoria Geral do Distrito Federal (CONTDF), da"
+        },
+        {
+          "block_id": "p0032-b0002",
+          "page": 32,
+          "bbox": [
+            42,
+            103.99,
+            292.93,
+            139.79
+          ],
+          "start": null,
+          "end": null,
+          "text": "VALDIVINO JOSÉ DE OLIVEIRA ___________________ (*) Republicado por erro de grade, publicado no DODF nº 111, de 19 de junho de 2026, página 31."
+        }
+      ]
+    },
+    {
+      "id": "review-item-00162",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00162"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "39–40",
+      "label": "ORDEM DE SERVIÇO Nº 44, DE 18 DE JUNHO DE 2026",
+      "reasons": [
+        "matéria multipágina",
+        "4 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0039-b0018",
+          "page": 39,
+          "bbox": [
+            308.83,
+            706.92,
+            559.93,
+            762.13
+          ],
+          "start": null,
+          "end": null,
+          "text": "ORDEM DE SERVIÇO Nº 44, DE 18 DE JUNHO DE 2026 O SUBSECRETÁRIO DE ADMINISTRAÇÃO GERAL, DA SECRETARIA EXECUTIVA DE GESTÃO INTEGRADA, DA SECRETARIA DE ESTADO DE SEGURANÇA PÚBLICA DO DISTRITO FEDERAL, no uso das atribuições que lhe confere a Portaria nº 141, de 30 de junho de 2015, desta Secretaria, cumulado com o artigo 28, XI, do Regimento Interno da Pasta, aprovado pelo Decreto nº 40.079/2019, resolve:"
+        },
+        {
+          "block_id": "p0040-b0003",
+          "page": 40,
+          "bbox": [
+            42,
+            145.6,
+            200.21,
+            166.08
+          ],
+          "start": null,
+          "end": null,
+          "text": "CASA MILITAR"
+        }
+      ]
+    },
+    {
+      "id": "review-item-00230",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00230"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "51–52",
+      "label": "AVISO DE ABERTURA DE INTENÇÃO DE REGISTRO DE PREÇOS",
+      "reasons": [
+        "matéria multipágina",
+        "4 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0051-b0012",
+          "page": 51,
+          "bbox": [
+            333.67,
+            709.14,
+            534.64,
+            718.22
+          ],
+          "start": null,
+          "end": null,
+          "text": "AVISO DE ABERTURA DE INTENÇÃO DE REGISTRO DE PREÇOS"
+        },
+        {
+          "block_id": "p0052-b0002",
+          "page": 52,
+          "bbox": [
+            109.59,
+            133.53,
+            224.42,
+            161.09
+          ],
+          "start": null,
+          "end": null,
+          "text": "Brasília/DF, 19 de junho de 2026 CRISTIANA DE CASTRO MESQUITA Diretora de Sistema de Registro de Preços"
+        }
+      ]
+    },
+    {
+      "id": "review-item-00333",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00333"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "61–62",
+      "label": "EXTRATO DO SEGUNDO TERMO ADITIVO AO CONTRATO Nº 544/2024 Processo: 04016-00098893/2022-11",
+      "reasons": [
+        "matéria multipágina",
+        "2 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0061-b0018",
+          "page": 61,
+          "bbox": [
+            308.83,
+            717.82,
+            559.81,
+            762.53
+          ],
+          "start": null,
+          "end": null,
+          "text": "EXTRATO DO SEGUNDO TERMO ADITIVO AO CONTRATO Nº 544/2024 Processo: 04016-00098893/2022-11. Partes: INSTITUTO DE GESTÃO ESTRATÉGICA DE SAÚDE DO DISTRITO FEDERAL - IGESDF, CNPJ nº 28.481.233/0001-72 e a ROCHE DIAGNOSTICA BRASIL LTDA, CNPJ nº 30.280.358/0006-90. Objeto: a) prorrogação do prazo de vigência para a entrega do saldo remanescente do CONTRATO"
+        },
+        {
+          "block_id": "p0062-b0001",
+          "page": 62,
+          "bbox": [
+            42,
+            59.44,
+            292.77,
+            166.52
+          ],
+          "start": null,
+          "end": null,
+          "text": "Nº 544/2024, por mais 12 (doze) meses ou até a entrega total do objeto, a contar de 13 de junho de 2026 a 13 de junho de 2027; b) Reajuste do CONTRATO Nº 544/2024, com base no Índice Nacional de Preços ao Consumidor Amplo (IPCA/IBGE), de aproximadamente 5,52973%, correspondente ao período de maio de 2024 a abril de 2025; c) Inclusão da cláusula de rescisão a termo. Do Valor Remanescente Estimado: R$ 267.696,73 (duzentos e sessenta e sete mil seiscentos e noventa e seis reais e setenta e três centavos), assinado em 15/06/2026. Da Ratificação: Ficam mantidas as demais cláusulas e condições constantes do instrumento originário. Signatários: pelo INSTITUTO DE GESTÃO ESTRATÉGICA DE SAÚDE DO DISTRITO FEDERAL - IGESDF, BÁRBARA LIRA FREITAS SANTOS, na qualidade de Diretora de Infraestrutura, Logística e Obras – Interina; Pelos Contratados: ADRIANO JOSE RODRIGUES e RODRIGO SANTOS DE SOUZA, na qualidade de Procuradores."
+        }
+      ]
+    },
+    {
+      "id": "review-item-00381",
+      "target": {
+        "layer": "semantic",
+        "record_id": "item-00381"
+      },
+      "category": "published_item_boundary",
+      "sample_kind": "high_risk",
+      "risk": "high",
+      "priority": 75,
+      "question": "Os limites desta matéria multipágina estão corretos?",
+      "proposal": "70–71",
+      "label": "EDITAL Nº 01/2026 - FAPDF PUBLICA SELEÇÃO PÚBLICA DE PROPOSTAS PARA APOIO FINANCEIRO",
+      "reasons": [
+        "matéria multipágina",
+        "6 blocos"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0070-b0047",
+          "page": 70,
+          "bbox": [
+            335.35,
+            256.88,
+            532.93,
+            274.97
+          ],
+          "start": null,
+          "end": null,
+          "text": "EDITAL Nº 01/2026 - FAPDF PUBLICA SELEÇÃO PÚBLICA DE PROPOSTAS PARA APOIO FINANCEIRO"
+        },
+        {
+          "block_id": "p0071-b0004",
+          "page": 71,
+          "bbox": [
+            359.37,
+            248.14,
+            508.56,
+            266.2
+          ],
+          "start": null,
+          "end": null,
+          "text": "ANA PAULA ALMEIDA ARAGÃO Superintendente Científica, Tecnológica e de Inovação"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0001-b0010",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0001-b0010"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0001-b0010",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0001-b0010",
+          "page": 1,
+          "bbox": [
+            42,
+            232.28,
+            277.71,
+            241.35
+          ],
+          "start": null,
+          "end": null,
+          "text": "Casa Civil................................................................... 31 50"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0009-b0031",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0009-b0031"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0009-b0031",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0009-b0031",
+          "page": 9,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "start": null,
+          "end": null,
+          "text": "PÁGINA 9 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0021-b0001",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0021-b0001"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0021-b0001",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0021-b0001",
+          "page": 21,
+          "bbox": [
+            42,
+            59.63,
+            292.96,
+            96.88
+          ],
+          "start": null,
+          "end": null,
+          "text": "§ 3º Concluídas todas as fases para autorização do afastamento de cargos, deverá ser providenciada a análise de compatibilidade de horários entre o cargo efetivo e o cargo em comissão, caso o servidor público opte por vincular o cargo comissionado a um cargo efetivo e exercer as atividades do outro cargo."
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0035-b0013",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0035-b0013"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0035-b0013",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0035-b0013",
+          "page": 35,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "start": null,
+          "end": null,
+          "text": "PÁGINA 35 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0049-b0021",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0049-b0021"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0049-b0021",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0049-b0021",
+          "page": 49,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "start": null,
+          "end": null,
+          "text": "PÁGINA 49 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0062-b0019",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0062-b0019"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0062-b0019",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0062-b0019",
+          "page": 62,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "start": null,
+          "end": null,
+          "text": "PÁGINA 62 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0069-b0009",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0069-b0009"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0069-b0009",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0069-b0009",
+          "page": 69,
+          "bbox": [
+            325.42,
+            167.2,
+            543.01,
+            194.09
+          ],
+          "start": null,
+          "end": null,
+          "text": "EDITAL Nº 32 – CAESB, DE 22 DE JUNHO DE 2026 CONCURSO PÚBLICO PARA O PROVIMENTO DE VAGAS E A FORMAÇÃO DE CADASTRO DE RESERVA EM CARGOS DE NÍVEL"
+        }
+      ]
+    },
+    {
+      "id": "review-negative-p0077-b0006",
+      "target": {
+        "layer": "evidence",
+        "record_id": "p0077-b0006"
+      },
+      "category": "negative_recall",
+      "sample_kind": "negative",
+      "risk": "high",
+      "priority": 70,
+      "question": "Há pessoa, organização, ação ou referência relevante omitida neste bloco?",
+      "proposal": "nenhuma omissão detectada",
+      "label": "Bloco p0077-b0006",
+      "reasons": [
+        "amostra negativa para estimar omissões"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0077-b0006",
+          "page": 77,
+          "bbox": [
+            42,
+            383.93,
+            292.86,
+            518.89
+          ],
+          "start": null,
+          "end": null,
+          "text": "Capítulo I Disposições Preliminares Art. 1º A audiência pública realizar-se-á com a finalidade de apresentar e debater as propostas de regularização de lotes localizados na Região Administrativa do Lago Sul: do Hospital Lago Sul (Hospital Daher), situado na QI 7 do SHIS, e do Centro Comercial Gilberto Salomão, situado na QI 5 do SHIS. Art. 2º Este regulamento define o procedimento que será adotado para o andamento da audiência pública virtual. §1º A audiência pública será de livre acesso para qualquer pessoa, bem como aos meios de comunicação, de forma virtual. §2º A audiência pública será registrada por gravação de áudio e vídeo, sendo que o material produzido comporá a memória do processo, objeto da audiência pública. Art. 3º O público participante deverá realizar o registro de presença no ambiente virtual, informando o nome completo, telefone e endereço de e-mail. O mesmo registro deverá ser efetuado por meio do chat da plataforma utilizada para a audiência pública."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000001",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000001"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DISPENSAR",
+      "label": "Dispensar",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0002-b0011",
+          "page": 2,
+          "bbox": [
+            308.83,
+            112.24,
+            559.81,
+            210.41
+          ],
+          "start": 405,
+          "end": 414,
+          "text": "ORDEM DE SERVIÇO Nº 27, DE 17 DE JUNHO DE 2026 O ADMINISTRADOR REGIONAL DO ITAPOÃ DO DISTRITO FEDERAL, no uso das atribuições conferidas pelo Artigo 42, do Decreto n° 38.094, de 28 de março de 2017, que aprova o Regimento Interno das Administrações Regionais, com alicerce no Decreto Distrital nº 30.634, de 30 de julho de 2009 e, pelo que consta no Processo SEI 00308- 00000671/2026-63, resolve: Art. 1º Dispensar o pagamento do preço público correspondente à utilização da Quadra Coberta - Projeto social ENCONTRO DE MULHERES, para realizar encontros sociais e comunitários, voltado ao público feminino da Região Administrativa do Itapoã e adjacências. Art. 2º Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000010",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000010"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "DOUGLAS DAMACENO SOUSA",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0031-b0007",
+          "page": 31,
+          "bbox": [
+            42,
+            314.67,
+            293,
+            753.1
+          ],
+          "start": 420,
+          "end": 428,
+          "text": "ORDEM DE SERVIÇO Nº 235, DE 17 DE JUNHO DE 2026 A SUBSECRETÁRIA DE ADMINISTRAÇÃO GERAL, DA CASA CIVIL DO DISTRITO FEDERAL, Substituta, no uso das atribuições conferidas pela Portaria nº 31, de 17/12/2020, e considerando o disposto nos art. 7º, § 3º e art. 117 da Lei nº 14.133/2021; no art. 43, do Decreto nº 32.598/2010; nos arts. 21 a 31, do Decreto nº 44.330/2023; e na Portaria nº 29, de 25/2/2004, resolve: Art. 1º Designar DOUGLAS DAMACENO SOUSA, matrícula nº 1.725560-0, para atuar como Gestor da contratação; JOSCIANE JEANE CARDOSO, matrícula nº 1.731.619-7, para atuar como Gestora da contratação substituta; SILVANA DE OLIVEIRA ALVES, matrícula nº 1.727.388-9, para atuar como fiscal técnico: HELLISON MARTINS DA SILVA, matrícula nº 1.730236-6, para atuar como fiscal técnico substituto; a fiscalização administrativa ficará a cargo da equipe da Unidade de Controle e Administração de Contratos (UCAC/SUAG/CACI); para atuação no âmbito do Contrato nº 55024/2025-CACI (180763899), firmado com a empresa DISTRITO CONSTRUTORA LTDA, tendo por objeto a prestação dos serviços de serviços de manutenção preventiva e limpeza contínua da piscina da Residência Oficial de Águas Claras (ROAC), compreendendo os insumos, equipamentos e mão de obra necessários à execução adequada dos serviços. Art. 2º Os agentes públicos de que se trata esta Ordem de Serviço deverão atuar na gestão, supervisão, fiscalização e no acompanhamento da execução, conforme dispostos na Lei nº 14.133/2021, no Decreto nº 32.598/2010, no Decreto nº 44.330/2023 e na Portaria nº 29, de 25/02/2004, bem como na Ordem de Serviço nº 27, de 07 de fevereiro de 2023, publicada no DODF nº 36 de 22 de fevereiro de 2023 e demais legislações vigentes. Art. 3º Para fins do disposto nesta Ordem de Serviço, considera-se: I - gestão de contrato - à coordenação das atividades relacionadas à fiscalização técnica e atos preparatórios à instrução processual e ao encaminhamento da documentação pertinente ao setor de contratos para a formalização dos procedimentos relativos à prorrogação, à alteração, ao reequilíbrio, à eventual proposição de aplicação de sanções e à extinção dos contratos, bem como a indicação dos possíveis fiscais técnico, administrativo e setorial que a contratação pode ensejar, entre outros; II - fiscalização técnica - o acompanhamento do contrato visando avaliar a execução do objeto nos moldes contratados e, se for o caso, aferir se a quantidade, a qualidade, o tempo, o modo da prestação e a execução do objeto estão compatíveis com os indicadores estabelecidos no edital, bem como a elaboração do atesto e do relatório circunstanciado, para fins de pagamento, conforme o resultado pretendido pela administração, com o eventual auxílio da fiscalização administrativa; III - fiscalização administrativa - apoio técnico e operacional ao gestor do contrato, com a realização das tarefas relacionadas ao controle dos prazos relacionados ao contrato e à formalização de apostilamentos e de termos aditivos, ao acompanhamento do empenho e do pagamento e ao acompanhamento de garantias e glosas, dentre outras ações de apoio técnico. Art. 4º. As atividades de gestão e de fiscalização dos contratos deverão ser realizadas de forma preventiva, rotineira e sistemática e exercidas pelos agentes públicos designados, assegurada a distinção das atividades. Art. 5º Tornar sem efeito a Ordem de Serviço 180, de 14 de Maio de 2026. Art. 6º Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000019",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000019"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "CESSAR_OS_EFEITOS",
+      "label": "CESSAR OS EFEITOS",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0032-b0010",
+          "page": 32,
+          "bbox": [
+            42,
+            557.22,
+            293,
+            762.31
+          ],
+          "start": 1592,
+          "end": 1609,
+          "text": "ORDEM DE SERVIÇO Nº 227, DE 18 DE JUNHO DE 2026 A SECRETÁRIA EXECUTIVA DE ADMINISTRAÇÃO E LOGÍSTICA, DA SECRETARIA DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL, no uso da competência delegada pelo art. 2º - A, inciso II, alínea \"a\", da Portaria nº 235, de 30 de agosto de 2021; com base no Art. 3º do Decreto nº 39.002, de 24 de abril de 2018, que regulamenta os arts. 44 e 45 da Lei Complementar nº 840, de 23 de dezembro de 2011, e diante do contido no Processo nº 04044-00003793/2026-92, resolve: CESSAR OS EFEITOS na Ordem de Serviço nº 472, de 02 de outubro de 2025, publicada no DODF nº 189 de 06 de outubro de 2025 - página 49, que designou JOÃO VITOR SANTANA VIEIRA, matrícula nº 285.099-0, para substituir o (a) Chefe, Símbolo CPE-05, da Unidade de Procedimentos e de Controle de Sistemas Contábeis, da Contadoria Geral do Distrito Federal, da Secretaria Executiva de Finanças, Orçamento e Planejamento, da Secretaria de Estado de Economia do Distrito Federal, em seus afastamentos ou impedimentos legais. CESSAR OS EFEITOS na Ordem de Serviço nº 607, de 1º de dezembro de 2025, publicada no DODF nº 228, de 03 de dezembro de 2025 - páginas 61/62, que designou SALMA NOGUEIRA FARIA DE MELO, matrícula nº 43.614-3, para substituir o (a) Diretor(a), Símbolo CPE-07, da Diretoria de Empresas Públicas, da Unidade de Orientação, Controle e Análise Contábil da Administração Indireta, da Contadoria Geral do Distrito Federal, da Secretaria Executiva de Finanças, Orçamento e Planejamento, da Secretaria de Estado de Economia do Distrito Federal, em seus afastamentos ou impedimentos legais. CESSAR OS EFEITOS na Ordem de Serviço nº 543, de 04 de novembro de 2025, publicada no DODF nº 211, de 06 de novembro de 2025 - página 25, que designou"
+        }
+      ]
+    },
+    {
+      "id": "review-action-000028",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000028"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DISPENSAR",
+      "label": "DISPENSAR",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0033-b0013",
+          "page": 33,
+          "bbox": [
+            308.83,
+            579.1,
+            559.85,
+            762.26
+          ],
+          "start": 902,
+          "end": 911,
+          "text": "ORDEM DE SERVIÇO Nº 10, DE 19 DE JUNHO DE 2026 O SECRETÁRIO EXECUTIVO DE ASSISTÊNCIA À SAÚDE, DA SECRETARIA EXECUTIVA DE ASSISTÊNCIA À SAÚDE, DA SECRETARIA DE ESTADO DE SAÚDE DO DISTRITO FEDERAL, no uso das suas competências regimentais e atribuições conferidas pelo art. 4º, do Decreto nº 39.546, de 19 de dezembro de 2018, Regimento Interno de Secretaria de Estado de Saúde do Distrito Federal, e; Considerando as disposições da Portaria nº 460, de 02 de outubro de 2024, publicada no DODF nº 191, de 04 de outubro de 2024, resolve: Art. 1º Retificar o art. 15 da Ordem de Serviço nº 07, de 15 de maio de 2026, publicada no DODF nº 089, de 18 de maio de 2026, e o art. 2º da Ordem de Serviço nº 08, de 02 de junho de 2026, publicada no DODF nº, de de junho de 2026, para fazer constar: ONDE SE LÊ: “...DISPENSAR o servidor SYLVIO TORRES DA MOTTA, matrícula 1.710.526-9, Médico, 20h,...” LEIA-SE: “...DISPENSAR o servidor SYLVIO TORRES DA MOTTA, matrícula 1.710.526-9, Médico, 40h...”. Art. 2º Designar o servidor SYLVIO TORRES DA MOTTA, matrícula 1.710.526-9, Médico, 40h, para exercer a função de Médico Supervisor da Comissão Especial de Médicos Supervisores, vinculada à Diretoria de Avaliação e Qualificação da Assistência. Art. 3º Dispensar a servidora TALITA LEITE BRINGEL, matrícula 1.671.386-9, Médica, 40h, da função de Médica Supervisora da Comissão Especial de Médicos Supervisores, vinculada à Diretoria de Avaliação e Qualificação da Assistência."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000037",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000037"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DISPENSAR",
+      "label": "Dispensar",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0034-b0001",
+          "page": 34,
+          "bbox": [
+            42,
+            59.57,
+            293.26,
+            455.95
+          ],
+          "start": 2144,
+          "end": 2153,
+          "text": "Art. 4º Dispensar a servidora ADLA FERNANDA NOGUEIRA RODRIGUES, matrícula 1.659.536-X, Enfermeira, 20h, da função de Gestora da Subcomissão de Fiscalização de Contratos Complementares de Radioterapia e Oncologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 5º Designar a servidora ADLA FERNANDA NOGUEIRA RODRIGUES, matrícula 1.659.536-X, Enfermeira, 20h, para exercer a função de Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Radioterapia e Oncologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 6º Reduzir a carga horária da servidora ÉRICA BATISTA QUEIROZ RODRIGUES, matrícula 1.438.832-4, Enfermeira, de 20 horas semanais para 14 horas semanais, como Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Radioterapia e Oncologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 7º Dispensar a servidora CAROLINE D’ABADIA SOARES DE AZEVEDO, matrícula 1.441.544-5, Médica, 20h, da função de Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Radioterapia e Oncologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 8º Designar a servidora ANA OLÍVIA MANSOLELLI, matrícula 1.684.931-0, Enfermeira, 40h, para exercer a função de Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de UTI, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 9º Designar a servidora MISLEIR DOS SANTOS DE SOUSA, matrícula 1.706.945-9, Técnica em Enfermagem, 20h, para exercer a função de Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de UTI, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 10. Designar a servidora TALITA LEITE BRINGEL, matrícula 1.671.386-9, Médica, 40h, para exercer a função de Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Cirurgias Eletivas, exceto Oftalmologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 11. Dispensar a servidora DANIELLA DE SOUZA VIANA, matrícula 0.198.410-1, Especialista em Saúde - Psicóloga, 10h, das funções de Gestora substituta e Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Internação Compulsória, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 12. Designar a servidora JÉSSICA LEITE RODRIGUES DE OLIVEIRA MAIA, matrícula 1.707.270-0, Enfermeira, 10h, para exercer as funções de Gestora substituta e Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Internação Compulsória, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 13. Ampliar a carga horária da servidora ÉRICA BATISTA QUEIROZ RODRIGUES, matrícula 1.438.832-4, Enfermeira, de 20 horas semanais para 26 horas semanais, como Fiscal Técnica da Subcomissão de Fiscalização de Contratos Complementares de Nefrologia, vinculada à Comissão de Fiscalização de Contratos Assistenciais Complementares. Art. 14. Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000046",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000046"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "WASHINGTON TAVARES DA ROCHA",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0036-b0020",
+          "page": 36,
+          "bbox": [
+            308.83,
+            708.15,
+            559.83,
+            762.17
+          ],
+          "start": 222,
+          "end": 230,
+          "text": "PORTARIA DE 19 DE JUNHO DE 2026 A SECRETÁRIA DE ESTADO DE EDUCAÇÃO DO DISTRITO FEDERAL, interina, no uso das atribuições previstas no inciso V do parágrafo único do artigo 105 da Lei Orgânica do Distrito Federal, resolve: DESIGNAR WASHINGTON TAVARES DA ROCHA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.307-3, para exercer a Função Gratificada Escolar,"
+        }
+      ]
+    },
+    {
+      "id": "review-action-000055",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000055"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "ANA PAULA DE SOUSA",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0037-b0001",
+          "page": 37,
+          "bbox": [
+            42,
+            59.63,
+            293.23,
+            762.65
+          ],
+          "start": 3399,
+          "end": 3407,
+          "text": "Símbolo FGE-02, SIGRH 52006640, de Chefe de Secretaria, do Centro de Ensino Médio 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00159233/2026-77. DESIGNAR TELMA APOSTOLO EVANGELISTA, Analista em Políticas Públicas e Gestão Educacional, matrícula 249.895-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009226, de Supervisor, da Escola Classe 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00065032/2026-18. DISPENSAR DENIS AUGUSTO DE FARIA MACEDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 30.871-4, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal, a contar de 15 de maio de 2026. Processo 00080-00185725/2026-18. DESIGNAR THAIS DANIELE GONÇALVES LESSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 225.572-3, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00185725/2026-18. DISPENSAR MAGNA PEREIRA DA SILVA, Professor de Educação Básica, matrícula 256.333-9, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DESIGNAR EVELYN DA SILVA CORDEIRO, Professor de Educação Básica, matrícula 259.802-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DISPENSAR, por motivo de aposentadoria, JOVENILCE PEREIRA DE SOUZA, Analista em Políticas Públicas e Gestão Educacional, matrícula 25.337-5, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 1º de abril de 2026. Processo 00080-00128736/2026-09. DESIGNAR DENISE VIEIRA TAVARES, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.327-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00128736/2026-09. DISPENSAR, por motivo de aposentadoria, REGINA CERQUEIRA DE BRITO REDONDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 24.526-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 01 de junho de 2026. Processo 00080-00212498/2026-19. DESIGNAR ANA PAULA DE SOUSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.262-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00212498/2026-19. DISPENSAR MARIA ELENEUDA GRAÇAS DA SILVA BELO, Técnico em Políticas Públicas e Gestão Educacional, matrícula 210.292-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR WELMA ABADIA CAMPELO DE MIRANDA, Analista em Políticas Públicas e Gestão Educacional, matrícula 23.102-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006306, de Chefe de Secretaria, do Centro de Ensino Especial 02 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00140614/2026-82. DESIGNAR CLAUDIA ROSA DOS SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 254.856-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR SULENE DE ANDRADE MATOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 248.248-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006074, de Chefe de Secretaria, da Escola Classe 15 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00199351/2026-18. DISPENSAR, a pedido, EMILAINE DE PAULA OLIVEIRA, Analista em Políticas Públicas e Gestão Educacional, matrícula 243.401-6, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008701, de Chefe de Secretaria, do Centro Interescolar de Línguas do Riacho Fundo II, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00155460/2026-23."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000064",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000064"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "JAQUELINE SUZAMAR ALVES DOS SANTOS",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0037-b0002",
+          "page": 37,
+          "bbox": [
+            308.83,
+            59.64,
+            559.84,
+            613.91
+          ],
+          "start": 1319,
+          "end": 1327,
+          "text": "DESIGNAR LUANA DE MELO MACHADO, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.236-0, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008701, de Chefe de Secretaria, do Centro Interescolar de Línguas do Riacho Fundo II, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209873/2026-35. DISPENSAR, por estar sendo designada para outra Função Gratificada Escolar, LUANA DE MELO MACHADO, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.236-0, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52010005, de Chefe de Secretaria, do Centro de Educação Infantil Parque do Riacho, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209873/2026-35. DISPENSAR, por ter sido nomeada para outra Função Gratificada Escolar, ANA LIDIA ALVES ROCHA, Analista em Políticas Públicas e Gestão Educacional, matrícula 213.818- 2, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009521, de Supervisor, da Escola Classe Córrego do Atoleiro, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal, a contar de 30 de março de 2026. Processo 00080-00180478/2026-63. DESIGNAR JAQUELINE SUZAMAR ALVES DOS SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.470-8, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009521, de Supervisor, da Escola Classe Córrego do Atoleiro, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00180478/2026-63. DISPENSAR, a pedido, ARIELLE PIRES MACIEL, Analista em Políticas Públicas e Gestão Educacional, matrícula 223.912-4, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009505, de Supervisor, do Centro de Ensino Fundamental Juscelino Kubitschek, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal, a contar de 16 de junho de 2026. Processo 00080-00211693/2026-13. DESIGNAR LUCIANA MACHADO MAIA, Analista em Políticas Públicas e Gestão Educacional, matrícula 254.850-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009713, de Supervisor, da Escola Classe 425 de Samambaia, da Coordenação Regional de Ensino de Samambaia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00015317/2026-08. DISPENSAR MAYARA ALVARENGA QUEIROZ, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.988-2, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008861, de Supervisor, do Centro de Ensino Fundamental 09 de Sobradinho, da Coordenação Regional de Ensino de Sobradinho, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209909/2026-81. DESIGNAR CHRISTIANNE OLIVEIRA SILVA SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.535-1, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008861, de Supervisor, do Centro de Ensino Fundamental 09 de Sobradinho, da Coordenação Regional de Ensino de Sobradinho, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209909/2026-81. DISPENSAR, a pedido, LELIANE BARBOSA ARAUJO, Analista em Políticas Públicas e Gestão Educacional, matrícula 213.271-0, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52007680, de Chefe de Secretaria, do Centro Educacional 02 de Taguatinga, da Coordenação Regional de Ensino de Taguatinga, da Secretaria de Estado de Educação do Distrito Federal, a contar de 16 de junho de 2026. Processo 00080-00211288/2026-03. DESIGNAR ROSILENE CONCEIÇÃO FERREIRA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.850-4, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52007680, de Chefe de Secretaria, do Centro Educacional 02 de Taguatinga, da Coordenação Regional de Ensino de Taguatinga, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00208594/2026-54. TORNAR SEM EFEITO, na Portaria de 31 de março de 2026, publicada no DODF nº 61, em 1º/04/2026, página 73, o ato que designou ANA CLAUDIA TRINDADE BESSA DE SOUSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 22.992-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH nº 52006832, de Chefe de Secretaria, do Centro de Ensino Especial 01 do Guará, da Coordenação Regional de Ensino do Guará, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080- 00062125/2026-82."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000073",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000073"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "EMÍLIA DE CASTRO LUNA",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0038-b0019",
+          "page": 38,
+          "bbox": [
+            308.83,
+            583.54,
+            559.84,
+            762.04
+          ],
+          "start": 1114,
+          "end": 1122,
+          "text": "ORDEM DE SERVIÇO Nº 539, DE 19 DE JUNHO DE 2026 A CHEFE DA CORREGEDORIA, DA SECRETARIA DE ESTADO DE EDUCAÇÃO DO DISTRITO FEDERAL, no uso das atribuições que lhe foram delegadas pela Portaria n° 808, de 26 de julho de 2024, publicada no DODF n° 143, de 29 de julho de 2024, p. 38, consoante o disposto no artigo 20, inciso III, alínea \"d\" do Regimento Interno da Secretaria de Estado de Educação do Distrito Federal, com fundamento no artigo 8º, inciso II, alínea \"b\", da Instrução Normativa n° 02, de 19 de outubro de 2021, da Controladoria-Geral do Distrito Federal, c/c artigos 211, 212, inciso II, e 217, todos da Lei Complementar n° 840/2011, resolve: Art. 1º Instaurar o Processo Administrativo Disciplinar n° 00080-00221312/2026-12, visando à apuração de supostas irregularidades constantes e referenciadas no Processo n° 00080-00293750/2024-11. Art. 2º Designar JOSÉ MARIA PINHEIRO, matrícula 33.694-7, DANIEL CORREA E CASTRO SOARES, matrícula 214.451-4, e AISHA PAULO FONSECA, matrícula 205.776-X, todos Professores de Educação Básica; para, sob a presidência do primeiro, conduzirem os trabalhos. Art. 3º Designar EMÍLIA DE CASTRO LUNA, matrícula 33.261-5, Professora da Educação Básica, para atuar como substituto eventual nas licenças, afastamentos, férias e demais ausências dos titulares, em consonância com o artigo 229, § 7º, da Lei Complementar n° 840/2011."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000082",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000082"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "Designar",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0040-b0001",
+          "page": 40,
+          "bbox": [
+            42,
+            59.39,
+            293.33,
+            129.89
+          ],
+          "start": 8,
+          "end": 16,
+          "text": "Art. 1º Designar o servidor VINICIUS FIUZA DUMAS, matrícula nº 1.719.190-4, na função de Gestor; o servidor JONAS CONSULE BENINCÁ, matrícula nº 1.675.165-5, na função de Fiscal Administrativo; e a servidora IZABELA BARBOSA MIGUEL, matrícula nº 1.726.333-6, como fiscal técnico, todos com a finalidade de exercer a supervisão, fiscalização e acompanhamento do Contrato nº 16/2026-FUSP, firmado com a empresa ELO CONSULTORIA EMPRESARIAL E PRODUCAO DE EVENTOS, cujo objeto é a participação em curso presencial de planejamento das contratações, conforme processo SEI nº 00050-00002589/2026-41. Art. 2ª Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000091",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000091"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "Designar",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0043-b0001",
+          "page": 43,
+          "bbox": [
+            42,
+            59.55,
+            293,
+            316.81
+          ],
+          "start": 396,
+          "end": 404,
+          "text": "PORTARIA Nº 145, DE 18 DE JUNHO DE 2026 O DIRETOR-GERAL DO DEPARTAMENTO DE TRÂNSITO DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o artigo 100 inciso XLI do Regimento Interno aprovado pelo Decreto nº 27.784/2007, e com base na Lei nº 14.133, de 1º de abril de 2021, recepcionada pelo Decreto nº 44.330, de 16 de março de 2023, e com base no Decreto nº 45.422/2024, resolve: Art. 1º Designar como Agentes de Contratação: ALLANN ALVES VIEIRA DE ANDRADE, matrícula 255.469-0; LEONARDO GARCIA ALMEIDA, Matrícula 1.726.832-X, e DÉBORAH LIMA MACIEL, matrícula 1726.153-8, para conduzirem e coordenarem a fase de concorrência da licitação, a sessão pública e executar quaisquer outras atividades necessárias ao bom andamento do certame até a homologação, objetivando a aquisição de bens ou contratação de serviços no âmbito do DETRAN/DF. Art. 2º Os servidores designados no art. 1º: a) Atuarão, em cada caso concreto, com observância ao princípio da segregação de funções. b) Quando da exoneração, vacância ou similares, os indicados deixam de compor a presente Portaria. Art. 3º O nome do Agente de Contratação indicado para cada processo, bem como do seu substituto em caso de afastamento ou impedimento legal, constará no Ato de Autorização da autoridade competente para início da fase externa da licitação. Parágrafo Único: Nos casos em que o substituto do Agente de Contratação designado também estiver afastado ou legalmente impedido, poderá ser indicado um substituto temporário, dentre os servidores constantes no art. 1º, mediante despacho motivado do Coordenador de Contratações Públicas nos autos do respectivo processo da licitação. Art. 4º Os servidores mencionados no art. 1º atuarão ainda em revezamento como membros da Equipe de Apoio nas licitações em que não figurarem como Agente de Contratação. Parágrafo Único: A Equipe de Apoio será composta de, no mínimo, 2 (dois) servidores. Art. 5º Revogar a PORTARIA Nº 274, DE 16 DE OUTUBRO DE 2025, publicada no DODF Nº 198, de 17/10/2025, Pág. 41 Art. 6º Esta Portaria entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-action-000100",
+      "target": {
+        "layer": "semantic",
+        "record_id": "action-000100"
+      },
+      "category": "administrative_action",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "A ação e seu participante estão corretamente representados?",
+      "proposal": "DESIGNAR",
+      "label": "Designar",
+      "reasons": [
+        "amostra aleatória de ações administrativas"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0045-b0001",
+          "page": 45,
+          "bbox": [
+            42,
+            59.71,
+            293.54,
+            318.21
+          ],
+          "start": 593,
+          "end": 601,
+          "text": "DISTRITO FEDERAL, com fundamento no artigo 117 da Lei Federal nº 14.133, de 1º de abril de 2021, que trata das Licitações e Contratos Administrativos, no artigo 10 do Decreto nº 44.330, de 16 de março de 2023, que regulamenta a Lei Federal nº 14.133/21 no âmbito da Administração Pública direta, autárquica e fundacional do Distrito Federal, e no artigo 3º-D, inciso I, da Portaria nº 15, de 22 de julho de 2020, publicada no DODF nº 139, de 24 de julho de 2020, que dispõe sobre a delegação de competência a servidores da Secretaria de Estado de Administração Penitenciária, resolve: Art. 1° Designar os servidores que atuarão como Gestor, Gestor Suplente e Fiscais Técnicos da Nota de Empenho 2026NE00580, assinada em 16/06/2026, em favor da empresa N.S.S. COMERCIAL & CONSTRUTORA LTDA, Processo SEI nº 04026-00023255/2026-32, que tem por objeto a aquisição de 164.000 (cento e sessenta e quatro mil), Rolos de Papel Higiênico, Material: Celulose virgem, Comprimento: 30 metros, Largura: 10 CM, tipo: Picotado, Folhas Duplas, cor branca, deve atender a NBR 15464 e a Portaria Inmetro nº 251/2021, além da legislação pertinente. Marca: BOB. item: 7 conforme Autorização de Despesa e Empenho: FILIPE MATHEUS BRAGA DE SOUZA, matrícula nº 1.682.802-X, como Gestor; ANTÔNIO JACKSON SOBREIRA GONÇALVES, matrícula nº 194.948-9, como Gestor Suplente; MAYARA VIANA MATOS, matrícula nº 1.689.149-X, como Fiscal Técnico; MARIANA PEDROSA CASTELO V. GOTTLIEB, matrícula nº 1.693.055-X, como Fiscal Técnico Suplente. Art. 2° Os Gestores e fiscais designados deverão observar as disposições expressas na Portaria nº 29, de 25 de fevereiro de 2004, da Secretaria de Estado de Gestão Administrativa do Distrito Federal - SGA, e, em especial, na Portaria nº 33, de 28 de janeiro de 2026, da Secretaria de Estado de Administração Penitenciária, bem como as disposições da Lei nº 14.133, de 1º de abril de 2021, e do Decreto nº 44.330, de 16 de março de 2023. Art. 3° Ficam convalidados os atos praticados pelos gestores e fiscais ora designados, até a publicação desta Ordem de Serviço. Art. 4° Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00001",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00001"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SECRETARIA DE ESTADO DE GOVERNO",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0001-b0038",
+          "page": 1,
+          "bbox": [
+            67.36,
+            650.89,
+            273.3,
+            665.44
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "SECRETARIA DE ESTADO DE GOVERNO"
+        },
+        {
+          "block_id": "p0031-b0009",
+          "page": 31,
+          "bbox": [
+            334.2,
+            65.72,
+            540.14,
+            80.26
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "SECRETARIA DE ESTADO DE GOVERNO"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00018",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00018"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SECRETARIA DE ESTADO DE SAÚDE",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0009-b0009",
+          "page": 9,
+          "bbox": [
+            76.7,
+            257.5,
+            263.97,
+            272.04
+          ],
+          "start": 0,
+          "end": 29,
+          "text": "SECRETARIA DE ESTADO DE SAÚDE"
+        },
+        {
+          "block_id": "p0033-b0011",
+          "page": 33,
+          "bbox": [
+            343.53,
+            531.34,
+            530.8,
+            545.88
+          ],
+          "start": 0,
+          "end": 29,
+          "text": "SECRETARIA DE ESTADO DE SAÚDE"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00035",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00035"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SECRETARIA DE ESTADO DE CULTURA",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0024-b0016",
+          "page": 24,
+          "bbox": [
+            335.37,
+            395.02,
+            538.97,
+            409.56
+          ],
+          "start": 0,
+          "end": 31,
+          "text": "SECRETARIA DE ESTADO DE CULTURA"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00052",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00052"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0030-b0006",
+          "page": 30,
+          "bbox": [
+            51.64,
+            324.87,
+            289.62,
+            339.42
+          ],
+          "start": 0,
+          "end": 39,
+          "text": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO"
+        },
+        {
+          "block_id": "p0048-b0008",
+          "page": 48,
+          "bbox": [
+            53.11,
+            544.56,
+            288.23,
+            559.1
+          ],
+          "start": 0,
+          "end": 39,
+          "text": "SECRETARIA DE ESTADO DE DESENVOLVIMENTO"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00069",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00069"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SECRETARIA EXECUTIVA DE GESTÃO ADMINISTRATIVA SUBSECRETARIA DE GESTÃO DE PESSOAS COORDENAÇÃO DE ADMINISTRAÇÃO DE PROFISSIONAIS",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0034-b0003",
+          "page": 34,
+          "bbox": [
+            54.99,
+            472.37,
+            276.83,
+            514.46
+          ],
+          "start": 0,
+          "end": 126,
+          "text": "SECRETARIA EXECUTIVA DE GESTÃO ADMINISTRATIVA SUBSECRETARIA DE GESTÃO DE PESSOAS COORDENAÇÃO DE ADMINISTRAÇÃO DE PROFISSIONAIS"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00086",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00086"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SUBCOMANDO GERAL DEPARTAMENTO DE RECURSOS HUMANOS",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0042-b0010",
+          "page": 42,
+          "bbox": [
+            82.14,
+            671.93,
+            250.01,
+            691.81
+          ],
+          "start": 0,
+          "end": 49,
+          "text": "SUBCOMANDO GERAL DEPARTAMENTO DE RECURSOS HUMANOS"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00103",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00103"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "DEFENSORIA PÚBLICA",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0048-b0016",
+          "page": 48,
+          "bbox": [
+            377.81,
+            439.76,
+            496.52,
+            454.3
+          ],
+          "start": 0,
+          "end": 18,
+          "text": "DEFENSORIA PÚBLICA"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00120",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00120"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "SUBSECRETARIA DE COMPRAS E CONTRATAÇÕES",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0060-b0005",
+          "page": 60,
+          "bbox": [
+            68.26,
+            354.4,
+            263.71,
+            365.34
+          ],
+          "start": 0,
+          "end": 39,
+          "text": "SUBSECRETARIA DE COMPRAS E CONTRATAÇÕES"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00137",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00137"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "DO CONSUMIDOR",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0068-b0018",
+          "page": 68,
+          "bbox": [
+            124.11,
+            535.14,
+            216.56,
+            549.69
+          ],
+          "start": 0,
+          "end": 13,
+          "text": "DO CONSUMIDOR"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00154",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00154"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "organization",
+      "label": "CONSELHO DO MEIO AMBIENTE DO DISTRITO FEDERAL",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0078-b0046",
+          "page": 78,
+          "bbox": [
+            312.21,
+            699.23,
+            554.85,
+            711.7
+          ],
+          "start": 0,
+          "end": 45,
+          "text": "CONSELHO DO MEIO AMBIENTE DO DISTRITO FEDERAL"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00171",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00171"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "position",
+      "label": "Auditor de Controle Interno",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0031-b0017",
+          "page": 31,
+          "bbox": [
+            308.83,
+            429.36,
+            559.84,
+            762.33
+          ],
+          "start": 1924,
+          "end": 1951,
+          "text": "PORTARIA Nº 430, DE 17 DE JUNHO DE 2026 (*) Altera a Portaria nº 994, de 20 de dezembro de 2024, que disciplina a formação de Grupo de Trabalho com vistas à elaboração de artefatos e acompanhamento do processo licitatório do novo Sistema Integrado de Gestão Governamental – Novo SIGGO para o Governo do Distrito Federal. O SECRETÁRIO DE ESTADO DE ECONOMIA DO DISTRITO FEDERAL, no uso das atribuições que lhe confere o art. 105, parágrafo único, incisos I e III, da Lei Orgânica do Distrito Federal, resolve: Art. 1º A Portaria nº 994, de 20 de dezembro de 2024, passa a vigorar com as seguintes alterações: “Art. 3º [...] I – Pela Secretaria Executiva de Finanças, Orçamento e Planejamento – SEFIN: a) OTÁVIO VERÍSSIMO SOBRINHO, Auditor de Controle Interno, matrícula 0191939-3 (Titular); e b) LUCIANO LIMA GOULART, Auditor de Controle Interno, matrícula 0190026-9 (Suplente); II – Pela Contadoria Geral do Distrito Federal – ContDF/SEFIN: a) LEON DE OLIVEIRA MADEIRA, Auditor de Controle Interno, matrícula 285.789-8 (Titular); e b) JOÃO VITOR SANTANA VIEIRA, Auditor de Controle Interno, matrícula 0285.099-0 (Suplente); III – Pela Subsecretaria de Planejamento Governamental – SUPLAN/SEFIN: a) GABRIEL CARLOS RIBEIRO ANTUNES, Auditor de Controle Interno, matrícula 285.784-7 (Titular); e b) PEDRO AUGUSTO CESAR, Auditor de Controle Interno, matrícula 285.762-6 (Suplente); IV – Pela Subsecretaria de Orçamento Público – SUOP/SEFIN: a) RAFAEL DUARTE DE PAULA SILVA, Auditor de Controle Interno, matrícula 0272467-7 (Titular); e b) ALISSON LIRA DA ROCHA, Auditor de Controle Interno, matrícula 190.047-1 (Suplente); [...] X – Pela Subsecretaria de Tecnologia da Informação – SUTI/SERT: a) EWERTON LUIZ KNEBEL MASERA, Gestor de Políticas Públicas e Gestão Governamental, matrícula 126.832-5 (Titular); e b) KEILLY FRANCIELLY DE ALMEIDA ALVES, matrícula 286.854-7 (Suplente). [...] Art. 4º Designar LEON DE OLIVEIRA MADEIRA, Auditor de Controle Interno, matrícula 285.789-8 (Titular), da Contadoria Geral do Distrito Federal (CONTDF), da"
+        }
+      ]
+    },
+    {
+      "id": "review-entity-group-00188",
+      "target": {
+        "layer": "semantic",
+        "record_id": "entity-group-00188"
+      },
+      "category": "entity_mention",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 55,
+      "question": "O trecho representa o tipo de entidade proposto?",
+      "proposal": "person",
+      "label": "REGINA CERQUEIRA DE BRITO REDONDO",
+      "reasons": [
+        "amostra aleatória de precisão por tipo"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0037-b0001",
+          "page": 37,
+          "bbox": [
+            42,
+            59.63,
+            293.23,
+            762.65
+          ],
+          "start": 2987,
+          "end": 3020,
+          "text": "Símbolo FGE-02, SIGRH 52006640, de Chefe de Secretaria, do Centro de Ensino Médio 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00159233/2026-77. DESIGNAR TELMA APOSTOLO EVANGELISTA, Analista em Políticas Públicas e Gestão Educacional, matrícula 249.895-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009226, de Supervisor, da Escola Classe 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00065032/2026-18. DISPENSAR DENIS AUGUSTO DE FARIA MACEDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 30.871-4, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal, a contar de 15 de maio de 2026. Processo 00080-00185725/2026-18. DESIGNAR THAIS DANIELE GONÇALVES LESSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 225.572-3, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00185725/2026-18. DISPENSAR MAGNA PEREIRA DA SILVA, Professor de Educação Básica, matrícula 256.333-9, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DESIGNAR EVELYN DA SILVA CORDEIRO, Professor de Educação Básica, matrícula 259.802-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DISPENSAR, por motivo de aposentadoria, JOVENILCE PEREIRA DE SOUZA, Analista em Políticas Públicas e Gestão Educacional, matrícula 25.337-5, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 1º de abril de 2026. Processo 00080-00128736/2026-09. DESIGNAR DENISE VIEIRA TAVARES, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.327-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00128736/2026-09. DISPENSAR, por motivo de aposentadoria, REGINA CERQUEIRA DE BRITO REDONDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 24.526-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 01 de junho de 2026. Processo 00080-00212498/2026-19. DESIGNAR ANA PAULA DE SOUSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.262-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00212498/2026-19. DISPENSAR MARIA ELENEUDA GRAÇAS DA SILVA BELO, Técnico em Políticas Públicas e Gestão Educacional, matrícula 210.292-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR WELMA ABADIA CAMPELO DE MIRANDA, Analista em Políticas Públicas e Gestão Educacional, matrícula 23.102-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006306, de Chefe de Secretaria, do Centro de Ensino Especial 02 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00140614/2026-82. DESIGNAR CLAUDIA ROSA DOS SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 254.856-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR SULENE DE ANDRADE MATOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 248.248-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006074, de Chefe de Secretaria, da Escola Classe 15 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00199351/2026-18. DISPENSAR, a pedido, EMILAINE DE PAULA OLIVEIRA, Analista em Políticas Públicas e Gestão Educacional, matrícula 243.401-6, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008701, de Chefe de Secretaria, do Centro Interescolar de Línguas do Riacho Fundo II, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00155460/2026-23."
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000001",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000001"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "norm",
+      "label": "Portaria nº 60",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0001-b0040",
+          "page": 1,
+          "bbox": [
+            42,
+            700.55,
+            293,
+            763.08
+          ],
+          "start": 216,
+          "end": 230,
+          "text": "ORDEM DE SERVIÇO Nº 89, DE 16 DE JUNHO DE 2026 A SECRETÁRIA EXECUTIVA DAS CIDADES, DA SECRETARIA DE ESTADO DE GOVERNO DO DISTRITO FEDERAL, no uso das atribuições que lhe são conferidas pelo inciso VII, Artigo 18, da Portaria nº 60, de 08 de fevereiro de 2022, resolve: Art. 1º Revogar, por interesse público, conforme Ofício Nº 234/2026 - RA-SCIA/GAB (204982714), o Termo de Permissão de Uso Não-Qualificado nº 456/2011 e Termo Aditivo nº 01/2013, constante no Processo Administrativo nº 0306-000029/2009, em"
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000175",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000175"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "norm",
+      "label": "Portaria n° 808",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0013-b0005",
+          "page": 13,
+          "bbox": [
+            42,
+            281.11,
+            293.01,
+            380.02
+          ],
+          "start": 182,
+          "end": 197,
+          "text": "ORDEM DE SERVIÇO N° 533, DE 19 DE JUNHO DE 2026 A CHEFE DA CORREGEDORIA, DA SECRETARIA DE ESTADO DE EDUCAÇÃO DO DISTRITO FEDERAL, no uso das atribuições que lhe foram delegadas pela Portaria n° 808, de 26 de julho de 2024, publicada no DODF n° 143, de 29 de julho de 2024, p. 38, consoante o disposto no Art. 20, inciso III , alínea \"d\", do Regimento Interno da Secretaria de Estado de Educação do Distrito Federal, resolve: Art. 1º Reconduzir a Comissão Sindicante instituída por meio da Ordem de Serviço n° 199, de 18 de março de 2026, publicada no DODF n° 52, de 19 de março de 2026, p. 18, para prosseguir na apuração das irregularidades constantes no Processo Sindicante n° 00080- 00111070/2026.-41, no prazo de 30 (trinta) dias, a contar de 18 de junho de 2026. Art. 2º Esta Ordem de Serviço entra em vigor na data de sua publicação."
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000349",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000349"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "norm",
+      "label": "Lei 840",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0035-b0008",
+          "page": 35,
+          "bbox": [
+            42,
+            605.96,
+            292.97,
+            762.58
+          ],
+          "start": 460,
+          "end": 467,
+          "text": "ORDEM DE SERVIÇO Nº 371, DE 19 DE JUNHO DE 2026 A SUPERINTENDENTE DA REGIÃO DE SAÚDE LESTE, DA SECRETARIA DE ESTADO DE SAÚDE DO DISTRITO FEDERAL, no uso das atribuições Regimentais, conforme o disposto no Decreto nº 39.546, de 20 de dezembro de 2018, publicado no DODF nº 241 de 20/12/2018 e o Art. 13 da Portaria nº 396, de 20 de junho de 2022, publicada no DODF nº 114, de 21 de junho de 2022, resolve: CONCEDER Licença Prêmio por Assiduidade, nos termos da Lei 840/11, art. 139, aos seguintes servidores, listados por nome, matrícula, cargo, quinquênio, período e processo, quando houver, respectivamente: WANESSA ROSA PEREIRA, 14387751, TEC. HIGIENE DENTAL - THD, 2º quinquênio 24/06/2017 a 28/06/2022, 00060- 00143587/2017-83; WALDIR SOARES CORDEIRO, 01389025, MOTORISTA, 2º quinquênio 24/05/2005 a 22/05/2010, WALDIR SOARES CORDEIRO, 01389025, MOTORISTA, 4º quinquênio 05/07/2010 a 16/11/2015, WALDIR SOARES CORDEIRO, 01389025, MOTORISTA, 5º quinquênio 17/11/2015 a 24/02/2021, 00060- 00128854/2018-73; ANA KARLA FIGUEIRA CACAES, 14340429, TECNICO EM ENFERMAGEM, 2º quinquênio 14/05/2016 a 10/03/2026, 00060-00339022/2019-61; NAYARA SANTOS SILVA, 16856945, TECNICO ENFERMAGEM, 1º quinquênio"
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000523",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000523"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "norm",
+      "label": "Portaria nº 908",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0046-b0008",
+          "page": 46,
+          "bbox": [
+            42,
+            459.44,
+            293,
+            550.86
+          ],
+          "start": 239,
+          "end": 254,
+          "text": "PORTARIA Nº 209, DE 18 DE JUNHO DE 2026. O SECRETÁRIO DE ESTADO DA AGRICULTURA, ABASTECIMENTO E DESENVOLVIMENTO RURAL DO DISTRITO FEDERAL, no uso de suas atribuições regulamentares e considerando o que dispõe o art. 95, inciso VII e IX da Portaria nº 908, de 18 de novembro de 2024, bem como em face do que consta no Documento SEI ID (205645325), resolve: SUSPENDER, por necessidade do serviço e fundamento no art. 128, Parágrafo único, inciso I, da Lei Complementar nº 840, de 23 de dezembro de 2011, as férias regulamentares da servidora ANA CAROLINA CAMPOS MAGALHÃES, matrícula 17208920, Assessora Especial, da Subsecretaria de Defesa Agropecuária, relativa ao período de 18/06/2026 a 27/06/2026, a servidora usufruirá este período em 03/11/2026 a 12/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000697",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000697"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "cnpj",
+      "label": "01.859.881/0001-63",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0056-b0015",
+          "page": 56,
+          "bbox": [
+            308.83,
+            585.58,
+            559.59,
+            674.84
+          ],
+          "start": 128,
+          "end": 146,
+          "text": "RECONHECIMENTO DE DÍVIDA Processo: 04001-00003245/2025-13. Interessado: CLÍNICA DE OTORRINOLARINGOLOGIA OTO NORTE LTDA, CNPJ Nº 01.859.881/0001-63. Valor: R$21.970,34 (vinte e um mil novecentos e setenta reais e trinta e quatro centavos), relativo ao Termo de Credenciamento nº 133/2021. Em 19/06/2026, o Diretor-Presidente do INAS, com base nos arts. 30 e 86 do Decreto nº 32.598/2010, e em respeito ao Ofício nº 292/2026-SEEC/SEFIN, no uso das atribuições previstas no art. 21 da Portaria nº 262/2006, AUTORIZA o reconhecimento da dívida, a emissão de nota de empenho, a liquidação e o pagamento da despesa em favor do Interessado. PABLO VIEIRA DE CASTRO."
+        }
+      ]
+    },
+    {
+      "id": "review-reference-000871",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-000871"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "monetary_value",
+      "label": "R$ 2.376,00",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0062-b0003",
+          "page": 62,
+          "bbox": [
+            42,
+            254.14,
+            292.75,
+            379.04
+          ],
+          "start": 308,
+          "end": 319,
+          "text": "EXTRATO DA ATA DE REGISTRO DE PREÇOS Nº 183/2026 Processo: 04016-00102952/2025-13. Partes: INSTITUTO DE GESTÃO ESTRATÉGICA DE SAÚDE DO DISTRITO FEDERAL e BIO INFINITY COMERCIO HOSPITALAR E LOCACAO LTDA. CNPJ nº 03.679.808/0001-35. Objeto: AQUISIÇÃO DE SENSOR DE OXIMETRIA ADULTO. Valor Total da Contratação: R$ 2.376,00 (dois mil trezentos e setenta e seis reais), assinado em 30/01/2026. Vigência: será de 12 (doze) meses, a partir da data de sua assinatura, podendo ser prorrogada por igual período, pelo mesmo quantitativo inicialmente contratado, desde que tenha saldo remanescente, e mediante concordância expressa do fornecedor e comprovada a vantajosidade para o IGESDF. Fundamento Legal: Na forma do Regulamento Próprio de Compras e Contratações do IGESDF. Signatários: Pelo Contratante: MARCOS DUTRA VARGAS, na qualidade de Diretor de Infraestrutura, Logística e Obras; pela Contratada: CLAUDIA CRISTINA CORREA CESAR, na qualidade de Representante Legal."
+        }
+      ]
+    },
+    {
+      "id": "review-reference-001045",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-001045"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "monetary_value",
+      "label": "R$ 239.000,00",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0072-b0005",
+          "page": 72,
+          "bbox": [
+            308.83,
+            210.25,
+            559.81,
+            762.83
+          ],
+          "start": 3286,
+          "end": 3299,
+          "text": "TECNOLÓGICA E INOVAÇÃO RESULTADO PRELIMINAR DA ETAPA I - HABILITAÇÃO A Superintendência Científica, Tecnológica e de Inovação da FUNDAÇÃO DE APOIO À PESQUISA DO DISTRITO FEDERAL – FAPDF, no uso de suas atribuições legais conferidas pelo artigo 17 do Decreto nº 43.189, de 05 de abril de 2022, que aprovou o Estatuto Social da FAPDF, e com fundamento nos artigos 27, incisos II e XVIII, do Regimento Interno, e nos termos do processo 00193-00000011/2026-81, TORNA PÚBLICO O RESULTADO PRELIMINAR DA ETAPA I - HABILTIAÇÃO referente às propostas submetidas para o EDITAL 06/2026 – DEMANDA ESPONTÂNEA - SELEÇÃO PÚBLICA DE PROPOSTAS DE PESQUISA CIENTÍFICA, TECNOLÓGICA E INOVAÇÃO, as propostas serão apresentadas em ordem alfabética, indicando a instituição executora e o valor aprovado por proposta. Inicialmente, será divulgada a relação correspondente à FAIXA A, seguida, posteriormente, da lista referente à FAIXA B. FAIXA A: Ana Claudia Guerra de Araujo, EMBRAPA, R$ 148.130,00; Andreanne Gomes Vasconcelos, PSPDIL, R$ 168.140,00; André Gustavo de Melo Araújo, UnB, R$ 135.000,00; Andréia de Almeida, UnB, R$ 158.110,00; Carla Simone Vizzotto, UnB, R$ 175.000,00; Carlos Andres Charris Vizcaino, UCB, R$ 167.019,00; Daniel Holanda Barroso, UnB, R$ 173.215,91; Diana Quirino Monteiro, UCB, R$ 146.479,22; Diogo de Oliveira Costa, UnB, R$ 87.980,00; Diogo Martins de Sá, UnB, R$ 174.700,00; Diogo Vieira Tibery, UnB, R$ 166.450,00; Elen Presotto, UnB, R$ 126.680,00; Emmanuel de Nazareth Brasil, IDP, R$ 174.660,00; Francine Golghetto Casemiro, UCB, R$ 174.920,00; Frederico Machado Almeida, UnB, R$ 146.000,00; Gabriel Pasquarelli do Nascimento, UnB, R$ 175.000,00; Guilherme Botelho Meireles de Souza, EMBRAPA, R$ 171.550,00; Heitor Siqueira Ribeiro, UnB, R$ 117.000,00;Hugo de Luca Corrêa, UCB, R$ 170.905,22; Ian Carlos Bispo de Carvalho, EMBRAPA, R$ 174.920,00; Isângelo Senna da Costa, ISCP, R$ 170.000,00; Isabella Márcia Soares Nogueira Teotônio, UnB, R$ 172.050,00; Ivair José de Morais Júnior, UCB, R$ 175.000,00; Jayanaraian Ferreira Martins Andrade, UnB, R$ 175.000,00; Jeann Luccas de Castro Sabino de Carvalho, UnB, R$ 174.999,77; José Roberto de Souza Júnior, UDF, R$ 100.000,00; Laura Davison Mangilli Toni, UnB, R$ 138.172,60; Linconl Agudo Oliveira Benito, UNICEUB, R$ 175.000,00; Luciana Lilian Louzada Martini, R$ 175.000,00; Lucas Silva de Oliveira, UnB, R$ 175.000,00; Luis Augusto Conte Mendes Veloso, UnB, R$ 170.000,00; Luis Claudio Martins de Moura, IFB - Gama, R$ 443.107,84; Lysleine Alves de Deus, UCB, R$ 174.970,00; Maria do Carmo de Lima Bezerra, UnB, R$ 164.680,00; Maria Eduarda Azambuja Amaral, IDP, R$ 85.540,00; Márcia Aparecida de Souza, Fênix, R$ 164.928,63; Matheus Anthony de Melo, UCB, R$ 173.324,80; Natalia Pazin Almeida, EMBRAPA, R$ 175.000,00; Patrícia Medeiros de Lima, UCB, R$ 200.200,00; Rafael Barreiros Porto, UnB, R$ 98.706,00; Rafael Besse, UnB, R$ 175.000,00; Raphael Severino Bonadio, UnB, R$ 171.600,00; Rayane Vieira Rodrigues, FGV, R$ 142.404,98; Roberta Fátima Neumeister, UnB, R$ 171.650,00; Samuel Leite Cardoso, UCB, R$ 160.112,83; Tchella Fernandes Maso, UnB, R$ 173.237,44; Thiago Marcel Moyano, UnB, R$ 169.000,00; Vinícius Vigolo, UnB, R$ 171.630,00; Yago de Souza Paiva, FGV, R$ 170.000,00; FAIXA B: Ailton Reis, EMBRAPA, R$ 239.000,00; Aisel Valle Garay, UnB, R$ 350.000,00; Aldo Henrique Fonseca Pacheco Tavares, UnB, R$ 217.000,00; Alessandra Monteiro de Paula, UnB, R$ 302.960,00; Alexandre Anderson de Sousa Munhoz Soares, ARAMARI, R$ 350.000,00; Alexandre Floriani Ramos, CENARGEN, R$ 346.519,50; Alexandre Franco Miranda, UCB, R$ 175.210,00; Alice Kazuko Inoue Nagata, CNPH, R$ 350.000,00; Aline de Queiroz Rodrigues, UnB, R$ 350.000,00; Aline Mizusaki Imoto, ESCS, R$ 286.600,00; Aline Pic-Taylor, UnB, R$ 350.000,00; Aline Silva Moraes, Unb, R$ 350.000,00; Ana Clara Giannecchini, UnB, R$ 338.840,00; Ana Cristi Basile Dias, UnB, R$ 350.000,00; Ana Flávia Alves Parente, UnB, R$ 334.139,00; Anderson de Jesus Gomes, UnB, R$ 300.000,00; André Luís Brasil Cavalcante, UnB, R$ 350.000,00; André Luís Rodrigues Araújo, UnB, R$ 324.040,00; André Von Borries Lopes, UnB, R$ 300.000,00; Andréa de Souza Lobo, UnB, R$ 223.860,00; Andréia Alves Costa Lindinger, UnB, R$ 290.000,00; Andréia Borges Avelar da Silva, UnB, R$ 165.026,90; Andreza Fabro de Bem, UnB, R$ 350.000,00; Angélica Amorim Amato, UnB, R$ 350.000,00; Antonia Débora Camila de Lima Ferreira, Arbor, R$ 348.500,00; Antonio Carlos de Oliveira Miranda, UnB, R$ 328.150,00; Artem Andrianov, UnB, R$ 332.476,00; Aryane Ribeiro Oliveira, FTPDI, R$ 350.000,00; Bárbara Eckstein, CENARGEN, R$ 350.000,00; Beatriz Amália Albarello, UCB, R$ 316.820,00; Benedito Leandro Neto, UnB, R$ 200.482,60; Benjamin Miranda Tabak, FGV, R$ 350.000,00; Brenda Rabello de Camargo, UnB, R$ 182.000,00; Bruna Pena"
+        }
+      ]
+    },
+    {
+      "id": "review-reference-001219",
+      "target": {
+        "layer": "semantic",
+        "record_id": "reference-001219"
+      },
+      "category": "reference",
+      "sample_kind": "random",
+      "risk": "medium",
+      "priority": 45,
+      "question": "A referência foi localizada e normalizada corretamente?",
+      "proposal": "monetary_value",
+      "label": "R$ 324.380,00",
+      "reasons": [
+        "amostra aleatória de referências"
+      ],
+      "evidence": [
+        {
+          "block_id": "p0073-b0002",
+          "page": 73,
+          "bbox": [
+            308.83,
+            59.73,
+            559.61,
+            742.92
+          ],
+          "start": 942,
+          "end": 955,
+          "text": "255.000,00; Mariana Machado Hecht, UnB, R$ 333.314,00; Marileusa Dosolina Chiarello, Unb, R$ 349.800,00; Marília de Castro Rodrigues Pappas, CENARGEN, R$ 349.350,00; Marilia Santos Silva Patriota, CENARGEN, R$ 325.500,00; Marisa Von Bülow, UnB, R$ 348.000,00; Martino Giorgioni, UnB, R$ 213.720,00; Maurício Rossato, UnB, R$ 333.200,00; Maxelle Martins Teixeira, FGV, R$ 329.820,00; Mayra Soares Costa Rodrigues, UnB, R$ 303.660,00; Melissa Nara de Carvalho Picinato Pirola, UnB, R$ 127.330,00; Michelle Machado de Oliveira Vilarinho, UnB, R$ 349.980,00; Mônica Alves de Macedo, CNPH, R$ 350.000,00; Muriel Bauermann Gubert, UnB, R$ 330.000,00; Murilo Sversut Dias, UnB, R$ 349.980,00; Naile Dame Teixeira, Unb, R$ 332.180,00; Natalia Maria Aggio, UnB, R$ 63.045,20; Nathann Teixeira Rodrigues, UnB, R$ 283.345,00; Nizamara Simenremis Pereira, IFB - Gama, R$ 349.845,66; Octávio Luiz Franco, UCB, R$ 321.060,00; Oscar Jose Smiderle, EMBRAPA, R$ 324.380,00; Osmindo Rodrigues Pires Júnior, UnB, R$ 266.459,00; Patricia Albuquerque de Andrade Nicola, UnB, R$ 340.200,00; Patrícia Azevedo Garcia, UnB, R$ 334.992,00; Patrícia Ianella, EMBRAPA, R$ 340.750,00; Paulo Cesar de Morais, UCB, R$ 324.750,00; Pedro Henrique de Oliveira Neto, UnB, R$ 350.000,00; Pérola de Oliveira Magalhães Dias Batista, UnB, R$ 350.000,00; Philippe Claude Thierry Lacour, UnB, R$ 273.630,00; Potira Meirelles Hermuche, UnB, R$ 322.855,00; Rafael Castilho Faria Mendes, Unb, R$ 350.000,00; Rafael Plakoudi Souto Maior, UnB, R$ 348.829,80; Raphael Matozo Tromer, UnB, R$ 350.000,00; Raquel Braz Assunção Botelho, UnB, R$ 169.792,00; Regina Célia de Oliveira, UnB, R$ 349.943,00; Regina da Silva Pina Neves, UnB, R$ 228.594,00; Regina Dalcastagnè, UnB, R$ 350.000,00; Regina Maria Dechechi Gomes Carneiro, CENARGEN, R$ 298.185,00; Rejane Ennes Cicerelli, UnB, R$ 274.500,00; Renata Ferreira Silva, FEPECS, R$ 250.600,00; Renata Garcia Dusi, LAZUTECH, R$ 297.000,00; Renata Puppin Zandonadi, UnB, R$ 307.527,76; Reuber Albuquerque Brandao, UnB, R$ 349.910,00; Ricardo Borges Pereira, CNPH, R$ 250.000,00; Ricardo Gargano, UnB, R$ 350.000,00; Ricardo Titze de Almeida, UnB, R$ 698.256,00; Rinaldo Eduardo Machado de Oliveira, UnB, R$ 347.920,00; Rita de Cassia Marqueti Durigan, UnB, R$ 349.000,00; Robert Edward Pogue, UCB, R$ 320.000,00; Roberta Azeredo Murta da Fonseca, UnB, R$ 82.588,00; Roberta Mary Vidotti, UnB, R$ 318.114,00; Roberto Arnaldo Trancoso Gomes, UnB, R$ 350.000,00; Robson de Oliveira Albuquerque, UCB,R$ 348.720,00; Rodrigo Vidal Oliveira, UnB, R$ 259.295,00; Rogerio Biaggioni Lopes, CENARGEN, R$ 315.800,00; Rômulo José da Costa Ribeiro, UnB, R$ 350.000,00; Rosalvo Ermes Streit, UCB, R$ 181.468,00; Rosangela Vieira de Andrade, UCB, R$ 349.727,67; Roseany de Vasconcelos Vieira Lopes, UnB, R$ 330.960,00; Samuel Cordeiro Vitor Martins, EMBRAPA, R$ 331.378,00; Samuel da Silva Aguiar, UCB, R$ 349.345,00; Sandra Fernandes Arruda, UnB, R$ 287.560,00; Sérgio Nogueira Seabra, IESB, R$ 134.490,00; Silvia Ribeiro de Souza, Unb, R$ 290.230,00; Silviene Fabiana de Oliveira, UnB, R$ 135.000,00; Simone da Graca Ribeiro, CENARGEN, R$ 350.000,00; Solange Carvalho Barrios Roveri José, CENARGEN, R$ 254.490,00; Sonia Maria de Freitas, UnB, R$ 350.000,00; Sônia Nair Báo, UnB, R$ 349.460,00; Soraya Adiva Roman Eyzaguirre, UCB, R$ 307.990,60; Suzana Moreira Avila, UnB, R$ 349.805,32; Taís Gratieri, UnB, R$ 350.000,00; Tania Mara Passarelli Tonhati, Unb, R$ 349.225,00; Tanise Vendruscolo Dalmolin, UnB, R$ 271.460,00; Tatiana Karla dos Santos Borges, UnB, R$ 349.898,41; Tatsuya Nagata, UnB, R$ 350.000,00; Taygoara Felamingo de Oliveira, UnB, R$ 332.000,00; Thiago Aparecido Trindade, UnB, R$ 348.340,00; Thiago Felippe Kurudez Cordeiro, UnB, R$ 309.850,00; Thiago Jose de Carvalho Andre, UnB, R$ 350.000,00; Thomas Christopher Rhys Williams, UnB, R$ 181.000,00; Uidemar Morais Barral, UnB, R$ 251.080,00; Valdirene Maria Silva Capuzzo, UnB, R$ 324.000,00; Veronica de Barros Slobodian Motta, UnB, R$ 345.782,00; Vinícius Machado dos Santos, IFB, R$ 141.000,00; Vinicius Zacarias Maldaner da Silva, UnB, R$ 341.600,00; Wagner Fontes, UnB, R$ 350.000,00; Wagner Rodrigues Martins, UnB, R$ 271.300,00; Walter de Britto Vidal Filho, UnB, R$ 112.250,00; Walterlânia Silva Santos, UnB, R$ 349.443,87; Warley Marcos Nascimento, CNPH, R$ 181.460,80; Weeberb João Réquia Júnior, FGV, R$ 347.600,00; Welitom Rodrigues Borges, UnB, R$ 347.890,00; Wiliam Ferreira da Cunha, UnB, R$ 350.000,00; William Ferreira Giozza, UnB, R$ 350.000,00; Yris Maria Fonseca Bazzo, UnB, R$ 350.000,00. INFORME: Ressalta-se que esta lista contempla apenas as propostas habilitadas de forma PRELIMINAR e não ranqueadas na ETAPA I – HABILITAÇÃO, conforme item 13.1.1.1 do Edital. A classificação nesta etapa não implica direito subjetivo ao apoio financeiro, constituindo mera expectativa de direito, condicionada à disponibilidade orçamentária e financeira do presente Edital, nos termos do item 17.3. Ressalta-se, ainda, que a habilitação preliminar nesta fase refere-se exclusivamente à verificação de requisitos formais e documentais, não representando julgamento de mérito da proposta. Em atenção aos itens 16.1 e 16.2, a partir desta data está aberto o prazo para interposição de recurso administrativo. Em caso de não habilitação da proposta ou de interesse em obter detalhes sobre a análise da proposta habilitada, o proponente deverá encaminhar sua solicitação para coobe@fap.df.gov.br."
+        }
+      ]
+    }
+  ]
+}

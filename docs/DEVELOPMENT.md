@@ -64,6 +64,30 @@ interface permite buscar e filtrar matérias, pessoas, órgãos, cargos, ações
 processos e referências, além de abrir bloco, página, coordenadas, regra e texto
 usados como evidência.
 
+A calibração humana independente fica em `http://localhost:3000/anotar`. Essa
+rota é deliberadamente separada do explorador: mostra as imagens das páginas 37
+e 51 e referências estruturais de bloco, sem classificações automáticas. Para
+recriar o pacote estrutural mínimo depois de alterar o documento-base:
+
+```powershell
+cd web
+npm run data:calibration
+```
+
+O lote baixado pela interface deve ser validado antes de ser fechado:
+
+```powershell
+python -m min_df.annotation caminho\para\lote.json
+```
+
+O fluxo principal de controle de qualidade está em `/revisar`. A fila é
+reproduzida a partir do explorador e da identidade material com:
+
+```powershell
+cd web
+npm run data:review
+```
+
 ## Política dos contratos
 
 Os contratos ficam em `src/min_df/schemas` e usam JSON Schema 2020-12.

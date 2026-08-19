@@ -61,7 +61,7 @@ comparado integralmente com uma anotação humana. Portanto:
 **Portão 0:** todos os checks verdes, árvore limpa, carga idempotente e baseline
 automático identificável por commit.
 
-### Passo 1 — Definir o protocolo de anotação
+### Passo 1 — Validar por revisão assistida e risco
 
 Estado atual:
 
@@ -70,9 +70,14 @@ Estado atual:
 - [x] guia 1.0 criado como rascunho de calibração;
 - [x] templates válidos e validador de lote criados;
 - [x] páginas 37 e 51 congeladas para calibração;
-- [ ] primeira aplicação cega concluída;
-- [ ] segunda aplicação independente concluída;
-- [ ] desacordos adjudicados e guia aprovado.
+- [x] interface cega criada com PDF primário, localizador de blocos e exportação
+  `human-annotation/1.0`;
+- [x] fila assistida inicial gerada com casos críticos, alto risco, amostra
+  aleatória e amostra negativa;
+- [x] interface de decisões rápidas criada;
+- [ ] revisar os casos críticos e uma amostra de 60–100 decisões;
+- [ ] medir precisão, omissões, tempo por decisão e risco residual;
+- [ ] converter erros dominantes em testes e reprocessar.
 
 - criar contrato versionado para anotação humana;
 - definir rótulos, campos obrigatórios e estados `confirmado`, `rejeitado`,
@@ -83,8 +88,10 @@ Estado atual:
 - separar desacordo de anotação, erro de fonte e erro do extrator;
 - definir amostragem, segunda revisão e adjudicação.
 
-**Portão 1:** duas aplicações do guia ao mesmo pequeno conjunto produzem decisões
-compatíveis; ambiguidades restantes estão documentadas.
+**Portão 1:** todos os casos críticos foram decididos, a amostra aleatória e
+negativa permite estimar precisão e omissões, os erros encontrados viraram
+testes e o risco residual está documentado. A anotação cega permanece disponível
+como instrumento opcional, não como obrigação operacional.
 
 ### Passo 2 — Revisar uma amostra estratificada
 
