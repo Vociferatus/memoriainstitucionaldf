@@ -14,6 +14,7 @@ if (-not (Test-Path -LiteralPath $python)) {
 }
 
 $semantic = ".artifacts\pilot-db\DODF 112 22-06-2026 INTEGRA.semantic.json"
+$identity = ".artifacts\pilot-db\DODF 112 22-06-2026 INTEGRA.identity.json"
 $semanticState = "missing"
 if (Test-Path -LiteralPath $semantic) {
   $semanticState = & $python -c `
@@ -34,11 +35,24 @@ if ($semanticState -ne "current") {
   }
 }
 
+$identityState = "missing"
+if (Test-Path -LiteralPath $identity) {
+  $identityState = & $python -c `
+    "import json,sys; from min_df.identity import SCRIPT_VERSION; payload=json.load(open(sys.argv[1], encoding='utf-8')); print('current' if payload.get('tool', {}).get('version') == SCRIPT_VERSION else 'stale')" `
+    $identity
+}
+if ($identityState -ne "current" -or $semanticState -ne "current") {
+  & $python -m min_df.identity --semantic $semantic `
+    --mentions "data\extractions\DODF 112 22-06-2026 INTEGRA.mentions.json" --output $identity
+  if ($LASTEXITCODE -ne 0) { throw "Falha ao gerar a identidade material." }
+}
+
 & $python scripts\load_to_postgres.py `
   --manifest "data\manifests\DODF 112 22-06-2026 INTEGRA.manifest.json" `
   --structured "data\structured\DODF 112 22-06-2026 INTEGRA.structured.json" `
   --mentions "data\extractions\DODF 112 22-06-2026 INTEGRA.mentions.json" `
-  --semantic $semantic
+  --semantic $semantic `
+  --identity $identity
 
 if ($LASTEXITCODE -ne 0) {
   throw "Falha ao carregar o piloto (código $LASTEXITCODE)."

@@ -47,3 +47,7 @@ def validate_mentions(payload: dict[str, Any]) -> None:
 
 def validate_semantic(payload: dict[str, Any]) -> None:
     validate_payload(payload, "semantic-document")
+
+
+def validate_identity(payload: dict[str, Any]) -> None:
+    validate_payload(payload, "identity-resolution")

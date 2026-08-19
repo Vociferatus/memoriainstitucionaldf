@@ -25,11 +25,13 @@ import psycopg
 from psycopg.types.json import Jsonb
 
 from min_df.contracts import (
+    validate_identity,
     validate_manifest,
     validate_mentions,
     validate_semantic,
     validate_structured,
 )
+from min_df.identity_store import load_identity_projection
 from min_df.ledger import load_ledger_v2
 from min_df.semantic_store import load_semantic_projection
 
@@ -383,6 +385,7 @@ def load_all(
     source_name: str,
     source_kind: str,
     semantic_path: Path | None = None,
+    identity_path: Path | None = None,
 ) -> dict[str, int]:
     require_psycopg()
 
@@ -390,11 +393,16 @@ def load_all(
     structured = read_json(structured_path)
     mentions_payload = read_json(mentions_path)
     semantic_payload = read_json(semantic_path) if semantic_path else None
+    identity_payload = read_json(identity_path) if identity_path else None
     validate_manifest(manifest)
     validate_structured(structured)
     validate_mentions(mentions_payload)
     if semantic_payload is not None:
         validate_semantic(semantic_payload)
+    if identity_payload is not None:
+        if semantic_payload is None or semantic_path is None:
+            raise ValueError("A camada de identidade requer a projeção semântica.")
+        validate_identity(identity_payload)
     doc_info = parse_dodf_filename(manifest["document"]["filename"])
     doc_info["metadata"] = {
         "manifest_schema_version": manifest.get("schema_version"),
@@ -444,6 +452,18 @@ def load_all(
                 semantic_path=semantic_path,
                 semantic=semantic_payload,
             )
+        identity_result: dict[str, int] = {}
+        if identity_path is not None and identity_payload is not None and semantic_path is not None:
+            identity_result = load_identity_projection(
+                conn,
+                ledger_capture_id=ledger["ledger_capture_id"],
+                semantic_run_id=semantic_result["semantic_run_id"],
+                block_db_ids=block_db_ids,
+                semantic_path=semantic_path,
+                mentions_path=mentions_path,
+                identity_path=identity_path,
+                identity=identity_payload,
+            )
 
     return {
         "source_id": source_id,
@@ -454,6 +474,7 @@ def load_all(
         "mentions": mentions_inserted,
         **ledger,
         **semantic_result,
+        **identity_result,
     }
 
 
@@ -523,6 +544,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         type=Path,
         help="JSON semântico opcional para navegação por matérias e entidades.",
     )
+    parser.add_argument("--identity", type=Path, help="JSON opcional de identidade material.")
     parser.add_argument("--source-name", default="DODF")
     parser.add_argument("--source-kind", default="diario_oficial")
     parser.add_argument(
@@ -553,6 +575,7 @@ def main(argv: list[str] | None = None) -> int:
         source_name=args.source_name,
         source_kind=args.source_kind,
         semantic_path=args.semantic,
+        identity_path=args.identity,
     )
 
     print("Carga concluida")

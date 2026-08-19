@@ -18,6 +18,7 @@ from min_df.extract_mentions import (
     load_structured_json,
     write_json,
 )
+from min_df.identity import build_identity_payload
 from min_df.load_to_postgres import dry_run_summary, load_all
 from min_df.semantic import build_semantic_payload
 
@@ -48,6 +49,7 @@ def artifact_paths(input_path: Path, output_dir: Path) -> dict[str, Path]:
         "markdown": output_dir / "markdown" / f"{stem}.md",
         "mentions": output_dir / "extractions" / f"{stem}.mentions.json",
         "semantic": output_dir / "semantic" / f"{stem}.semantic.json",
+        "identity": output_dir / "identity" / f"{stem}.identity.json",
         "audit": output_dir / "audit" / f"{stem}.audit.txt",
         "summary": output_dir / "audit" / f"{stem}.summary.json",
     }
@@ -118,12 +120,18 @@ def run_pipeline(
     semantic_payload = build_semantic_payload(structured, paths["structured"])
     write_json(paths["semantic"], semantic_payload)
 
+    identity_payload = build_identity_payload(
+        semantic_payload, mentions_payload, paths["semantic"], paths["mentions"]
+    )
+    write_json(paths["identity"], identity_payload)
+
     report = audit(paths["manifest"], paths["structured"], paths["mentions"])
     paths["audit"].parent.mkdir(parents=True, exist_ok=True)
     paths["audit"].write_text("\n".join(report) + "\n", encoding="utf-8")
 
     summary = summarize(paths)
     summary["semantic"] = semantic_payload["counts"]
+    summary["identity"] = identity_payload["counts"]
     summary["load_dry_run"] = dry_run_summary(
         paths["manifest"], paths["structured"], paths["mentions"]
     )
@@ -140,6 +148,7 @@ def run_pipeline(
             source_name,
             source_kind,
             paths["semantic"],
+            paths["identity"],
         )
 
     paths["summary"].write_text(
