@@ -63,6 +63,17 @@ automático identificável por commit.
 
 ### Passo 1 — Definir o protocolo de anotação
 
+Estado atual:
+
+- [x] contrato `human-annotation/1.0` criado;
+- [x] modos cego, independente, assistido e adjudicação separados;
+- [x] guia 1.0 criado como rascunho de calibração;
+- [x] templates válidos e validador de lote criados;
+- [x] páginas 37 e 51 congeladas para calibração;
+- [ ] primeira aplicação cega concluída;
+- [ ] segunda aplicação independente concluída;
+- [ ] desacordos adjudicados e guia aprovado.
+
 - criar contrato versionado para anotação humana;
 - definir rótulos, campos obrigatórios e estados `confirmado`, `rejeitado`,
   `ausente`, `ambíguo` e `não aplicável`;

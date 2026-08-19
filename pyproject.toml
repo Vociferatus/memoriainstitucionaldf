@@ -31,6 +31,7 @@ min-df-load = "min_df.load_to_postgres:main"
 min-df-pipeline = "min_df.pipeline:main"
 min-df-semantic = "min_df.semantic:main"
 min-df-identity = "min_df.identity:main"
+min-df-validate-annotation = "min_df.annotation:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

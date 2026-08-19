@@ -356,7 +356,9 @@ Escopo: transformar o resultado automático do DODF 112 em benchmark humano
 mensurável antes de ampliar o corpus.
 
 - [ ] Integrar e congelar o marco da identidade material v1.
-- [ ] Criar contrato e guia de anotação humana.
+- [x] Criar contrato e guia inicial de anotação humana.
+- [x] Congelar páginas 37 e 51 para calibração do protocolo.
+- [ ] Executar duas aplicações independentes e adjudicar os desacordos.
 - [ ] Selecionar 12 páginas estratificadas do DODF 112.
 - [ ] Fazer segunda revisão de pelo menos 20% da amostra.
 - [ ] Medir precisão e recall por matéria, entidade e ação.

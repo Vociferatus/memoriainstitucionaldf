@@ -287,6 +287,14 @@ congelar benchmark automático
 CPF, matrícula, expansão para um mês e inferências permanecem bloqueados até os
 respectivos portões de qualidade e governança.
 
+O contrato `human-annotation/1.0`, os templates e o guia de calibração já estão
+disponíveis em `annotations/` e `docs/ANNOTATION_GUIDE_DODF.md`. Um lote pode ser
+validado com:
+
+```powershell
+python -m min_df.annotation caminho\para\lote.json
+```
+
 ## Roadmap
 
 A trajetória geral está em:

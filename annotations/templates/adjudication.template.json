@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "annotation_batch_id": "dodf112-template-adjudication",
+  "created_at": "2026-08-18T00:00:00Z",
+  "protocol": {
+    "name": "dodf_human_annotation",
+    "version": "1.0",
+    "guide_uri": "repo:///docs/ANNOTATION_GUIDE_DODF.md"
+  },
+  "annotator": {
+    "id": "adjudicator-template",
+    "kind": "human",
+    "mode": "adjudication"
+  },
+  "source": {
+    "document_key": "dodf:2026-06-22:edicao-112:integra",
+    "document_filename": "DODF 112 22-06-2026 INTEGRA.pdf",
+    "document_sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+    "page_count": 85,
+    "baseline_commit": "e5d2f54352000e28c5b1a13a9085139ff35ed5af",
+    "automatic_artifacts": []
+  },
+  "scope": {
+    "pages": [1],
+    "selection_method": "template_not_real_annotation",
+    "pass_number": 1,
+    "parent_batch_ids": []
+  },
+  "records": []
+}
