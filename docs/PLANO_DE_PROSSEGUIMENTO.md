@@ -1,7 +1,7 @@
 # Plano de prosseguimento cauteloso
 
-Versão: 1.0  
-Data: 2026-08-18  
+Versão: 1.0
+Data: 2026-08-18
 Estado: plano executivo vigente.
 
 ## 1. Objetivo
