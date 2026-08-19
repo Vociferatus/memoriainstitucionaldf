@@ -1,24 +1,29 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from min_df.identity import build_identity_payload
-
-ROOT = Path(__file__).parents[2]
-SEMANTIC = ROOT / ".artifacts/pilot-db/DODF 112 22-06-2026 INTEGRA.semantic.json"
-MENTIONS = ROOT / "data/extractions/DODF 112 22-06-2026 INTEGRA.mentions.json"
+from min_df.semantic import build_semantic_payload
 
 
-def payload() -> dict:
+@pytest.fixture(scope="module")
+def identity_payload(pilot_paths: dict[str, Path], project_root: Path) -> dict:
+    structured = json.loads(pilot_paths["structured"].read_text(encoding="utf-8"))
+    semantic = build_semantic_payload(
+        structured, pilot_paths["structured"].relative_to(project_root)
+    )
+    mentions = json.loads(pilot_paths["mentions"].read_text(encoding="utf-8"))
     return build_identity_payload(
-        json.loads(SEMANTIC.read_text(encoding="utf-8")),
-        json.loads(MENTIONS.read_text(encoding="utf-8")),
-        SEMANTIC,
-        MENTIONS,
+        semantic,
+        mentions,
+        pilot_paths["structured"].with_suffix(".semantic.json"),
+        pilot_paths["mentions"],
     )
 
 
-def test_dodf_112_material_identity_baseline() -> None:
-    result = payload()
+def test_dodf_112_material_identity_baseline(identity_payload: dict) -> None:
+    result = identity_payload
     assert result["counts"] == {
         "fragments": 1645,
         "assertions": 302,
@@ -31,8 +36,8 @@ def test_dodf_112_material_identity_baseline() -> None:
     }
 
 
-def test_nominal_mentions_are_never_automatically_merged() -> None:
-    result = payload()
+def test_nominal_mentions_are_never_automatically_merged(identity_payload: dict) -> None:
+    result = identity_payload
     fragments = {fragment["id"]: fragment for fragment in result["fragments"]}
     for link in result["identity_links"]:
         assert fragments[link["fragment_id"]]["entity_type"] not in {
@@ -43,8 +48,8 @@ def test_nominal_mentions_are_never_automatically_merged() -> None:
     assert all(group["decision"] == "KEEP_SEPARATE" for group in result["candidate_groups"])
 
 
-def test_links_are_referentially_complete_and_material() -> None:
-    result = payload()
+def test_links_are_referentially_complete_and_material(identity_payload: dict) -> None:
+    result = identity_payload
     fragment_ids = {fragment["id"] for fragment in result["fragments"]}
     entity_ids = {entity["id"] for entity in result["canonical_entities"]}
     assert all(link["fragment_id"] in fragment_ids for link in result["identity_links"])
@@ -52,8 +57,8 @@ def test_links_are_referentially_complete_and_material() -> None:
     assert all(not link["has_divergence"] for link in result["identity_links"])
 
 
-def test_invalid_cnpj_opens_case_instead_of_entity() -> None:
-    result = payload()
+def test_invalid_cnpj_opens_case_instead_of_entity(identity_payload: dict) -> None:
+    result = identity_payload
     invalid = [identifier for identifier in result["identifiers"] if not identifier["is_valid"]]
     assert len(invalid) == 1
     invalid_fragment = invalid[0]["fragment_id"]
