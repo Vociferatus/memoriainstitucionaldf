@@ -1,0 +1,304 @@
+{
+  "schema_version": "calibration-source/1.0",
+  "protocol": {
+    "name": "dodf_human_annotation",
+    "version": "1.0",
+    "guide_uri": "repo:///docs/ANNOTATION_GUIDE_DODF.md"
+  },
+  "source": {
+    "document_key": "dodf:2026-06-22:edicao-112:integra",
+    "document_filename": "DODF 112 22-06-2026 INTEGRA.pdf",
+    "document_sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+    "page_count": 85,
+    "baseline_commit": "1a6f37b5a3eca2439a7663184f699e808d6646c6"
+  },
+  "scope": {
+    "pages": [
+      37,
+      51
+    ],
+    "selection_method": "calibration_pages_37_51_v1"
+  },
+  "pages": [
+    {
+      "number": 37,
+      "width": 605,
+      "height": 810,
+      "image": "/calibration/dodf112-page-37.png",
+      "blocks": [
+        {
+          "id": "p0037-b0006",
+          "page": 37,
+          "order": 1,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "text": "PÁGINA 37 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        },
+        {
+          "id": "p0037-b0001",
+          "page": 37,
+          "order": 2,
+          "bbox": [
+            42,
+            59.63,
+            293.23,
+            762.65
+          ],
+          "text": "Símbolo FGE-02, SIGRH 52006640, de Chefe de Secretaria, do Centro de Ensino Médio 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00159233/2026-77. DESIGNAR TELMA APOSTOLO EVANGELISTA, Analista em Políticas Públicas e Gestão Educacional, matrícula 249.895-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009226, de Supervisor, da Escola Classe 02 do Gama, da Coordenação Regional de Ensino do Gama, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00065032/2026-18. DISPENSAR DENIS AUGUSTO DE FARIA MACEDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 30.871-4, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal, a contar de 15 de maio de 2026. Processo 00080-00185725/2026-18. DESIGNAR THAIS DANIELE GONÇALVES LESSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 225.572-3, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005567, de Chefe de Secretaria, da Escola Classe 305 Sul, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00185725/2026-18. DISPENSAR MAGNA PEREIRA DA SILVA, Professor de Educação Básica, matrícula 256.333-9, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DESIGNAR EVELYN DA SILVA CORDEIRO, Professor de Educação Básica, matrícula 259.802-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009011, de Supervisor, do Centro de Educação Profissional Escola Sabores Oscar, da Coordenação Regional de Ensino do Plano Piloto, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00216968/2026-13. DISPENSAR, por motivo de aposentadoria, JOVENILCE PEREIRA DE SOUZA, Analista em Políticas Públicas e Gestão Educacional, matrícula 25.337-5, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 1º de abril de 2026. Processo 00080-00128736/2026-09. DESIGNAR DENISE VIEIRA TAVARES, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.327-2, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52005998, de Chefe de Secretaria, do Centro Interescolar de Línguas de Brazlândia, da Coordenação Regional de Ensino de Brazlândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00128736/2026-09. DISPENSAR, por motivo de aposentadoria, REGINA CERQUEIRA DE BRITO REDONDO, Analista em Políticas Públicas e Gestão Educacional, matrícula 24.526-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal, a contar de 01 de junho de 2026. Processo 00080-00212498/2026-19. DESIGNAR ANA PAULA DE SOUSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.262-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006301, de Chefe de Secretaria, do Centro de Ensino Especial 01 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00212498/2026-19. DISPENSAR MARIA ELENEUDA GRAÇAS DA SILVA BELO, Técnico em Políticas Públicas e Gestão Educacional, matrícula 210.292-7, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR WELMA ABADIA CAMPELO DE MIRANDA, Analista em Políticas Públicas e Gestão Educacional, matrícula 23.102-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006306, de Chefe de Secretaria, do Centro de Ensino Especial 02 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00140614/2026-82. DESIGNAR CLAUDIA ROSA DOS SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 254.856-9, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006378, de Chefe de Secretaria, do Centro de Ensino Médio 12 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00342629/2025-01. DESIGNAR SULENE DE ANDRADE MATOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 248.248-7, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52006074, de Chefe de Secretaria, da Escola Classe 15 de Ceilândia, da Coordenação Regional de Ensino de Ceilândia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00199351/2026-18. DISPENSAR, a pedido, EMILAINE DE PAULA OLIVEIRA, Analista em Políticas Públicas e Gestão Educacional, matrícula 243.401-6, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008701, de Chefe de Secretaria, do Centro Interescolar de Línguas do Riacho Fundo II, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00155460/2026-23."
+        },
+        {
+          "id": "p0037-b0007",
+          "page": 37,
+          "order": 3,
+          "bbox": [
+            192.79,
+            774.78,
+            396.02,
+            783.86
+          ],
+          "text": "Documento assinado digitalmente, original em https://www.dodf.df.gov.br"
+        },
+        {
+          "id": "p0037-b0002",
+          "page": 37,
+          "order": 4,
+          "bbox": [
+            308.83,
+            59.64,
+            559.84,
+            613.91
+          ],
+          "text": "DESIGNAR LUANA DE MELO MACHADO, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.236-0, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008701, de Chefe de Secretaria, do Centro Interescolar de Línguas do Riacho Fundo II, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209873/2026-35. DISPENSAR, por estar sendo designada para outra Função Gratificada Escolar, LUANA DE MELO MACHADO, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.236-0, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52010005, de Chefe de Secretaria, do Centro de Educação Infantil Parque do Riacho, da Coordenação Regional de Ensino do Núcleo Bandeirante, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209873/2026-35. DISPENSAR, por ter sido nomeada para outra Função Gratificada Escolar, ANA LIDIA ALVES ROCHA, Analista em Políticas Públicas e Gestão Educacional, matrícula 213.818- 2, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009521, de Supervisor, da Escola Classe Córrego do Atoleiro, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal, a contar de 30 de março de 2026. Processo 00080-00180478/2026-63. DESIGNAR JAQUELINE SUZAMAR ALVES DOS SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.470-8, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009521, de Supervisor, da Escola Classe Córrego do Atoleiro, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00180478/2026-63. DISPENSAR, a pedido, ARIELLE PIRES MACIEL, Analista em Políticas Públicas e Gestão Educacional, matrícula 223.912-4, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009505, de Supervisor, do Centro de Ensino Fundamental Juscelino Kubitschek, da Coordenação Regional de Ensino de Planaltina, da Secretaria de Estado de Educação do Distrito Federal, a contar de 16 de junho de 2026. Processo 00080-00211693/2026-13. DESIGNAR LUCIANA MACHADO MAIA, Analista em Políticas Públicas e Gestão Educacional, matrícula 254.850-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52009713, de Supervisor, da Escola Classe 425 de Samambaia, da Coordenação Regional de Ensino de Samambaia, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00015317/2026-08. DISPENSAR MAYARA ALVARENGA QUEIROZ, Analista em Políticas Públicas e Gestão Educacional, matrícula 252.988-2, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008861, de Supervisor, do Centro de Ensino Fundamental 09 de Sobradinho, da Coordenação Regional de Ensino de Sobradinho, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209909/2026-81. DESIGNAR CHRISTIANNE OLIVEIRA SILVA SANTOS, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.535-1, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52008861, de Supervisor, do Centro de Ensino Fundamental 09 de Sobradinho, da Coordenação Regional de Ensino de Sobradinho, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00209909/2026-81. DISPENSAR, a pedido, LELIANE BARBOSA ARAUJO, Analista em Políticas Públicas e Gestão Educacional, matrícula 213.271-0, da Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52007680, de Chefe de Secretaria, do Centro Educacional 02 de Taguatinga, da Coordenação Regional de Ensino de Taguatinga, da Secretaria de Estado de Educação do Distrito Federal, a contar de 16 de junho de 2026. Processo 00080-00211288/2026-03. DESIGNAR ROSILENE CONCEIÇÃO FERREIRA, Analista em Políticas Públicas e Gestão Educacional, matrícula 253.850-4, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH 52007680, de Chefe de Secretaria, do Centro Educacional 02 de Taguatinga, da Coordenação Regional de Ensino de Taguatinga, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080-00208594/2026-54. TORNAR SEM EFEITO, na Portaria de 31 de março de 2026, publicada no DODF nº 61, em 1º/04/2026, página 73, o ato que designou ANA CLAUDIA TRINDADE BESSA DE SOUSA, Analista em Políticas Públicas e Gestão Educacional, matrícula 22.992-X, para exercer a Função Gratificada Escolar, Símbolo FGE-02, SIGRH nº 52006832, de Chefe de Secretaria, do Centro de Ensino Especial 01 do Guará, da Coordenação Regional de Ensino do Guará, da Secretaria de Estado de Educação do Distrito Federal. Processo 00080- 00062125/2026-82."
+        },
+        {
+          "id": "p0037-b0003",
+          "page": 37,
+          "order": 5,
+          "bbox": [
+            397.42,
+            614.24,
+            469.95,
+            623.31
+          ],
+          "text": "IÊDES SOARES BRAGA"
+        },
+        {
+          "id": "p0037-b0004",
+          "page": 37,
+          "order": 6,
+          "bbox": [
+            308.83,
+            631.14,
+            559.83,
+            753.01
+          ],
+          "text": "PORTARIA Nº 297, DE 19 DE JUNHO DE 2026 Altera a Portaria nº 1.198, de 5 de novembro de 2025, que instituiu a 2ª Comissão Especial destinada à apuração de Processos Administrativos Disciplinares e Sindicâncias. A SECRETÁRIA DE ESTADO DE EDUCAÇÃO DO DISTRITO FEDERAL, interina, no uso das atribuições que lhe são conferidas por meio do artigo 105 da Lei Orgânica do Distrito Federal, resolve: Art. 1º Alterar o inciso II do artigo 3º da Portaria nº 1.198, de 5 de novembro de 2025, que instituiu a 2ª Comissão Especial destinada à apuração de Processos Administrativos Disciplinares e Sindicâncias, que passa a vigorar com a seguinte redação: \"Art. 3º ........................ (...) II - MATHEUS FERNANDES COUTO, matrícula 253.194-1, Vogal;\" (NR) Art. 2º Esta Portaria entra em vigor na data de sua publicação."
+        },
+        {
+          "id": "p0037-b0005",
+          "page": 37,
+          "order": 7,
+          "bbox": [
+            397.42,
+            753.34,
+            469.95,
+            762.41
+          ],
+          "text": "IÊDES SOARES BRAGA"
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "width": 605,
+      "height": 810,
+      "image": "/calibration/dodf112-page-51.png",
+      "blocks": [
+        {
+          "id": "p0051-b0014",
+          "page": 51,
+          "order": 1,
+          "bbox": [
+            41.25,
+            37.77,
+            561.02,
+            52.44
+          ],
+          "text": "PÁGINA 51 Diário Oficial do Distrito Federal Nº 112, SEGUNDA-FEIRA, 22 DE JUNHO DE 2026"
+        },
+        {
+          "id": "p0051-b0001",
+          "page": 51,
+          "order": 2,
+          "bbox": [
+            42,
+            59.54,
+            292.88,
+            572.96
+          ],
+          "text": "8.2. Os contemplados pegarão as licenças no dia 26/06/2026 (sexta-feira), no Anexo do Buriti, de 09:00h às 16:00h, onde serão repassadas informações e orientações sobre o trabalho Ambulante no dia do evento; 8.3. Não será entregue autorização fora do dia e horário estipulados no item 8.2 deste edital; 8.4. Não será entregue autorização a terceiros, a não ser por procuração, uma vez que é pessoal, intransferível e concedida a título provisório, conforme artigo 15 da Lei 6.190/2018; 9. DAS PROIBIÇÕES. 9.1. Venda de bebidas alcoólicas à criança e adolescente, de acordo com a Lei Federal nº 8.069, de 13/07/1990, artigo 81, inciso II, do Estatuto da Criança e Adolescente(ECA); 9.2. Venda de bebida alcoólica a indígena, de acordo com a Lei nº 6.001/1973, artigo 58, inciso III ( Estatuto do Índio); 9.3. Venda de cigarros, cigarrilhas, charutos, cachimbos ou qualquer outro produto fúmigeno, derivado ou não do tabaco, de acordo com a Lei nº 9.294/1996, artigo 3º, inciso IX; 9.4. Venda de bebidas destiladas para qualquer consumidor, de acordo com a Lei nº 9.294/1973, artigo 3º, inciso IX; 9.5. Venda de facas ou material cortante que propicie risco a vida das pessoas; 9.6. Vender, alugar ou ceder a qualquer título o espaço público objeto desta autorização; 9.7. Montagem de estrutura com mesas e cadeiras para utilização dos clientes; 9.8. Deixar o veiculo motorizado junto a barraca, utilizando Área Pública fora do especificado no licenciamento; 10. DOS DEVERES. 10.1. As bebidas (cerveja, sucos, refrigerantes e energéticos) deverão ser comercializadas em copo plástico, latas de alumínio e/ou garrafas de plástico; 10.2. Os alimentos comercializados deverão ser servidos em pratos plásticos e com talheres descartáveis. Em relação ao churrasquinho, estes somente poderão ser entregues aos consumidores em pratos de plástico e fora dos espetos; 10.3. Caberá aos Ambulantes a responsabilidade pelo recolhimento e ensacamento de todo o lixo gerado durante a duração da atividade; 10.4. No botijão de gás deverá ser utilizado mangueiras, com regulador de pressão e revestimento de aço; 10.5. Está PROIBIDA a comercialização de mercadorias que utilize \"varais\", especialmente em utilizando postes ou árvores. 10.6. Manter, no entorno da área ocupada por Ambulantes, faixa livre de circulação em calçadas e pontos de acessibilidade, permitindo acesso de pessoas com deficiência; 10.7. O descumprimento dos itens acima acarretará notificação pelos órgãos de controle, multas, sanções conforme a Lei nº 6.190, de 20 de julho de 2018. 11. DAS PENALIDADES. 11.1. Os Ambulantes que operam sem licença ou em desacordo com as regulamentações podem ser multados pela Secretaria Secretaria de Estado de Proteção da Ordem Urbanística do Distrito Federal - DF LEGAL. O valor da multa pode variar; 11.2. Apreensão de mercadorias; 11.3. Remoção do local de venda, em caso de ocupação ilegal de um espaço público; 11.4. O Ambulante que descumprir as regras deste Edital de Chamamento Público ficará impedido de participar dos próximos 03 (três) chamamentos. Sendo reincidente perderá o direito de participar de eventos. 12. DA LOCALIZAÇÃO. 12.1. Os Ambulantes modalidade barraca deverão ocupar os espaços determinados na autorização conforme croqui abaixo. 12.2. A montagem das barracas será acompanhada pelos servidores designados da Secretaria Executiva das Cidades e do DF LEGAL, no local determinado no croqui. 13. DISPOSIÇÕES FINAIS 13.1. Não haverá reserva de vagas no chamamento público para as associações representativas da categoria dos Ambulantes."
+        },
+        {
+          "id": "p0051-b0015",
+          "page": 51,
+          "order": 3,
+          "bbox": [
+            192.79,
+            774.78,
+            396.02,
+            783.86
+          ],
+          "text": "Documento assinado digitalmente, original em https://www.dodf.df.gov.br"
+        },
+        {
+          "id": "p0051-b0002",
+          "page": 51,
+          "order": 4,
+          "bbox": [
+            393.02,
+            271.31,
+            474.42,
+            280.38
+          ],
+          "text": "SUELY MARIA DE SOUZA"
+        },
+        {
+          "id": "p0051-b0003",
+          "page": 51,
+          "order": 5,
+          "bbox": [
+            405.58,
+            280.22,
+            461.66,
+            289.29
+          ],
+          "text": "Secretária Executiva"
+        },
+        {
+          "id": "p0051-b0004",
+          "page": 51,
+          "order": 6,
+          "bbox": [
+            308.83,
+            297.33,
+            525.99,
+            316.11
+          ],
+          "text": "ADMINISTRAÇÃO REGIONAL DE ÁGUA QUENTE"
+        },
+        {
+          "id": "p0051-b0005",
+          "page": 51,
+          "order": 7,
+          "bbox": [
+            339.87,
+            315.95,
+            528.36,
+            325.02
+          ],
+          "text": "EXTRATO DE TERMO ADITIVO REFERENTE AO CONTRATO"
+        },
+        {
+          "id": "p0051-b0006",
+          "page": 51,
+          "order": 8,
+          "bbox": [
+            308.83,
+            324.86,
+            559.7,
+            476.49
+          ],
+          "text": "DE LOCAÇÃO DE IMÓVEL Nº 03/2024 PROCESSO DO ALUGUEL: 04041-00000151/2024-54. PROCESSO DO TERMO ADITIVO: 04041-00000151/2024-54. Das Partes: DISTRITO FEDERAL, por intermédio da ADMINISTRAÇÃO REGIONAL DE ÁGUA QUENTE – RA XXXV, e GBR INVESTIMENTOS HOLDING LTDA., inscrita no CNPJ nº 30.673.729/0001-90. Objeto: redução temporária, excepcional e consensual do valor mensal da locação do imóvel objeto do Contrato de Locação nº 03/2024, em atendimento às medidas de racionalização, controle e eficiência das despesas públicas instituídas pelo Decreto Distrital nº 48.509/2026. Valor: o valor mensal da locação passa de R$ 17.000,00 (dezessete mil reais) para R$ 15.000,00 (quinze mil reais), representando redução aproximada de 11,76% (onze vírgula setenta e seis por cento). Vigência da Redução: de 1º de junho de 2026 a 31 de dezembro de 2026, ou até a eventual revogação, suspensão ou cessação dos efeitos do Decreto Distrital nº 48.509, de 24 de abril de 2026, prevalecendo o evento que ocorrer primeiro. Fundamentação Legal: Lei Federal nº 14.133/2021, especialmente seus arts. 5º e 11; Decreto Distrital nº 48.509/2026; e Processo SEI nº 04041-00000151/2024-54. Economia Estimada: R$ 14.000,00 (quatorze mil reais) durante o período de vigência da redução. LÚCIA GOMES DA SILVA."
+        },
+        {
+          "id": "p0051-b0007",
+          "page": 51,
+          "order": 9,
+          "bbox": [
+            331.29,
+            490.86,
+            543.05,
+            505.4
+          ],
+          "text": "SECRETARIA DE ESTADO DE ECONOMIA"
+        },
+        {
+          "id": "p0051-b0008",
+          "page": 51,
+          "order": 10,
+          "bbox": [
+            333.15,
+            520.14,
+            532.46,
+            541.74
+          ],
+          "text": "SECRETARIA EXECUTIVA DE CONTRATOS SUBSECRETARIA DE COMPRAS GOVERNAMENTAIS"
+        },
+        {
+          "id": "p0051-b0009",
+          "page": 51,
+          "order": 11,
+          "bbox": [
+            308.83,
+            539.72,
+            530.54,
+            567.41
+          ],
+          "text": "COORDENAÇÃO DE GESTÃO DE SUPRIMENTOS DIRETORIA DE SISTEMA DE REGISTRO DE PREÇOS"
+        },
+        {
+          "id": "p0051-b0010",
+          "page": 51,
+          "order": 12,
+          "bbox": [
+            308.83,
+            567.24,
+            559.79,
+            647.6
+          ],
+          "text": "EXTRATO DO 1º TERMO ADITIVO A ATA DE REGISTRO DE PREÇOS N.° 0133/2025 (*) Processo SEI-GDF n.° 00060-00104864/2024-61, Pregão Eletrônico n.° 90035/2025. Assinatura do 1º Termo Aditivo: 18/06/2026. Objeto: prorrogação da vigência da Ata de Registro de Preços n.° 0133/2025, por mais 12 (doze) meses, contados a partir de 24/06/2026, passando a vigorar até 24/06/2027, bem como a renovação dos quantitativos registrados. Empresa vencedora: SIMPRESS COMÉRCIO, LOCAÇÃO E SERVIÇOS LTDA, CNPJ: 07.432.517/0001-07. O Termo Aditivo, na íntegra, será disponibilizada no Sistema de Gestão de Atas de Registro de Preços (SGARP)."
+        },
+        {
+          "id": "p0051-b0011",
+          "page": 51,
+          "order": 13,
+          "bbox": [
+            308.83,
+            647.43,
+            559.83,
+            701.06
+          ],
+          "text": "Brasília/DF, 19 de junho de 2026 CRISTIANA DE CASTRO MESQUITA Diretora de Sistema de Registro de Preços ____________________ (*) Republicado por ter sido encaminhado com incorreção no original, publicado no DODF nº 111, de 19 de junho de 2026, pág. 51."
+        },
+        {
+          "id": "p0051-b0012",
+          "page": 51,
+          "order": 14,
+          "bbox": [
+            333.67,
+            709.14,
+            534.64,
+            718.22
+          ],
+          "text": "AVISO DE ABERTURA DE INTENÇÃO DE REGISTRO DE PREÇOS"
+        },
+        {
+          "id": "p0051-b0013",
+          "page": 51,
+          "order": 15,
+          "bbox": [
+            308.83,
+            718.05,
+            559.8,
+            762.77
+          ],
+          "text": "DO DISTRITO FEDERAL (IRPDF) N.° 0042/2026 A Diretoria de Sistema de Registro de Preços, da Coordenação de Gestão de Suprimentos, da Subsecretaria de Compras Governamentais (SCG), em face do disposto no art. 192, inciso I, do Decreto n.° 44.330, de 16 de março de 2023, COMUNICA aos órgãos da estrutura administrativa do Distrito Federal acerca da abertura de Intenção de Registro de"
+        }
+      ]
+    }
+  ]
+}

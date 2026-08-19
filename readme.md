@@ -288,7 +288,9 @@ CPF, matrícula, expansão para um mês e inferências permanecem bloqueados at�
 respectivos portões de qualidade e governança.
 
 O contrato `human-annotation/1.0`, os templates e o guia de calibração já estão
-disponíveis em `annotations/` e `docs/ANNOTATION_GUIDE_DODF.md`. Um lote pode ser
+disponíveis em `annotations/` e `docs/ANNOTATION_GUIDE_DODF.md`. A rota
+`/anotar` oferece a primeira aplicação cega das páginas 37 e 51, usando o PDF
+como fonte primária e sem expor rótulos automáticos. Um lote exportado pode ser
 validado com:
 
 ```powershell

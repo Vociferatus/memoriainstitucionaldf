@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "annotation_batch_id": "dodf112-calibration-blind_primary-reviewer-fixture-20260818",
+  "created_at": "2026-08-18T12:00:00.000Z",
+  "protocol": {
+    "name": "dodf_human_annotation",
+    "version": "1.0",
+    "guide_uri": "repo:///docs/ANNOTATION_GUIDE_DODF.md"
+  },
+  "annotator": {
+    "id": "reviewer-fixture",
+    "kind": "human",
+    "mode": "blind_primary"
+  },
+  "source": {
+    "document_key": "dodf:2026-06-22:edicao-112:integra",
+    "document_filename": "DODF 112 22-06-2026 INTEGRA.pdf",
+    "document_sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+    "page_count": 85,
+    "baseline_commit": "1a6f37b5a3eca2439a7663184f699e808d6646c6",
+    "automatic_artifacts": []
+  },
+  "scope": {
+    "pages": [37, 51],
+    "selection_method": "calibration_pages_37_51_v1",
+    "pass_number": 1,
+    "parent_batch_ids": []
+  },
+  "records": [
+    {
+      "id": "annotation-0001-fixture",
+      "annotation_type": "observation",
+      "task_type": "document_structure",
+      "judgment": "PRESENT",
+      "target": null,
+      "evidence": [
+        {
+          "document_sha256": "17389d23375c9b9b747c8a0f74305ce20ee4b52dbc20e23d92bef780ec4709fc",
+          "page": 37,
+          "block_id": "p0037-b0006",
+          "start": 0,
+          "end": 9,
+          "bbox": [41.25, 37.77, 561.02, 52.44],
+          "quote": "PÁGINA 37"
+        }
+      ],
+      "payload": {
+        "observed_type": "running_header",
+        "label": "PÁGINA 37",
+        "role": null,
+        "value_original": "PÁGINA 37",
+        "value_normalized": null,
+        "start_block_id": null,
+        "end_block_id": null,
+        "date_type": null,
+        "date_value": null,
+        "fragment_ids": [],
+        "decision": null,
+        "attributes": {}
+      },
+      "confidence": "certain",
+      "rationale": null,
+      "error_categories": [],
+      "notes": null
+    }
+  ]
+}

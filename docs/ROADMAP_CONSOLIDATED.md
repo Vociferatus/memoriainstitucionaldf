@@ -356,6 +356,8 @@ Os limiares, portões e condições de parada estão em
 - [x] Separar primeira anotação, segunda revisão e adjudicação em lotes
   imutáveis.
 - [x] Congelar páginas 37 e 51 para calibração do Portão 1.
+- [x] Disponibilizar interface cega para as páginas congeladas, sem rótulos
+  automáticos e com exportação contratual.
 - [ ] Executar as duas aplicações independentes e adjudicar desacordos.
 - [ ] Revisar manualmente as 85 páginas.
 - [ ] Validar limites de todas as matérias.

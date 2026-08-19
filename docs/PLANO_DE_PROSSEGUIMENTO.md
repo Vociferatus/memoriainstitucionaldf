@@ -70,6 +70,8 @@ Estado atual:
 - [x] guia 1.0 criado como rascunho de calibração;
 - [x] templates válidos e validador de lote criados;
 - [x] páginas 37 e 51 congeladas para calibração;
+- [x] interface cega criada com PDF primário, localizador de blocos e exportação
+  `human-annotation/1.0`;
 - [ ] primeira aplicação cega concluída;
 - [ ] segunda aplicação independente concluída;
 - [ ] desacordos adjudicados e guia aprovado.
