@@ -36,7 +36,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
       - name: Node 22
-        uses: actions/setup-node@1e60f620b9541dca1515402f7a8a6fba2f2e1d19 # v6.0.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.0.0
         with:
           node-version: "22.13.1"
           cache: npm
