@@ -1,5 +1,9 @@
 # Memoria Institucional Navegavel - Roadmap
 
+> Este arquivo mantém o backlog estratégico por domínio. O estado de fases está
+> em `docs/ROADMAP_CONSOLIDATED.md`; o passo a passo vigente, seus portões e
+> condições de parada estão em `docs/PLANO_DE_PROSSEGUIMENTO.md`.
+
 ## Proposito
 
 Consumir, preservar, estruturar e consolidar documentos publicos para permitir a
@@ -36,6 +40,15 @@ que lhe deu origem.
 - [x] Primeira edicao carregada no PostgreSQL.
 - [ ] Convencoes de armazenamento e identificacao definidas.
 - [x] Banco de dados e esquema inicial criados.
+- [x] Fundação reproduzível, contratos e CI criados.
+- [x] Ledger de evidências v2 implementado.
+- [x] DODF 112 segmentado em seções, contextos e matérias.
+- [x] Ações, pessoas, organizações, cargos e referências em passe automático v1.
+- [x] Explorador de evidências criado.
+- [x] Identidade material v1 implementada com política conservadora.
+- [ ] Conjunto ouro e métricas de precisão, recall e false merge rate.
+- [ ] Política implementada para dados pessoais.
+- [ ] Validação em dez edições representativas.
 - [ ] Coletor historico do DODF criado.
 - [ ] Conjunto inicial de extratores deterministas criado.
 
@@ -339,23 +352,25 @@ elo e apresentado como causal sem uma fonte que o declare.
 
 ## Proxima iteracao recomendada
 
-Escopo: transformar o prototipo atual em um piloto auditavel de uma edicao e,
-em seguida, de um mes completo.
+Escopo: transformar o resultado automático do DODF 112 em benchmark humano
+mensurável antes de ampliar o corpus.
 
-- [x] Definir uma primeira versao do JSON estrutural canonico.
-- [x] Adaptar `dodf_to_markdown.py` para gerar JSON e Markdown derivado.
-- [x] Criar manifesto SHA-256 para o PDF de exemplo.
-- [x] Implementar o primeiro extrator: numero de processo SEI.
-- [x] Criar esquema PostgreSQL minimo para documento, bloco e mencao.
-- [x] Criar carregador inicial para manifesto, estrutura e mencoes.
-- [x] Criar auditor simples para conferir consistencia dos artefatos.
-- [x] Carregar uma edicao de ponta a ponta.
-- [ ] Selecionar paginas representativas para o conjunto ouro.
-- [ ] Escrever testes de ordem de leitura e rastreabilidade.
-- [ ] Auditar manualmente os resultados e registrar erros.
-- [ ] Pesquisar o catalogo oficial para montar o inventario de um mes.
-- [ ] Coletar e processar o mes piloto.
-- [ ] Decidir o que precisa mudar antes da coleta historica.
+- [ ] Integrar e congelar o marco da identidade material v1.
+- [ ] Criar contrato e guia de anotação humana.
+- [ ] Selecionar 12 páginas estratificadas do DODF 112.
+- [ ] Fazer segunda revisão de pelo menos 20% da amostra.
+- [ ] Medir precisão e recall por matéria, entidade e ação.
+- [ ] Medir false merge rate e auditar todos os `AUTO_LINK` da amostra.
+- [ ] Classificar erros e corrigir somente por regras versionadas.
+- [ ] Reprocessar a edição inteira após cada mudança de regra.
+- [ ] Revisar as 85 páginas e publicar relatório de qualidade.
+- [ ] Formalizar política de dados pessoais antes de CPF ou matrícula.
+- [ ] Atualizar o frontend para revisão de fragmentos, candidatos e casos.
+- [ ] Somente então selecionar e processar dez edições representativas.
+
+Os critérios numéricos e as condições de parada estão em
+`docs/PLANO_DE_PROSSEGUIMENTO.md`. A pesquisa do catálogo e o mês piloto não
+começam antes da validação das dez edições.
 
 ## Registro de decisoes
 

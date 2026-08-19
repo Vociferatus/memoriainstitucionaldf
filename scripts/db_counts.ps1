@@ -27,3 +27,10 @@ docker compose exec -T postgres sh -c `
 if ($LASTEXITCODE -ne 0) {
   throw "Falha ao consultar a projeção semântica (código $LASTEXITCODE)."
 }
+
+docker compose exec -T postgres sh -c `
+  'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "WITH latest AS (SELECT max(id) id FROM identity_runs) SELECT ''fragments'' tabela,count(*) FROM identity_fragments f,latest l WHERE f.identity_run_id=l.id UNION ALL SELECT ''canonical_entities'',count(*) FROM canonical_entities e,latest l WHERE e.identity_run_id=l.id UNION ALL SELECT ''identity_links'',count(*) FROM identity_links i,latest l WHERE i.identity_run_id=l.id UNION ALL SELECT ''candidate_groups'',count(*) FROM identity_candidate_groups c,latest l WHERE c.identity_run_id=l.id UNION ALL SELECT ''resolution_cases'',count(*) FROM identity_resolution_cases r,latest l WHERE r.identity_run_id=l.id;"'
+
+if ($LASTEXITCODE -ne 0) {
+  throw "Falha ao consultar a camada de identidade (código $LASTEXITCODE)."
+}

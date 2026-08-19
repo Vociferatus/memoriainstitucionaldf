@@ -104,6 +104,26 @@ Essas observações não são promovidas automaticamente a entidades canônicas 
 eventos consolidados. A cobertura e os limites atuais estão documentados em
 `docs/PHASE_3_AUTOMATIC_PASS_V1.md`.
 
+### 7. Identidade material conservadora
+
+A camada de identidade preserva cada menção como fragmento antes de qualquer
+consolidação. Processos podem ser materializados pelo número SEI e organizações
+legais por CNPJ válido. Pessoas, órgãos editoriais e cargos nunca são unidos
+automaticamente apenas pelo nome.
+
+O DODF 112 produz atualmente:
+
+```text
+1645 fragmentos
+1276 entidades materiais
+1342 ligações automáticas por identificador material
+45 grupos candidatos mantidos separados
+1 caso de resolução
+```
+
+A implementação, os limites e a matriz estão documentados em
+`docs/MATERIAL_IDENTITY_V1.md`.
+
 ## Scripts Criados
 
 Para instalar o ambiente e executar toda a edição piloto com um único comando,
@@ -165,10 +185,13 @@ Resultado validado:
 
 Pasta: `db/migrations/`
 
-Foi criada a primeira migracao SQL:
+Existem quatro migrações incrementais:
 
 ```text
 db/migrations/001_initial_schema.sql
+db/migrations/002_evidence_ledger_v2.sql
+db/migrations/003_semantic_navigation.sql
+db/migrations/004_material_identity.sql
 ```
 
 Ela define tabelas para guardar:
@@ -245,15 +268,37 @@ Também existe um explorador web para analisar como esses dados foram formados:
 Ele oferece navegação por matérias, entidades, ações, processos e referências,
 sempre exibindo a evidência documental correspondente.
 
-O próximo passo é ampliar a cobertura semântica da Fase 3, construir o conjunto
-ouro e medir precisão e recall antes de consolidar inferências.
+O passe automático do DODF 112 e a identidade material v1 estão implementados.
+O projeto está agora no portão de qualidade: construir anotação humana, medir
+precisão, recall e false merge rate e revisar a edição antes de ampliar o corpus.
+
+A ordem cautelosa é:
+
+```text
+congelar benchmark automático
+→ revisar amostra estratificada
+→ medir e corrigir
+→ revisar as 85 páginas
+→ validar identidade e temporalidade
+→ adaptar a interface de revisão
+→ testar dez edições representativas
+```
+
+CPF, matrícula, expansão para um mês e inferências permanecem bloqueados até os
+respectivos portões de qualidade e governança.
 
 ## Roadmap
 
-A lista principal de acoes esta em:
+A trajetória geral está em:
 
 ```text
-ROADMAP.md
+docs/ROADMAP_CONSOLIDATED.md
 ```
 
-Ela deve ser tratada como a lista viva do projeto.
+O passo a passo vigente está em:
+
+```text
+docs/PLANO_DE_PROSSEGUIMENTO.md
+```
+
+`ROADMAP.md` permanece como backlog estratégico por domínio.
