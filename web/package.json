@@ -7,6 +7,7 @@
   },
   "scripts": {
     "data:calibration": "node ../scripts/build_calibration_dataset.mjs",
+    "data:review": "node ../scripts/build_review_queue.mjs",
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",

@@ -2,7 +2,8 @@
 
 Versão: 1.0
 Data: 2026-08-18
-Estado: seleção congelada; anotações ainda não iniciadas.
+Estado: protocolo preservado como auditoria opcional; substituído operacionalmente
+pela revisão assistida baseada em risco.
 
 ## Objetivo
 

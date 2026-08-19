@@ -297,6 +297,10 @@ validado com:
 python -m min_df.annotation caminho\para\lote.json
 ```
 
+O fluxo operacional principal é a rota `/revisar`: uma fila automática baseada
+em risco, com casos críticos, amostra aleatória e busca de omissões. O revisor
+decide afirmações já acompanhadas de evidência, sem reconstruir o documento.
+
 ## Roadmap
 
 A trajetória geral está em:

@@ -57,3 +57,24 @@ test("ships only source locators for frozen calibration pages", async () => {
   );
   assert.equal(payload.source.document_sha256.length, 64);
 });
+
+test("renders the risk-based assisted review route", async () => {
+  const response = await render("/revisar");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Revisão assistida/);
+  assert.match(html, /Calculando prioridades de revisão/);
+});
+
+test("ships a bounded and stratified assisted review queue", async () => {
+  const payload = JSON.parse(
+    await readFile(new URL("../public/dodf112-review-queue.json", import.meta.url), "utf8"),
+  );
+  assert.equal(payload.queue.length, 69);
+  assert.equal(payload.counts.critical, 1);
+  assert.equal(payload.counts.high, 36);
+  assert.equal(payload.counts.medium, 32);
+  assert.ok(payload.queue.some((row) => row.sample_kind === "negative"));
+  assert.ok(payload.queue.every((row) => row.evidence.length > 0));
+  assert.ok(payload.queue.every((row) => row.reasons.length > 0));
+});

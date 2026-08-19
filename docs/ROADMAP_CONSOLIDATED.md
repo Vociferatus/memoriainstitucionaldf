@@ -358,7 +358,10 @@ Os limiares, portões e condições de parada estão em
 - [x] Congelar páginas 37 e 51 para calibração do Portão 1.
 - [x] Disponibilizar interface cega para as páginas congeladas, sem rótulos
   automáticos e com exportação contratual.
-- [ ] Executar as duas aplicações independentes e adjudicar desacordos.
+- [x] Gerar fila assistida por risco com casos críticos, amostra aleatória e
+  amostra negativa.
+- [ ] Revisar 60–100 decisões curtas e todos os casos críticos.
+- [ ] Medir qualidade e transformar erros dominantes em testes.
 - [ ] Revisar manualmente as 85 páginas.
 - [ ] Validar limites de todas as matérias.
 - [ ] Validar contextos editoriais.
