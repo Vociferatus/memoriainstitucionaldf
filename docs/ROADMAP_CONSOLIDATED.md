@@ -1,8 +1,12 @@
 # Roadmap consolidado — Memória Institucional Navegável
 
-Versão: 1.0
+Versão: 1.1
 Data: 2026-08-18
-Estado: planejamento aprovado para execução incremental.
+Estado: execução incremental com portões de qualidade.
+
+O passo a passo vigente e os critérios de interrupção estão em
+`docs/PLANO_DE_PROSSEGUIMENTO.md`. Em caso de divergência, este roadmap define a
+trajetória geral e o plano de prosseguimento define a próxima execução.
 
 ## 1. Resultado pretendido
 
@@ -139,27 +143,35 @@ justificarem.
 - migração e carga PostgreSQL do piloto;
 - banco histórico localizado e auditado;
 - proveniência e auditoria técnica registradas.
+- pacote Python, contratos JSON e CI reproduzível;
+- ledger v2 de blobs, capturas, artefatos e transformações;
+- segmentação integral em 3 seções, 202 contextos e 457 matérias;
+- 114 ações administrativas e 1.396 referências semânticas;
+- explorador web de evidências;
+- identidade material v1 com 1.645 fragmentos, 1.276 entidades materiais,
+  1.342 links, 45 grupos candidatos e 1 caso de resolução;
+- 26 testes, lint, tipos, pipeline web e pipeline Python aprovados.
 
 ### Ausente ou insuficiente
 
-- testes automatizados;
-- contratos JSON formais;
-- pacote Python organizado;
-- ledger geral de artefatos e transformações;
-- separação correta entre blob e captura;
-- modelo de matéria publicada;
-- segmentação de atos;
-- pessoas, organizações, cargos e ações administrativas;
-- revisão humana e conjunto ouro;
-- coletor de edições;
-- inventário de cobertura;
-- schemas `knowledge`, `analytics` e `audit`.
+- revisão humana integral e conjunto ouro;
+- precisão, recall e false merge rate medidos;
+- extração completa de órgão, unidade, autoridade e datas tipadas;
+- cadastro temporal de órgãos e relações institucionais;
+- política implementada para dados pessoais e identificadores sensíveis;
+- interface de revisão de candidatos, decisões e divergências;
+- validação em dez edições representativas;
+- coletor de edições e inventário de cobertura;
+- contratos completos das camadas `knowledge`, `analytics` e `audit`.
 
 ### Etapa atual
 
 ```text
-Fases 0, 1 e 2 concluídas em 2026-08-18
-Fase 3 em execução: passe automático v1 concluído; cobertura integral e avaliação seguem pendentes
+Fases 0, 1 e 2: concluídas
+Fase 3 automática: concluída para o DODF 112
+Identidade material v1: implementada antecipadamente, aguardando validação empírica
+Etapa corrente: Fase 4 — conjunto ouro e qualidade do DODF 112
+Expansão para dez edições: bloqueada pelo portão de qualidade
 ```
 
 ## 5. Fase 0 — Preservação e linha de base
@@ -325,6 +337,19 @@ conferida visualmente no PDF.
 
 Objetivo: transformar o DODF 112 em benchmark do projeto.
 
+A ordem operacional desta fase é obrigatória:
+
+1. integrar e congelar o benchmark automático;
+2. definir contrato e guia de anotação;
+3. revisar amostra estratificada de 12 páginas;
+4. medir e corrigir por categoria;
+5. revisar as 85 páginas;
+6. validar a identidade material e a temporalidade;
+7. registrar a decisão de passagem.
+
+Os limiares, portões e condições de parada estão em
+`docs/PLANO_DE_PROSSEGUIMENTO.md`.
+
 ### Anotação e revisão
 
 - [ ] Revisar manualmente as 85 páginas.
@@ -334,6 +359,9 @@ Objetivo: transformar o DODF 112 em benchmark do projeto.
 - [ ] Validar ações administrativas selecionadas.
 - [ ] Registrar ambiguidades e desacordos.
 - [ ] Versionar a anotação sem misturá-la com a saída automática.
+- [ ] Fazer segunda revisão de pelo menos 20% da amostra e 100% dos casos de
+  identidade.
+- [ ] Adjudicar desacordos sem apagar as anotações originais.
 
 ### Métricas
 
@@ -344,6 +372,8 @@ Objetivo: transformar o DODF 112 em benchmark do projeto.
 - [ ] Taxa de matérias sem contexto conhecido.
 - [ ] Taxa de revisão pendente.
 - [ ] Tempo e custo por página.
+- [ ] False merge rate da identidade material.
+- [ ] Auto-links sem identificador material válido: zero.
 
 ### Critério de saída
 
@@ -442,20 +472,22 @@ Objetivo: relacionar o corpus sem apagar ambiguidade.
 
 ### Entidades
 
-- [ ] Criar entidades canônicas com IDs estáveis.
-- [ ] Manter menções e nomes originais.
-- [ ] Consolidar empresas prioritariamente por CNPJ.
+- [x] Criar fundação v1 de entidades materiais com IDs estáveis.
+- [x] Manter menções, fragmentos e nomes originais.
+- [x] Materializar organizações legais prioritariamente por CNPJ válido na v1.
 - [ ] Criar cadastro temporal de órgãos e unidades.
 - [ ] Modelar mudanças de nome, fusão, cisão, criação e extinção.
-- [ ] Adotar política conservadora para pessoas.
+- [x] Adotar política conservadora v1 para pessoas, sem união por nome.
 
 ### Resolução
 
-- [ ] Gerar candidatos com método e score.
+- [x] Gerar candidatos nominais com método e decisão `KEEP_SEPARATE`; score
+  probabilístico continua fora da v1.
 - [ ] Preservar evidências favoráveis e contrárias.
-- [ ] Criar fila de revisão humana.
+- [x] Criar estrutura persistente para fila de revisão humana.
 - [ ] Medir false merge rate.
-- [ ] Permitir desfazer qualquer decisão.
+- [x] Preservar fragmentos e decisões versionadas para permitir reversão; fluxo
+  humano de reversão segue pendente.
 
 ### Eventos
 
@@ -650,29 +682,28 @@ Não são critérios suficientes:
 
 ## 22. Próxima iteração executável
 
-Escopo: Fase 0 final + início da Fase 1.
+Escopo: fechar o benchmark automático e iniciar a validação humana do DODF 112.
 
 Ordem:
 
-1. revisar e consolidar o commit da linha de base;
-2. definir política de dados e arquivos grandes;
-3. criar ambiente Python reproduzível;
-4. transformar a reprodução manual em testes automatizados;
-5. criar comando único de pipeline e auditoria;
-6. criar os três JSON Schemas atuais;
-7. testar banco limpo, idempotência, backup e restauração;
-8. registrar decisão para iniciar o ledger v2.
+1. revisar e integrar a PR da identidade material v1;
+2. congelar commit, contratos, hashes, contagens e limitações do benchmark;
+3. criar contrato de anotação separado da saída automática;
+4. escrever guia de anotação com exemplos e estados de decisão;
+5. selecionar 12 páginas estratificadas;
+6. executar anotação e segunda revisão mínima de 20%;
+7. produzir taxonomia de erros, precisão, recall e false merge rate;
+8. corrigir regras com testes e reprocessamento integral;
+9. decidir se o projeto está autorizado a revisar as 85 páginas.
 
 ### Marco de saída da próxima iteração
 
 ```text
-Um comando processa o PDF original do DODF 112,
-valida os contratos,
-reproduz todos os artefatos,
-carrega um banco limpo,
-executa auditoria,
-e encerra com testes verdes.
+Um conjunto estratificado do DODF 112 possui anotação humana versionada,
+métricas por categoria, divergências explícitas e decisão registrada
+para iniciar ou não a revisão integral das 85 páginas.
 ```
 
-Somente depois começa a segmentação semântica integral das matérias do DODF
-112.
+Somente depois da revisão integral e do portão de qualidade começa a expansão
+para dez edições representativas. Identificadores pessoais adicionais e
+inferências permanecem bloqueados por governança específica.

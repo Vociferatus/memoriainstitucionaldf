@@ -80,6 +80,27 @@ Nunca entram no Git:
 - logs com dados sensíveis;
 - arquivos temporários.
 
+### Dados pessoais e identificadores administrativos
+
+A publicação em fonte oficial não torna automaticamente necessário ou adequado
+republicar todo dado pessoal em uma projeção navegável.
+
+Antes de extrair ou persistir CPF, matrícula, endereço, contato ou identificador
+equivalente, o projeto deve definir:
+
+- finalidade histórica ou técnica específica;
+- necessidade do valor completo em vez de forma mascarada;
+- camada autorizada a armazenar e consultar o campo;
+- classificação de sensibilidade e publicabilidade;
+- minimização, retenção e descarte de derivados;
+- controle de acesso e logs de consulta/exportação;
+- procedimento de correção, contestação e resposta a incidente;
+- revisão jurídica necessária para distribuição ampliada.
+
+Até que essa política operacional seja aprovada, novos extratores podem localizar
+um padrão apenas em ambiente controlado de pesquisa, mas não devem incorporar o
+identificador completo ao banco navegável, ao frontend ou a exportações.
+
 ## Exceção da linha de base recuperada
 
 O primeiro commit preserva integralmente o piloto ancestral, inclusive PDF,
@@ -111,6 +132,10 @@ edições. Arquivos já rastreados permanecem versionados como referência.
 - backup externo;
 - fixtures pequenas no Git;
 - avaliação formal de Git LFS somente se houver necessidade concreta.
+
+A passagem para dez edições também depende do portão de qualidade do DODF 112;
+a passagem para um mês depende da validação nas dez edições. Os detalhes estão em
+`docs/PLANO_DE_PROSSEGUIMENTO.md`.
 
 ### Um ano ou mais
 

@@ -1,4 +1,9 @@
-# Fase 4 — Identidade material v1
+# Identidade material v1 — fundação antecipada
+
+Estado: implementação técnica antecipada da futura base de conhecimento. Este
+marco não encerra a Fase 4 do roadmap, dedicada ao conjunto ouro e à medição de
+qualidade do DODF 112. A identidade somente será considerada empiricamente
+validada após os Portões 4 e 5 de `docs/PLANO_DE_PROSSEGUIMENTO.md`.
 
 ## Resultado
 
@@ -64,3 +69,16 @@ social. Pessoas e órgãos dependem da próxima evolução: extração de CPF/ma
 vínculos temporais, hierarquia institucional, denominações legais e tratamento
 formal de divergências. O futuro front deve exibir separadamente entidades materiais,
 fragmentos candidatos e fila de casos, sem esconder o grau de certeza.
+
+## Próxima validação obrigatória
+
+Antes de ampliar a consolidação ou usar novos identificadores:
+
+1. revisar todos os grupos candidatos presentes no conjunto ouro;
+2. revisar todos os casos de resolução;
+3. conferir cada `AUTO_LINK` da amostra contra sua evidência material;
+4. medir false merge rate;
+5. testar rejeição, reversão e reabertura de decisões;
+6. introduzir temporalidade somente com publicação, assinatura, vigência e
+   efeito explicitamente separados;
+7. aplicar a política de dados pessoais antes de CPF ou matrícula.
